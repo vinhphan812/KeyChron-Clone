@@ -1,0 +1,296 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-size: 10px;
+    }
+    
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    .dark-mode {
+        background-color: #100e17;
+        color: white;
+    }
+    
+    .dark-mode .button {
+        background-color: #fff;
+        color: #000;
+    }
+    /* Add a gray background color and some padding to the footer */
+    
+    footer {
+        background-color: #f2f2f2;
+        padding: 25px;
+    }
+    
+    .carousel-inner img {
+        width: 100%;
+        /* Set width to 100% */
+        margin: auto;
+        min-height: 200px;
+    }
+    
+    ​
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    
+    .carousel-caption {
+        display: none;
+        @media (max-width: 600px)
+    }
+    
+    .h2sig {
+        text-indent: 8%;
+        font-weight: Bold;
+        margin-top: 10rem;
+        width: 100%;
+    }
+    
+    .button {
+        display: block;
+        border-radius: 4px;
+        background-color: black;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 15px;
+        padding: 9px 20px;
+        width: 215px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        font-weight: bold;
+    }
+    
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+    
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+    
+    .button:hover span {
+        padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+    
+    .button1 {
+        background-color: white;
+    }
+    
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        margin: 5rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .flex-container3column {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        margin: 5rem;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vmin;
+    }
+    
+    .flex-containerreverse {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        margin: 5rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+    
+    .flex-item-left {
+        padding: 10px;
+        flex: 50%;
+    }
+    
+    .flex-item-right {
+        padding: 10px;
+        flex: 50%;
+    }
+    
+    .flex-item-leftreverse {
+        padding: 10px;
+        flex: 60%;
+    }
+    
+    .flex-item-rightreverse {
+        padding: 10px;
+        flex: 40%;
+    }
+    
+    .flex-itemcolumn1 {
+        padding: 10px;
+        flex: 33, 3%;
+    }
+    
+    .flex-itemcolumn2 {
+        padding: 10px;
+        flex: 33, 3%;
+    }
+    
+    .flex-itemcolumn3 {
+        padding: 10px;
+        flex: 33, 3%
+    }
+    
+    .checked {
+        color: orange;
+    }
+    
+    .tablelogo {
+        margin: auto;
+        border-collapse: separate;
+        border-spacing: 10rem 5rem;
+    }
+    
+    .logoscroll {
+        overflow-x: auto;
+    }
+    
+    .logoscroll::-webkit-scrollbar {
+        display: none;
+    }
+    
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .contain {
+        position: relative;
+        text-align: left;
+        color: black;
+        display: flex;
+    }
+    
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        background-color: whitesmoke;
+        padding: 40px 20px;
+        width: 40rem;
+        height: 35rem;
+        border: 1px;
+        border-radius: 2rem;
+        max-width: 100%;
+        box-shadow: 0 0 5px 0 #333;
+    }
+    
+    .footer {
+        display: flex;
+        height: auto;
+        line-height: 2.8rem;
+        justify-content: center;
+        margin-left: 15%;
+        margin-right: 15%;
+        font-family: sans-serif;
+    }
+    
+    .footerbg {
+        height: auto;
+        width: 100%;
+    }
+    
+    .iconrow {
+        margin-bottom: auto;
+        flex: 25%;
+        margin-left: 4rem;
+    }
+    
+    .keychronrow {
+        text-align: left;
+        flex: 25%;
+    }
+    
+    .helprow {
+        text-align: left;
+        flex: 25%;
+    }
+    
+    .bethefirstrow {
+        text-align: left;
+        flex: 25%;
+    }
+    
+    .copyright {
+        text-align: left;
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        margin-left: 10%;
+        font-size: 12px;
+    }
+    
+    img {
+        height: auto;
+    }
+    
+    input {
+        border-radius: 5px;
+        border: 1px solid;
+    }
+    
+    .fontres {
+        width: 50%;
+        font-size: 2rem;
+        text-align: left;
+    }
+    /* Responsive layout - makes a one column-layout instead of two-column layout */
+    
+    @media (max-width: 800px) {
+        h2 {
+            font-size: 25px;
+        }
+        .flex-container {
+            flex-direction: column;
+        }
+        .flex-containerreverse {
+            flex-direction: column;
+        }
+        .tablelogo {
+            flex-direction: column;
+        }
+        .centered {
+            display: none;
+        }
+        .flex-container3column {
+            flex-direction: column;
+        }
+        .footer {
+            flex-direction: column;
+        }
+        .fontres {
+            width: 100%;
+        }
+    }
