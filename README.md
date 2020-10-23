@@ -1,3 +1,3 @@
 # KeychronClone
 
-Khởi động landingpage trước!!!
+[Long Shaww](https://www.facebook.com/long.shaww/)
