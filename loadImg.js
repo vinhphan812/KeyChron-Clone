@@ -2,5 +2,5 @@
 
 var img = document.getElementsByTagName('img');
 for (var i of img) {
-     i.src = 'https://picsum.photos/1920/960';
+     // i.src = 'https://picsum.photos/1920/960';
 }
