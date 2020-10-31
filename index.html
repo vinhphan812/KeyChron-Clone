@@ -14,7 +14,90 @@
 </head>
 
 <body>
-     <nav class="navbar navbar-inverse">
+     <div class="text_notification">K1, K2, K4, K6 and K8 will be shipped out in three business days. Pre-orders will be shipped out on October 15th.</div>
+     <div class="top" id="top">
+          <div class="top_logo">
+               <img src="./assets/img/logo/update0101-2_160x.jpg" alt="Logo">
+          </div>
+          <div class="top_container">
+               <ul class="menu">
+                    <li class="menu_item act_drop">
+                         <a href="#">
+                              <span>Keyboards</span>
+                              <i class="fa fa-chevron-right fa-xs"></i>
+                         </a>
+                         <ul class="dropdown">
+                              <li><a href="#">KeyChron K1</a></li>
+                              <li><a href="#">KeyChron K2</a></li>
+                              <li><a href="#">KeyChron K2(Hot-swappable)</a></li>
+                              <li><a href="#">KeyChron K4</a></li>
+                              <li><a href="#">KeyChron K6</a></li>
+                              <li><a href="#">KeyChron K8</a></li>
+                              <li><a href="#">KeyChron K3 (Pre-order)</a></li>
+                              <li><a href="#">KeyChron  ISO Layout Collection</a></li>
+                         </ul>
+                    </li>
+                    <li class="menu_item act_drop">
+                         <a href="#">
+                              <span>Accessories</span>
+                              <i class="fa fa-chevron-right fa-xs"></i>
+                         </a>
+                         <ul class="dropdown">
+                              <li><a href="#">Low Profile Keycap Set for K1</a></li>
+                              <li><a href="#">K2 PBT Retro Mac Keycap Set</a></li>
+                              <li><a href="#">K2 Walnut Wood Palm Rest</a></li>
+                              <li><a href="#">K4 Keycap Set</a></li>
+                              <li><a href="#">K4 Walnut Wood Palm Rest</a></li>
+                              <li><a href="#">K6 Keycap Set</a></li>
+                              <li><a href="#">K6 Walnut Wood Palm Rest</a></li>
+                              <li><a href="#">K8 Keycap Set</a></li>
+                              <li><a href="#">K8 Walnut Wood Palm Rest</a></li>
+                              <li><a href="#">Switches</a></li>
+                              <li><a href="#">T10 USB-C Hub</a></li>
+                         </ul>
+                    </li>
+                    <li class="menu_item">
+                         <a href="#">Buyer' Showcase</a>
+                    </li>
+                    <li class="menu_item">
+                         <a href="#">Get 10% off</a>
+                    </li>
+                    <li class="menu_item">
+                         <a href="#">Blog</a>
+                    </li>
+               </ul>
+          </div>
+          <div class="top_icon_user">
+               <a href="#"><i class="fa fa-user fa-lg"></i></a>
+               <a href="#"><i class="fa fa-search fa-lg"></i></a>
+               <a href="#"><i class="fa fa-shopping-cart fa-lg"></i></a>
+               <a href="" onclick="darkMode()">
+                    <i class="fa fa-adjust fa-2x" aria-hidden="true"></i>
+               </a>
+          </div>
+
+     </div>
+     <div class="container__slide">
+          <div class="container__slide__all">
+               <div class="container__slide__item">
+                    <div class="container__slide__item__img"></div>
+               </div>
+               <div class="container__slide__item">
+                    <div class="container__slide__item__img"></div>
+               </div>
+               <div class="container__slide__item">
+                    <div class="container__slide__item__img"></div>
+               </div>
+               <div class="container__slide__item">
+                    <div class="container__slide__item__img"></div>
+               </div>
+               <div class="container__slide__item">
+                    <div class="container__slide__item__img"></div>
+               </div>
+          </div>
+     </div>
+     <a href="#top__page" id="up__top" class="up__top hidden"><i class="far fa-caret-square-up fa-3x"></i></a>
+     <!-- <nav class="navbar navbar-inverse">
           <div class="container-fluid">
                <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -33,15 +116,15 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                         <li><button class="button1" onclick="myFunction()">
+                         <li><button class="button1" onclick="darkMode()">
                         <i class="fa fa-adjust fa-2x" aria-hidden="true"></i>
                     </button></li>
                     </ul>
                </div>
           </div>
-     </nav>
+     </nav> -->
 
-     <div id="myCarousel" class="carousel slide" data-ride="carousel">
+     <div id="myCarousel" class="carousel slide show-carousel control" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -52,7 +135,7 @@
           </ol>
 
           <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
+          <div class="carousel-inner show-carousel" role="listbox">
                <div class="item active">
                     <img src="./assets/img/product/Keychron-K2-version2.jpg" alt="Image">
                     <div class="carousel-caption">
@@ -90,7 +173,6 @@
                     </div>
                </div>
           </div>
-
 
           <!-- Left and right controls -->
           <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -277,15 +359,15 @@
                     </i>
                </div>
                <div class="keychronrow">
-                    <h4 style="font-weight: Bold;">KEYCHRON</h4>About us<br>Where to Buy<br>Careers<br>Blog<br>Contact us
+                    <h4 class="bold">KEYCHRON</h4>About us<br>Where to Buy<br>Careers<br>Blog<br>Contact us
                     <br>Influencer</div>
                <div class="helprow">
-                    <h4 style="font-weight: Bold">HELP & SUPPORT</h4>User Manual<br>Firmwares
+                    <h4 class="bold">HELP & SUPPORT</h4>User Manual<br>Firmwares
                     <br>Help Center <br> Shipping Policy <br> Return Policy <br> Warranty
                     <br>Privacy Policy<br>Terms Of Service<br>Different Layout Survey<br> Sitemap
                </div>
                <div class="bethefirstrow">
-                    <h4 style="font-weight: bold;">BE THE FIRST TO KNOW</h4>
+                    <h4 class="bold">BE THE FIRST TO KNOW</h4>
                     Get the latest product news, special offers and interesting behind-the-scenes stories from us
                     <form action="/action_page.php">
                          <label for="email"></label>
@@ -299,11 +381,10 @@
           </div>
      </div>
      <!--footer-->
-     <script src="./loadImg.js"></script>
+     <script src="./scroll.js" type="text/javascript"></script>
      <script>
-          function myFunction() {
-               var element = document.body;
-               element.classList.toggle("dark-mode");
+          function darkMode() {
+               return document.body.className ? document.body.className = "" : document.body.className = "dark-mode";
           }
      </script>
 </body>
