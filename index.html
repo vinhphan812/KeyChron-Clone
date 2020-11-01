@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
      <title>Keychron</title>
@@ -9,19 +9,24 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
      <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://kit.fontawesome.com/7d63550d9f.js" crossorigin="anonymous"></script>
 
 </head>
 
-<body>
+<body id="top__page">
      <div class="text_notification">K1, K2, K4, K6 and K8 will be shipped out in three business days. Pre-orders will be shipped out on October 15th.</div>
      <div class="top" id="top">
-          <div class="top_logo">
+          <div class="top__logo">
                <img src="./assets/img/logo/update0101-2_160x.jpg" alt="Logo">
           </div>
-          <div class="top_container">
+          <div class="top__container" id="container">
+               <button class="btn__close">
+                    <svg width="2rem" height="2rem" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                         <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+               </button>
                <ul class="menu">
-                    <li class="menu_item act_drop">
+                    <li class="menu__item act__drop">
                          <a href="#">
                               <span>Keyboards</span>
                               <i class="fa fa-chevron-right fa-xs"></i>
@@ -37,7 +42,7 @@
                               <li><a href="#">KeyChron  ISO Layout Collection</a></li>
                          </ul>
                     </li>
-                    <li class="menu_item act_drop">
+                    <li class="menu__item act__drop">
                          <a href="#">
                               <span>Accessories</span>
                               <i class="fa fa-chevron-right fa-xs"></i>
@@ -56,24 +61,23 @@
                               <li><a href="#">T10 USB-C Hub</a></li>
                          </ul>
                     </li>
-                    <li class="menu_item">
+                    <li class="menu__item">
                          <a href="#">Buyer' Showcase</a>
                     </li>
-                    <li class="menu_item">
+                    <li class="menu__item">
                          <a href="#">Get 10% off</a>
                     </li>
-                    <li class="menu_item">
+                    <li class="menu__item">
                          <a href="#">Blog</a>
                     </li>
                </ul>
           </div>
-          <div class="top_icon_user">
+          <div class="top__icon__user" id="icon__bar">
                <a href="#"><i class="fa fa-user fa-lg"></i></a>
                <a href="#"><i class="fa fa-search fa-lg"></i></a>
+               <a href="#" class="hidden" onclick="show()"><i class="fas fa-bars fa-lg"></i></a>
                <a href="#"><i class="fa fa-shopping-cart fa-lg"></i></a>
-               <a href="" onclick="darkMode()">
-                    <i class="fa fa-adjust fa-2x" aria-hidden="true"></i>
-               </a>
+               <a href="#"><i class="fa fa-adjust fa-lg" aria-hidden="true" onclick="darkMode()"></i></a>
           </div>
 
      </div>
@@ -96,7 +100,6 @@
                </div>
           </div>
      </div>
-     <a href="#top__page" id="up__top" class="up__top hidden"><i class="far fa-caret-square-up fa-3x"></i></a>
      <!-- <nav class="navbar navbar-inverse">
           <div class="container-fluid">
                <div class="navbar-header">
@@ -105,23 +108,23 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
         </button>
-                    <a class="navbar-brand" href="#">Logo</a>
-               </div>
-               <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                         <li class="active"><a href="#">Home</a></li>
-                         <li><a href="#">About</a></li>
-                         <li><a href="#">Projects</a></li>
-                         <li><a href="#">Contact</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                         <li><button class="button1" onclick="darkMode()">
+               <a class="navbar-brand" href="#">Logo</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+               <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+               </ul>
+               <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><button class="button1" onclick="darkMode()">
                         <i class="fa fa-adjust fa-2x" aria-hidden="true"></i>
                     </button></li>
-                    </ul>
-               </div>
+               </ul>
           </div>
+     </div>
      </nav> -->
 
      <div id="myCarousel" class="carousel slide show-carousel control" data-ride="carousel">
@@ -270,7 +273,7 @@
      <!--3 column-->
      <h2 style="font-weight: bold;text-indent: 16%;">Various Layout</h2>
      <div class="flex-col-3">
-          <div class="flex-item-col">
+          <a href="#" class="flex-item-col">
                <img src="./assets/img/product/KeyChronK2-V2.jpg">
                <div class="detail col">
                     <p class="name__product">Keychron K2 Wireless Mechanical Keyboard (Version2)</p>
@@ -285,9 +288,8 @@
 
                     <p class="price">from $69.00</p>
                </div>
-
-          </div>
-          <div class="flex-item-col">
+          </a>
+          <a href="#" class="flex-item-col">
                <img src="./assets/img/product/KeyChronK4.jpg">
                <div class="detail col">
                     <p class="name__product">Keychron K4 Wireless Mechanical Keyboard</p>
@@ -302,8 +304,8 @@
                     <p class="price">from $59.00</p>
                </div>
 
-          </div>
-          <div class="flex-item-col">
+          </a>
+          <a href="#" class="flex-item-col">
                <img src="./assets/img/product/KeyChronK6.jpg">
                <div class="detail col">
                     <p class="name__product">Keychron K6 Wireless Mechanical Keyboard</p>
@@ -319,7 +321,7 @@
                     <p class="price">from $69.00</p>
                </div>
 
-          </div>
+          </a>
      </div>
      <!--3 column//-->
      <h2 style="font-weight: bold;text-indent:16%;margin-top:5rem;margin-bottom: 5rem;">Blog posts</h2>
@@ -380,6 +382,7 @@
                © 2020 Keychron | Wireless Mechanical Keyboards for Mac, Windows and Android
           </div>
      </div>
+     <a href="#top__page" id="up__top" class="up__top hidden"><i class="far fa-caret-square-up fa-3x"></i></a>
      <!--footer-->
      <script src="./scroll.js" type="text/javascript"></script>
      <script>

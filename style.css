@@ -4,13 +4,25 @@
 }
 
 html {
-     font-size: 10px;
      scroll-behavior: smooth;
 }
 
 body {
      background-color: white;
      color: black;
+     letter-spacing: 0.025em;
+     height: 2000px;
+     margin: 0;
+}
+
+button {
+     background-color: #fff;
+     border: 0;
+}
+
+button:focus,
+button:active {
+     outline: none;
 }
 
 input:focus {
@@ -25,6 +37,11 @@ ul {
      list-style-type: none;
      padding: 0;
      margin: 0;
+}
+
+a {
+     text-decoration: none;
+     color: #000;
 }
 
 a:focus {
@@ -46,7 +63,7 @@ a:focus {
 .top {
      display: flex;
      align-items: center;
-     justify-content: center;
+     justify-content: space-evenly;
      background-color: #fff;
      height: 6rem;
      width: 100%;
@@ -55,7 +72,7 @@ a:focus {
      box-shadow: 0 0 5px 0 #999;
 }
 
-.top_nav {
+.top__nav {
      position: fixed;
      top: 0rem;
      animation: translateY 1s;
@@ -70,35 +87,40 @@ a:focus {
      }
 }
 
-.top>.top_icon_user {
+.top>.top__icon__user {
      height: 100%;
      display: flex;
      align-items: center;
      justify-self: center;
 }
 
-.top>.top_icon_user>a>i {
+.top>.top__icon__user>a>i {
      margin: 0 1rem;
      padding: .5rem;
      color: #888;
 }
 
-.top>.top_icon_user>a>i:hover {
+.top>.top__icon__user>a>i:hover {
      opacity: 1;
      color: #000;
 }
 
-.top_logo {
-     margin-left: 2rem;
+.top>.top__icon__user>.hidden {
+     display: none;
 }
 
-.top_container {
+.top__container {
      height: 100%;
-     margin-right: 8rem;
+}
+
+.btn__close {
+     display: none;
+     margin-left: auto;
 }
 
 .menu {
      display: flex;
+     flex-wrap: wrap;
      align-items: center;
      font-size: 1.188rem;
      font-weight: 400;
@@ -107,23 +129,22 @@ a:focus {
      padding-left: 1rem;
 }
 
-.menu>.menu_item {
+.menu>.menu__item {
      position: relative;
      height: 2rem;
-     opacity: .8;
-     z-index: 5;
+     opacity: .75;
 }
 
-.menu>.menu_item>a {
+.menu>.menu__item>a {
      color: #000;
      text-decoration: none;
 }
 
-.menu>.menu_item:hover {
+.menu>.menu__item:hover {
      opacity: 1;
 }
 
-.menu>.menu_item>a {
+.menu>.menu__item>a {
      padding: .5rem 1.5rem;
 }
 
@@ -135,18 +156,19 @@ a:focus {
      width: 20rem;
      font-size: .9em;
      margin: .5rem 0 0 0;
-     box-shadow: 0 1px 2px 2px #33333309;
      transform: translateY(-1rem);
+     z-index: 2;
+     box-shadow: 0 1px 2px 2px #33333309;
      transition: transform ease .2s, visibility 0.1s;
 }
 
-.act_drop:hover>.dropdown,
+.act__drop:hover>.dropdown,
 .dropdown:hover {
      visibility: visible;
      transform: translateY(0);
 }
 
-.act_drop:hover>a::before {
+.act__drop:hover>a::before {
      content: '';
      position: absolute;
      left: 1.5rem;
@@ -167,11 +189,11 @@ a:focus {
      }
 }
 
-.act_drop>a>i {
+.act__drop>a>i {
      transition: transform linear 200ms;
 }
 
-.act_drop:hover a>i {
+.act__drop:hover a>i {
      transform: rotate(90deg);
 }
 
@@ -182,6 +204,23 @@ a:focus {
 .dropdown>li>a {
      text-decoration: none;
      color: #000;
+}
+
+.up__top {
+     position: fixed;
+     bottom: 1rem;
+     right: -5rem;
+     opacity: .75;
+     transition: right ease 400ms, opacity ease 400ms;
+}
+
+.visible {
+     right: 1rem;
+}
+
+.visible:hover {
+     color: #000;
+     opacity: 1;
 }
 
 
@@ -199,6 +238,10 @@ a:focus {
 
 .dark-mode input {
      color: #000;
+}
+
+.dark-mode .up__top {
+     color: #fff;
 }
 
 .dark-mode .button {
@@ -529,6 +572,35 @@ input {
 /* Responsive layout - makes a one column-layout instead of two-column layout */
 
 @media (max-width: 900px) {
+     .top>.top__container>.btn__close {
+          display: block;
+     }
+     .top>.top__container {
+          position: fixed;
+          right: -12rem;
+          top: 0;
+          height: 100vh;
+          width: 12rem;
+          margin: 0;
+          background-color: #fff;
+          z-index: 2;
+          transition: right linear 300ms;
+     }
+     .top>.active {
+          right: 0;
+     }
+     .top>.top__container>.menu {
+          flex-direction: column;
+          width: 100%;
+     }
+     .top>.top__container>.menu>.menu__item {
+          width: 100%;
+          padding: 5px;
+     }
+     .top>.top__container>.menu>.menu__item>a {
+          width: 100%;
+          padding: 0;
+     }
      .flex-container {
           flex-direction: column;
           padding: 2rem 0;
@@ -570,6 +642,8 @@ input {
           width: 100%;
      }
 }
+
+@media only screen and (max-width:1400px) {}
 
 @media (min-width: 900px) and (max-width: 1400px) {
      .flex-col-3 {
