@@ -1,0 +1,105 @@
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+
+@media only screen and (max-width: 900px) {
+     .top>.top__container>.btn__close {
+          display: block;
+          padding: 1rem;
+     }
+     .top>.top__container {
+          position: fixed;
+          right: -100%;
+          top: 0;
+          height: 100vh;
+          width: 50vw;
+          background-color: #fff;
+          margin: 0;
+          z-index: 2;
+     }
+     .top>.active {
+          right: 0;
+     }
+     .top>.top__container>.menu {
+          flex-direction: column;
+          width: 100%;
+     }
+     .top>.top__container>.menu>.menu__item {
+          width: 100%;
+          padding: 5px;
+     }
+     .top>.top__container>.menu>.menu__item>a {
+          width: 100%;
+          padding: 0;
+     }
+     .flex-container {
+          flex-direction: column;
+          padding: 2rem 0;
+     }
+     .flex-container>.flex-item {
+          width: 100%;
+     }
+     .logo__scroll {
+          margin: 2rem 0;
+          width: 100%;
+     }
+     .table__logo {
+          width: 300%;
+     }
+     .table__logo>img {
+          width: 128px;
+     }
+     .h2sig {
+          margin-left: 2rem;
+     }
+     .centered {
+          display: none;
+     }
+     .flex-col-3 {
+          flex-direction: column;
+          margin: auto;
+          width: 80%;
+          align-items: center;
+     }
+     .flex-col-3>.flex-item-col {
+          width: 100%;
+          height: 50%;
+          margin: 1rem 0;
+     }
+     .footer {
+          flex-direction: column;
+     }
+     .fontres {
+          width: 100%;
+     }
+}
+
+@media only screen and (max-width: 500px) {
+     .top>.top__logo {
+          display: none;
+     }
+     .top>.top__container {
+          width: 70vw;
+     }
+     .h2sig {
+          margin-left: 1rem;
+          font-size: 1.5rem;
+     }
+}
+
+@media only screen and (max-width:1400px) {}
+
+@media (min-width: 900px) and (max-width: 1400px) {
+     .flex-col-3 {
+          margin: 0 5%;
+          height: 28rem;
+     }
+     .flex-col-3>.flex-item-col {
+          height: auto;
+          width: 30%;
+     }
+     .flex-col-3>.flex-item-col>img {
+          height: 55%;
+     }
+     .table__logo {
+          width: 120%;
+     }
+}

@@ -1,4 +1,8 @@
-const iconBar = document.getElementById('icon__bar')
+const iconBar = document.getElementById('icon__bar');
+const close = document.getElementById('close__menu');
+const menu = document.getElementById('menu');
+const main = document.getElementById('main');
+
 window.onscroll = function() {
      if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 130) {
           document.getElementById('top').className = "top top__nav";
@@ -24,5 +28,16 @@ function showMenuBar() {
 }
 
 function show() {
-     document.getElementById('container').className = 'top__container active'
+     menu.className = 'top__container active';
+     document.body.classList.add('open__menu__right');
+     main.onclick = () => {
+          menu.classList.remove('active');
+          document.body.removeAttribute('class');
+
+     }
 }
+
+close.addEventListener('click', (e) => {
+     menu.classList.remove('active');
+     document.body.removeAttribute('class');
+});
