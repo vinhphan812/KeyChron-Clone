@@ -7,9 +7,11 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <!-- labrary -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
      <script src="https://kit.fontawesome.com/7d63550d9f.js" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
      <!-- css page -->
      <link rel="stylesheet" href="./css/style.css">
      <link rel="stylesheet" href="./css/darkmode.css">
@@ -197,10 +199,10 @@
           <!--Signature//-->
           <!--Content-->
           <div class="flex-container">
-               <div class="flex-item">
+               <div class="flex-item" data-aos="fade-right" aos-init>
                     <img src="./img/product/K2-hero2_540x.jpg">
                </div>
-               <div class="flex-item">
+               <div class="flex-item" data-aos="fade-left" aos-init>
                     <h2 class="title">Wireless & Wired</h2>
                     <p class="subtitle">Connect the keyboard with up to 3 devices via Bluetooth or to a single device with the USB Type-C wired option. Pair it up with your smartphone, laptop and iPad, and switch amongst the devices swiftly, that is best for home, office
                          and light gaming uses. </p>
@@ -392,6 +394,8 @@
      <!--footer-->
      <script src="./js/scroll.js" type="text/javascript"></script>
      <script>
+          AOS.init();
+
           function darkMode() {
                return document.body.className ? document.body.className = "" : document.body.className = "dark-mode";
           }
