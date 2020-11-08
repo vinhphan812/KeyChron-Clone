@@ -3,7 +3,14 @@ const close = document.getElementById('close__menu');
 const menu = document.getElementById('menu');
 const main = document.getElementById('main');
 
-window.onscroll = function() {
+
+//start....
+
+topBar();
+showMenuBar();
+window.onscroll = topBar();
+
+function topBar() {
      if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 130) {
           document.getElementById('top').className = "top top__nav";
           document.getElementById('up__top').className = "up__top visible";
@@ -12,8 +19,6 @@ window.onscroll = function() {
           document.getElementById('up__top').className = "up__top";
      }
 }
-
-showMenuBar();
 
 document.body.onresize = showMenuBar;
 

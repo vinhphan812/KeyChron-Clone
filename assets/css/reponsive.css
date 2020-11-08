@@ -30,9 +30,14 @@
           width: 100%;
           padding: 0;
      }
+     .img-slide {
+          height: 50vh;
+     }
      .flex-container {
           flex-direction: column;
           padding: 2rem 0;
+          width: 80%;
+          margin: auto;
      }
      .flex-container>.flex-item {
           width: 100%;
@@ -73,6 +78,13 @@
 }
 
 @media only screen and (max-width: 500px) {
+      :root {
+          font-size: 14px;
+     }
+     .flex-container {
+          width: 100%;
+          margin: 0;
+     }
      .top>.top__logo {
           display: none;
      }
