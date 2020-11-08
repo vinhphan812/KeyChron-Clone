@@ -4,7 +4,28 @@ html {
      margin: 0;
      font: 400 15px/1.8 "Lato", sans-serif;
      color: #777;
-     /* scroll-behavior: smooth; */
+     transition: background-color 300ms;
+}
+
+ul {
+     list-style-type: none;
+}
+
+#loading {
+     width: 100vw;
+     display: flex;
+     justify-content: center;
+     z-index: 30;
+}
+
+.loading::after {
+     content: '';
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #ababab55;
 }
 
 .landing1 {
@@ -23,7 +44,7 @@ html {
 .landing1text {
      text-align: center;
      position: absolute;
-     top: 68%;
+     top: 50vh;
      left: 50%;
      transform: translate(-50%, -50%);
      color: white;
@@ -71,7 +92,6 @@ html {
 
 .container {
      position: absolute;
-     margin: 20px;
      right: 3%;
      width: auto;
 }
@@ -198,4 +218,16 @@ html {
      .footer {
           flex-direction: column;
      }
+}
+
+.avt {
+     width: 15rem;
+     height: 15rem;
+     margin: auto;
+     background-image: url('https://scontent-xsp1-2.xx.fbcdn.net/v/t1.0-9/118771772_1946892495452517_5234922339250540953_o.jpg?_nc_cat=104&ccb=2&_nc_sid=8bfeb9&_nc_ohc=qhf1mOsjaOoAX9yUBwz&_nc_ht=scontent-xsp1-2.xx&oh=8ac073351268f7f7abd2bcf4f0022e2d&oe=5FCC7136');
+     background-position: center -50px;
+     background-repeat: no-repeat;
+     background-size: 360px 450px;
+     border-radius: 50%;
+     box-shadow: 0 0 5px 1px #aeaeae;
 }

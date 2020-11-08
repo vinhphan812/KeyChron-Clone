@@ -154,7 +154,7 @@ footer {
      padding: 2.5rem 20%;
      display: flex;
      justify-content: center;
-     align-items: stretch;
+     align-items: center;
 }
 
 .reverse {
@@ -247,7 +247,7 @@ footer {
 }
 
 .table__logo>img {
-     width: 192px;
+     width: 128px;
 }
 
 .tablelogo img {
