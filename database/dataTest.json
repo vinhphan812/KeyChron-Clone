@@ -1,0 +1,127 @@
+{
+     "slide": [{
+          "title": "K2 WIRELESS <br> MECHANICAL KEYBOARD",
+          "sub": "Compact yet Functional to Boost Productivity",
+          "URL": "#",
+          "imgURL": "./img/product/Keychron-K2-version2.jpg",
+          "btnContent": "Shop Now"
+     }, {
+          "title": "K6 WIRELESS MECHANICAL<br>KEYBOARD",
+          "sub": "65% Compact. Hot-swappable Switch Option",
+          "URL": "#",
+          "imgURL": "./img/product/Keychron-K6.jpg",
+          "btnContent": "Shop Now"
+     }, {
+          "title": "K8 Tenkeyless Wireless Mechanical Keyboard",
+          "sub": "Hot-swappable option | Optical or Gateron switch",
+          "URL": "#",
+          "imgURL": "./img/product/Keychron-K8.png",
+          "btnContent": "Shop Now"
+     }, {
+          "title": "K3 WIRELESS MECHANICAL KEYBOARD",
+          "sub": "Ultra-slim | Lightweight | Hot-swappable option",
+          "URL": "#",
+          "imgURL": "./img/product/Keychron-K3.png",
+          "btnContent": "Shop Now"
+     }, {
+          "title": "K4 WIRELESS MECHANICAL KEYBOARD",
+          "sub": "With Number Pad | Gateron or LK Optical Switches",
+          "URL": "#",
+          "imgURL": "./img/product/Keychron-K4.jpg",
+          "btnContent": "Shop Now"
+     }],
+     "hightlights": [{
+          "imgURL": "./img/product/K2-hero2_540x.jpg",
+          "title": "Wireless & Wired",
+          "content": "Connect the keyboard with up to 3 devices via Bluetooth or to a single device with the USB Type-C wired option. Pair it up with your smartphone, laptop and iPad, and switch amongst the devices swiftly, that is best for home, office and light gaming uses.",
+          "btnContent": "Discovery Keyboard"
+     }, {
+          "imgURL": "./img/product/Keychron_ultra_slim_RGB_backlight_wireless_mechanical_keyboard_Gateron_low_profile_switch_Mac_multimedia_layout_540x.jpg",
+          "title": "Keychron's Mac Layout",
+          "content": "Keychron is one of the few mechanical keyboards that features macOS media keys (F1 to F12) in a Mac layout with the same as conventional Mac systems.",
+          "btnContent": "View Details"
+     }, {
+          "imgURL": "./img/product/k4-frontpage_540x.jpg",
+          "title": "Compatible With All Devices",
+          "content": "Keychron keyboards are 100% compatible with multiple operating systems. Perfectly suitable for macOS, Windows, iOS, as well as Android.",
+          "btnContent": "Explore More"
+     }],
+     "brandLogo": [{
+          "name": "The Verge",
+          "imgURL": "./img/logo/verge.jpg"
+     }, {
+          "name": "Unbox Therapy",
+          "imgURL": "./img/logo/unboxTheRapy.jpg"
+     }, {
+          "name": "Marques Brownnlee",
+          "imgURL": "./img/logo/mkbhd_300_180x.png"
+     }, {
+          "name": "Cult Of Mac",
+          "imgURL": "./img/logo/CultOfMac.png"
+     }, {
+          "name": "9 To 5 Mac",
+          "imgURL": "./img/logo/9To5Mac.png"
+     }, {
+          "name": "Dave 2D",
+          "imgURL": "./img/logo/Dave2D.png"
+     }, {
+          "name": "Apple Insider",
+          "imgURL": "./img/logo/Apple_Insider.png"
+     }, {
+          "name": "Digital Trends",
+          "imgURL": "./img/logo/Digital.png"
+     }, {
+          "name": "Android Central",
+          "imgURL": "./img/logo/android.png"
+     }, {
+          "name": "The Next Web",
+          "imgURL": "./img/logo/tnw.png"
+     }],
+     "product": [{
+          "name": "Keychron K2 Wireless Mechanical Keyboard (Version2)",
+          "URL": "#",
+          "imgURL": "./img/product/KeyChronK2-V2.jpg",
+          "star": 5,
+          "reviews": 424,
+          "price": 69.00,
+          "sale": 0,
+          "isVarious": true,
+          "isStock": true
+     }, {
+          "name": "Keychron K4 Wireless Mechanical Keyboard",
+          "URL": "#",
+          "imgURL": "./img/product/KeyChronK4.jpg",
+          "star": 4,
+          "reviews": 202,
+          "price": 69,
+          "sale": 14.4927536232,
+          "isVarious": true,
+          "isStock": true
+     }, {
+          "name": "Keychron K6 Wireless Mechanical Keyboard",
+          "URL": "#",
+          "imgURL": "./img/product/KeyChronK6.jpg",
+          "star": 5,
+          "reviews": 147,
+          "price": 69,
+          "sale": 0,
+          "isVarious": true,
+          "isStock": true
+     }],
+     "Blog": [{
+          "imgURL": "",
+          "date": "",
+          "title": "",
+          "URL": ""
+     }, {
+          "imgURL": "",
+          "date": "",
+          "title": "",
+          "URL": ""
+     }, {
+          "imgURL": "",
+          "date": "",
+          "title": "",
+          "URL": ""
+     }]
+}
