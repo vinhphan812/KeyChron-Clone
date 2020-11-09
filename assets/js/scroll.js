@@ -7,8 +7,7 @@ const main = document.getElementById('main');
 //start....
 
 topBar();
-showMenuBar();
-window.onscroll = topBar();
+window.addEventListener('scroll', topBar);
 
 function topBar() {
      if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 130) {
@@ -19,6 +18,7 @@ function topBar() {
           document.getElementById('up__top').className = "up__top";
      }
 }
+showMenuBar();
 
 document.body.onresize = showMenuBar;
 

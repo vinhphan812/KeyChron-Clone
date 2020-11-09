@@ -157,7 +157,7 @@
      position: fixed;
      bottom: 1rem;
      right: -5rem;
-     opacity: .75;
+     opacity: .6;
      transition: right ease 400ms, opacity ease 400ms;
 }
 
@@ -168,6 +168,7 @@
 .visible:hover {
      color: #000;
      opacity: 1;
+     box-shadow: 0 0 5px 2px #333;
 }
 
 .open__menu__right .main::after {
