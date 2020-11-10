@@ -259,6 +259,7 @@ footer {
 .logo__scroll {
      overflow-x: auto;
      margin: 2rem 3rem;
+     padding: 2rem 0;
      background-color: #fff;
      display: flex;
      justify-content: space-evenly;
@@ -395,6 +396,7 @@ input {
      border: 2px solid #fff;
      margin: auto;
      border-radius: 0;
+     text-shadow: 0 0 5px #333;
      transition: box-shadow 300ms, border-radius 300ms;
 }
 

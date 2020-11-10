@@ -31,11 +31,12 @@ getData().then(async function(res) {
                <div class="carousel-caption">
                     <div class="title"><span>${i.title}</span></div>
                     <div class="subtitle"><span>${i.sub}</span></div>
-                    <button class="btn btn-outline-light button"><span>${i.btnContent}</span></button>
+                    <button class="button"><span>${i.btnContent}</span></button>
                </div>
           </div>`
      }).join('');
      slideDOM.children[0].classList.add('active');
+
      hl.innerHTML = data.hightlights.map(function(i, e) {
           return `<div class="flex-container ${e%2 != 0 ? 'reverse' : ''}">
                <div class="flex-item" data-aos="fade-up-right" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
@@ -48,6 +49,7 @@ getData().then(async function(res) {
                </div>
           </div>`
      }).join('');
+
      logoBrand.innerHTML = data.brandLogo.map(function(i, e) {
           return `<img data-aos="flip-right" data-aos-delay="${(e + 1) * 100}" data-aos-duration="1000" src="${i.imgURL}" alt="${i.name}">`
      }).join('');
@@ -73,15 +75,11 @@ function getData() {
 
 function renderStarReview(star) {
      var starHTML = "";
-     for (var i = 1; i <= 5; i++) {
-          if (i <= star)
-               starHTML += "<span class='fa fa-star checked'></span>"
-          else
-               starHTML += "<span class='fa fa-star'></span>"
-     }
+     for (var i = 1; i <= 5; i++)
+          starHTML += i <= star ? "<span class='fa fa-star checked'></span>" : "<span class='fa fa-star'></span>";
      return starHTML;
 }
 
 function Price(price, sale) {
-     return sale > 0 ? `<p class='price'><span>$${price.toFixed(2)}</span> from $${(price * (1 - sale / 100)).toFixed(2)}</p>` : `<p class="price">from $${price.toFixed(2)}</p>`
+     return `<p class='price'><span>${sale > 0 ? "$" + price.toFixed(2) : ""}</span> from $${(price * (1 - sale / 100)).toFixed(2)}</p>`;
 }

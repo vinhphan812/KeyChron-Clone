@@ -168,7 +168,15 @@
 .visible:hover {
      color: #000;
      opacity: 1;
-     box-shadow: 0 0 5px 2px #333;
+}
+
+.visible>i {
+     text-shadow: 0 0 2px #333;
+     transition: text-shadow 300ms;
+}
+
+.visible:hover>i {
+     text-shadow: 0 0 5px #333;
 }
 
 .open__menu__right .main::after {
