@@ -23,6 +23,55 @@ ul {
      list-style-type: none;
 }
 
+.view {
+     position: relative;
+     color: #fff;
+     opacity: 0.75;
+     overflow: hidden;
+     z-index: 10;
+     transition: color 300ms, opacity 300ms;
+     animation: shaw 1s linear infinite;
+}
+
+@keyframes shaw {
+     0% {
+          box-shadow: 0 0 5px 0 #fff;
+     }
+     50% {
+          box-shadow: 0 0 10px 0 #fff;
+     }
+     100% {
+          box-shadow: 0 0 5px 0 #fff;
+     }
+}
+
+.view:hover {
+     color: #fff;
+     opacity: 1;
+}
+
+.view:hover>div {
+     transform: skewX(45deg) translateX(-10%);
+}
+
+.view>div {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 200%;
+     height: 100%;
+     transform: skewX(45deg) translateX(-120%);
+     background-color: #ffffff66;
+     transition: transform 1s;
+}
+
+.view>button {
+     font-size: 1.2rem;
+     background-color: #ffffff33;
+     padding: .5rem 1rem;
+     border: 5px solid #fff;
+}
+
 #loading {
      width: 100vw;
      display: flex;
