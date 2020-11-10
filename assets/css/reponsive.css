@@ -13,7 +13,7 @@
           width: 50vw;
           background-color: #fff;
           margin: 0;
-          z-index: 2;
+          z-index: 5;
      }
      .top>.active {
           right: 0;

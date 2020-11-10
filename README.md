@@ -1,11 +1,20 @@
 # KeychronClone
 
-# How to run
-     - install [nodeJS](https://nodejs.org/en/download/)
+# Description 
 
-``` base
-     Open terminal at folder project and run command: npm install --save
-     Start Server is run: npm start 
-```
+**`FONT-END`** using Library: [ReactJs](https://reactjs.org/), [BootStrap](https://getbootstrap.com/), [FontAwesome](https://fontawesome.com/), [AOSjs](https://michalsnik.github.io/aos/).
+**`BACK-END`** using Library: [ExpressJs](https://expressjs.com/), [BodyParser](https://www.npmjs.com/package/body-parser).
+
+# How to run
+## installation
+ 1. Download [NodeJs](https://nodejs.org/en/download/).
+ 2. Download [Visual Studio Code](https://code.visualstudio.com/download).
+ 3. open `Visual studio code` then open folder contain project.
+ 4. Open terminal `Ctrl + Shift + ~` (window) and run command:
+ ```base
+     npm install --save
+     npm start
+ ```
 
 [Long Shaww](https://www.facebook.com/long.shaww/)
+[Vinh Phan](https://www.facebook.com/id.24.10.2001.788)

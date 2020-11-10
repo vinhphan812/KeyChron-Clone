@@ -5,22 +5,21 @@
      <title>Keychron</title>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
      <link rel="shortcut icon" href="favicon.png" type="image/png">
 
      <!-- labrary -->
      <!-- AOS -->
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-     <!-- Jquery -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <!-- Css Bootstrap 3-4 -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
      <!-- Font awesome -->
      <script src="https://kit.fontawesome.com/7d63550d9f.js" crossorigin="anonymous"></script>
-
+     <!-- ReactJs -->
+     <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+     <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
      <!-- css page -->
      <link rel="stylesheet" href="./css/style.css">
      <link rel="stylesheet" href="./css/darkmode.css">
@@ -28,7 +27,7 @@
      <link rel="stylesheet" href="./css/reponsive.css">
 </head>
 
-<body id="top__page">
+<body id="top__page" class="loading">
      <div class="text_notification">K1, K2, K4, K6 and K8 will be shipped out in three business days. Pre-orders will be shipped out on October 15th.</div>
      <div class="top" id="top">
           <div class="top__logo">
@@ -109,54 +108,10 @@
                     <span class="sr-only">Next</span>
                </a>
           </div>
-          <!--Signature-->
           <h2 class="h2sig">Signature Keychron Features</h2>
-          <!--Signature//-->
-          <!--Content-->
-          <div id="hightlights">
-               <div class="flex-container">
-                    <div class="flex-item" data-aos="fade-up-right" data-aos-duration="1000">
-                         <img src="./img/product/K2-hero2_540x.jpg">
-                    </div>
-                    <div class="flex-item" data-aos="fade-up-left" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
-                         <h2 class="title">Wireless & Wired</h2>
-                         <p class="subtitle">Connect the keyboard with up to 3 devices via Bluetooth or to a single device with the USB Type-C wired option. Pair it up with your smartphone, laptop and iPad, and switch amongst the devices swiftly, that is best for home, office
-                              and light gaming uses. </p>
-                         <button class="button">
-                         <span>Discovery Keyboard</span>
-               </button>
-                    </div>
-               </div>
-               <!--reverse-->
-               <div class="flex-container reverse">
-                    <div class="flex-item" data-aos="fade-up-right" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
-                         <img src="./img/product/Keychron_ultra_slim_RGB_backlight_wireless_mechanical_keyboard_Gateron_low_profile_switch_Mac_multimedia_layout_540x.jpg">
-                    </div>
-                    <div class="flex-item" data-aos="fade-up-left" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
-                         <h2 class="title">Keychron's Mac Layout</h2>
-                         <p class="subtitle">Keychron is one of the few mechanical keyboards that features macOS media keys (F1 to F12) in a Mac layout with the same as conventional Mac systems.
-                         </p>
-                         <button class="button">
-                   <span>Discovery Keyboard</span>
-                </button>
-                    </div>
-               </div>
 
-               <!--reverse//-->
-               <div class="flex-container">
-                    <div class="flex-item" data-aos="fade-up-right" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
-                         <img src="./img/product/k4-frontpage_540x.jpg">
-                    </div>
-                    <div class="flex-item" data-aos="fade-up-left" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
-                         <h2 class="title">Compatible With All Devices</h2>
-                         <p class="subtitle">Keychron keyboards are 100% compatible with multiple operating systems. Perfectly suitable for macOS, Windows, iOS, as well as Android.
-                         </p>
-                         <button class="button">
-                   <span>Discovery Keyboard</span>
-                </button>
-                    </div>
-               </div>
-          </div>
+          <!-- DOM hightlight React -->
+          <div id="hightlights"></div>
           <!--logo-->
           <div class="logo__scroll" id="logoBrand"></div>
 
@@ -180,60 +135,10 @@
 
           <!--3 column-->
           <h2 style="font-weight: bold;text-indent: 16%;">Various Layout</h2>
-          <div class="flex-col-3" id="various">
-               <a href="#" class="flex-item-col">
-                    <img src="./img/product/KeyChronK2-V2.jpg">
-                    <div class="detail col">
-                         <p class="name__product">Keychron K2 Wireless Mechanical Keyboard (Version2)</p>
-                         <div class="reviews">
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star checked"></span>
-                              <span>424 reviews</span>
-                         </div>
-
-                         <p class="price">from $69.00</p>
-                    </div>
-               </a>
-               <a href="#" class="flex-item-col">
-                    <img src="./img/product/KeyChronK4.jpg">
-                    <div class="detail col">
-                         <p class="name__product">Keychron K4 Wireless Mechanical Keyboard</p>
-                         <div class="reviews">
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star"></span>
-                              <span>202 reviews</span>
-                         </div>
-                         <p class="price">from $59.00</p>
-                    </div>
-
-               </a>
-               <a href="#" class="flex-item-col">
-                    <img src="./img/product/KeyChronK6.jpg">
-                    <div class="detail col">
-                         <p class="name__product">Keychron K6 Wireless Mechanical Keyboard</p>
-                         <div class="reviews">
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star checked"></span>
-                              <span>147 reviews</span>
-                         </div>
-
-                         <p class="price">from $69.00</p>
-                    </div>
-
-               </a>
-          </div>
+          <div class="flex-col-3" id="various"></div>
           <!--3 column//-->
           <h2 style="font-weight: bold;text-indent:16%;margin-top:5rem;margin-bottom: 5rem;">Blog posts</h2>
-          <div class="flex-col-3">
+          <div class="flex-col-3" id="blog">
                <div class="flex-item-col">
                     <img src="./img/product/Keychron_keyboards_Video_Review_-_August_2020_400x.jpeg">
                     <div class="detail">
@@ -291,28 +196,19 @@
                </div>
           </div>
           <a href="#top__page" id="up__top" class="up__top hidden"><i class="far fa-caret-square-up fa-3x"></i></a>
-          <div class="d-flex justify-content-center">
-               <div class="spinner-border" role="status">
+          <div id="loading">
+               <div class="spinner-border text-light position-fixed" style="width: 5rem; height: 5rem; margin: auto; top: 50%" role="status">
                     <span class="sr-only">Loading...</span>
                </div>
           </div>
      </div>
      <div id="root"></div>
+
      <!--footer-->
-     <script src="./js/scroll.js" type="text/javascript"></script>
-     <script src="./js/getData.js" type="text/javascript"></script>
-     <script>
-          window.onload = function() {
-               AOS.init();
-
-          }
-
-          function darkMode() {
-               return document.body.className ? document.body.className = "" : document.body.className = "dark-mode";
-          }
-     </script>
+     <script src="./js/DOM.js" type="text/babel"></script>
      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+     <script src="./js/scroll.js" type="text/javascript"></script>
 </body>
 
 </html>

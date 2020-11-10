@@ -18,7 +18,7 @@
 
 <body class="loading">
      <!--Content-->
-     <div class="landing1" id="Keychron">
+     <div class="landing" id="Keychron">
           <div class="container">
                <div class="topnav">
                     <a href="#home">Home</a>
@@ -27,7 +27,7 @@
                     <a href="#about">About</a>
                </div>
           </div>
-          <div class="landing1text">
+          <div class="landingtext">
                <a href="https://www.facebook.com/long.shaww" target="_blank">
                     <div class="avt"></div>
                </a>
@@ -36,68 +36,25 @@
                <a href="./HOME">
                     <button>Keychron Clone Project</button>
                </a>
+               <a href="#info">
+                    <i class="fa fa-chevron-down"></i>
+               </a>
           </div>
      </div>
      <!--paragraph-->
-     <div class="contentparagraph1" data-aos="fade-up" data-aos-anchor-splacement="center-center">
-          <h2 style="text-align:center;font-weight: bold;">Info:</h2>
-          <ul>
-               <li>Name/NickName: Trần Thanh Long/longshaww</li>
-               <li>Age: 18+</li>
-          </ul>
-          <h2 style="text-align:center;font-weight: bold;">Background:</h2>
-          <ul>
-               <li>Abilities: Newbie FrontEnd Developer , a bit JavaScript, C# , C# Winform</li>
-               <li>Studying at University of Foreign Languages and Information Technology</li>
-               <li>Major: Information Technology</li>
-          </ul>
-     </div>
-
-     <div class="landing2" id="landing2"></div>
-     <!--paragraph-->
-     <div class="contentparagraph2">
-          <p>Project S: Keychron Clone</p>
-     </div>
-     <!--paragraph-->
-     <div class="landing3"></div>
-     <div class="contentparagraph2">
-          <p>Link to the Project S:</p>
-          <a href=#Keychron> <button> Visit my Project S</button></a>
-     </div>
-
-     <!--Content-->
-
-     <!--footer-->
-     <div class="footerbg">
-          <div class="footer">
-               <div class="iconrow">
-                    <i class="fa fa-facebook fa-2x" aria-hidden="true"> 
-            <i class="fa fa-twitter" aria-hidden="true"> 
-                <i class="fa fa-instagram " aria-hidden="true"> 
-                    <i class="fa fa-youtube-play " aria-hidden="true"> </i></i>
-                    </i>
-                    </i>
-               </div>
-               <div class="keychronrow">
-                    <h4 style="font-weight: Bold;">KEYCHRON</h4>About us<br>Where to Buy<br>Careers<br>Blog<br>Contact us
-                    <br>Influencer</div>
-               <div class="helprow">
-                    <h4 style="font-weight: Bold">HELP & SUPPORT</h4>User Manual<br>Firmwares
-                    <br>Help Center <br> Shipping Policy <br> Return Policy <br> Warranty
-                    <br>Privacy Policy<br>Terms Of Service<br>Different Layout Survey<br> Sitemap
-               </div>
-               <div class="bethefirstrow">
-                    <h4 style="font-weight: bold;">BE THE FIRST TO KNOW</h4>
-                    Get the latest product news, special offers and interesting behind-the-scenes stories from us
-                    <form action="/action_page.php">
-                         <label for="email"></label>
-                         <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
-                         <input type="email" id="email" name="email" value="Enter your email">
-                    </form>
-               </div>
-          </div>
-          <div class="copyright">
-               © 2020 Copyright longshaww | A newbie FrontEnd Developer
+     <div class="info" id="info" data-aos="fade-up" data-aos-anchor-splacement="center-center">
+          <div class="info__content">
+               <h2 class="title">Info:</h2>
+               <ul>
+                    <li>Name/NickName: Trần Thanh Long/longshaww</li>
+                    <li>Age: 18+</li>
+               </ul>
+               <h2 class="title">Background:</h2>
+               <ul>
+                    <li>Abilities: Newbie FrontEnd Developer , a bit JavaScript, C# , C# Winform</li>
+                    <li>Studying at University of Foreign Languages and Information Technology</li>
+                    <li>Major: Information Technology</li>
+               </ul>
           </div>
      </div>
      <!--footer-->
@@ -110,6 +67,7 @@
           window.onload = function() {
                AOS.init();
                stopLoading();
+               return window.location.hash ? window.location.href = "/" : "";
           }
 
           function stopLoading() {

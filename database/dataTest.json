@@ -77,7 +77,7 @@
           "name": "The Next Web",
           "imgURL": "./img/logo/tnw.png"
      }],
-     "product": [{
+     "products": [{
           "name": "Keychron K2 Wireless Mechanical Keyboard (Version2)",
           "URL": "#",
           "imgURL": "./img/product/KeyChronK2-V2.jpg",
@@ -94,7 +94,7 @@
           "star": 4,
           "reviews": 202,
           "price": 69,
-          "sale": 14.4927536232,
+          "sale": 10,
           "isVarious": true,
           "isStock": true
      }, {
@@ -109,19 +109,19 @@
           "isStock": true
      }],
      "Blog": [{
-          "imgURL": "",
-          "date": "",
-          "title": "",
-          "URL": ""
+          "imgURL": "./img/product/Keychron_keyboards_Video_Review_-_August_2020_400x.jpeg",
+          "date": "SEP 26,2020",
+          "title": "Keychron Keyboards Video Review-August 2020",
+          "URL": "#"
      }, {
-          "imgURL": "",
-          "date": "",
-          "title": "",
-          "URL": ""
+          "imgURL": "./img/product/Keychron_K8_400x.jpg",
+          "date": "SEP 02,2020",
+          "title": "Keychron keyboard Article Review-August 2020",
+          "URL": "#"
      }, {
-          "imgURL": "",
-          "date": "",
-          "title": "",
-          "URL": ""
+          "imgURL": "./img/product/Keychron_keyboards_video_review_400x.jpg",
+          "date": "AUG 29,2020",
+          "title": "Keychron keyboards Video Review-July 2020",
+          "URL": "#"
      }]
 }

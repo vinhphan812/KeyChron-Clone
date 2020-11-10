@@ -1,6 +1,6 @@
 :root {
      font-size: 16px;
-     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     font-family: "Lato", sans-serif;
 }
 
 html {
@@ -12,6 +12,7 @@ body {
      color: black;
      letter-spacing: 0.025em;
      margin: 0;
+     font-weight: 400;
      transition: background-color linear 300ms;
 }
 
@@ -52,6 +53,23 @@ a:hover {
 
 a:focus {
      outline: none;
+}
+
+#loading {
+     width: 100vw;
+     display: flex;
+     justify-content: center;
+     z-index: 30;
+}
+
+.loading::after {
+     content: '';
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #ababab55;
 }
 
 .navbar {
@@ -182,8 +200,15 @@ footer {
      height: 100%;
 }
 
+
+/* 
+.flex-item:hover>img {
+     opacity: 0.7;
+} */
+
 .flex-item>img {
      width: 100%;
+     transition: opacity 400ms;
 }
 
 .flex-item>.title {
@@ -385,7 +410,7 @@ input {
      bottom: 0;
      left: 10%;
      top: 30%;
-     z-index: 10;
+     z-index: 4;
      color: #fff;
      text-shadow: 0 0 5px #000;
      text-align: center;
