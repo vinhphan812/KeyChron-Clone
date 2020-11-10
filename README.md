@@ -2,8 +2,9 @@
 
 # Description 
 
-**`FONT-END`** using Library: [ReactJs](https://reactjs.org/), [BootStrap](https://getbootstrap.com/), [FontAwesome](https://fontawesome.com/), [AOSjs](https://michalsnik.github.io/aos/).
-**`BACK-END`** using Library: [ExpressJs](https://expressjs.com/), [BodyParser](https://www.npmjs.com/package/body-parser).
+-**`FONT-END`** using Library: [ReactJs](https://reactjs.org/), [BootStrap](https://getbootstrap.com/), [FontAwesome](https://fontawesome.com/), [AOSjs](https://michalsnik.github.io/aos/).
+
+-**`BACK-END`** using Library: [ExpressJs](https://expressjs.com/), [BodyParser](https://www.npmjs.com/package/body-parser).
 
 # How to run
 ## installation
