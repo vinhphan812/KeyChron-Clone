@@ -12,7 +12,6 @@ $(document).ready(function() {
      $('#close__menu').click(closeMenu);
 })
 
-
 function stopLoading() {
      $("#loading").remove();
      $(document.body).removeClass('loading');
@@ -23,12 +22,10 @@ function darkMode() {
      return !body.hasClass('dark-mode') ? body.addClass('dark-mode') : body.removeClass('dark-mode');
 }
 
-
-// window.addEventListener('scroll', topBar);
-
+//
 function topBar() {
      const top = $('#top');
-     const toTop = $('#toTop');
+     const toTop = $('#up__top');
 
      if (document.documentElement.scrollTop > 130) {
           top.addClass('top__nav');
@@ -38,9 +35,6 @@ function topBar() {
           toTop.removeClass('visible');
      }
 }
-
-
-// document.body.onresize = showMenuBar;
 
 function showMenuBar() {
      const user = $('#icon__bar>a:nth-child(1)');

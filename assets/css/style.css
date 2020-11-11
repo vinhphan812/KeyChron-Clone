@@ -13,7 +13,7 @@ body {
      letter-spacing: 0.025em;
      margin: 0;
      font-weight: 400;
-     transition: background-color linear 300ms;
+     transition: background-color linear 500ms;
 }
 
 button {
@@ -427,7 +427,7 @@ input {
 
 .carousel-caption>.button:hover {
      color: #fff;
-     border-radius: 10px;
+     border-radius: 20px;
      box-shadow: 0 0 10px 2px #333;
 }
 

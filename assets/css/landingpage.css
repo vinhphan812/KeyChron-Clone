@@ -68,6 +68,7 @@ ul {
 .view>button {
      font-size: 1.2rem;
      background-color: #ffffff33;
+     letter-spacing: .3rem;
      padding: .5rem 1rem;
      border: 5px solid #fff;
 }

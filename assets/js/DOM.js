@@ -44,12 +44,13 @@ function App(data){
           ReactDOM.render(<Various products={data.products}/>, $('#various')[0])
           ReactDOM.render(<Blog blog={data.Blog} />, $('#blog')[0]);
 
-          AOS.init();
+          AOS.init(); // animation on scroll 
      } catch (error) {
           AOS.init();
      }
 }
 
+//component render Carousel
 class Slide extends React.Component{
      render(){
           return this.props.list.map((item) => this.SlideItem(item))
@@ -67,10 +68,10 @@ class Slide extends React.Component{
           )
      }
 }
-
+// Component render Hight Light 
 class HightLight extends React.Component {
      render(){
-          return this.props.list.map((item, index) => this.Item(item, index))
+          return this.props.list.map((item, index) => this.Item(item, index));
      }
      Item(data, index) {
           return (
