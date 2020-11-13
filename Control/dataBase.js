@@ -39,6 +39,24 @@ class dataBase {
                }
           })
      }
+     getProducts() {
+          return new Promise((resolve, reject) => {
+               try {
+                    return rData().then(data => resolve(data.products)).catch(err => reject(err));
+               } catch (error) {
+                    reject(error);
+               }
+          })
+     }
+     getUser() {
+          return new Promise(async(resolve, reject) => {
+               try {
+                    return await rData(pathUser).then(data => resolve(data)).catch(err => reject(err));
+               } catch (error) {
+                    reject(error);
+               }
+          })
+     }
      addUser(info = { user, pass, name, email }) {
           return new Promise(async(resolve, reject) => {
                rData(pathUser).then((data) => {

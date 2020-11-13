@@ -106,15 +106,6 @@ footer {
      @media (max-width: 600px);
 }
 
-@keyframes fade {
-     from {
-          height: 0;
-     }
-     to {
-          height: auto;
-     }
-}
-
 .img-slide {
      width: 100%;
      height: 80vh;
@@ -470,15 +461,4 @@ input {
      width: 100%;
      position: absolute;
      padding-left: 46px;
-}
-
-@keyframes fade-up {
-     from {
-          opacity: 0;
-          transform: translateY(2rem);
-     }
-     to {
-          opacity: 1;
-          transform: translateY(0);
-     }
 }

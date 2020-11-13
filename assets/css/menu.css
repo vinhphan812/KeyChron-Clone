@@ -24,15 +24,6 @@
      animation: translateY 1s;
 }
 
-@keyframes translateY {
-     0% {
-          top: -6rem
-     }
-     100% {
-          top: 0
-     }
-}
-
 .top>.top__icon__user {
      height: 100%;
      display: flex;
@@ -125,15 +116,6 @@
      animation: translateX 1s;
 }
 
-@keyframes translateX {
-     from {
-          right: 100%;
-     }
-     to {
-          right: 3rem;
-     }
-}
-
 .act__drop>a>i {
      transition: transform linear 200ms;
 }
@@ -187,15 +169,4 @@
      right: 0;
      z-index: 1;
      animation: delay-off 0.4 forwards;
-}
-
-@keyframes delay-off {
-     to {
-          opacity: 0;
-          background-color: #000000aa;
-     }
-     from {
-          opacity: 1;
-          background-color: #000000ff;
-     }
 }

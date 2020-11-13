@@ -57,5 +57,5 @@ function show() {
 
 function closeMenu() {
      menu.classList.remove('active');
-     $(document.body).removeAttr('class');
+     $(document.body).removeClass('open__menu__right');
 }
