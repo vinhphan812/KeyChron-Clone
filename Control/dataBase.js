@@ -29,12 +29,28 @@ function wData(path = pathDB, data) {
 }
 
 class dataBase {
-     contructor() {}
+     DATA = false;
+     contructor() {
+
+     }
      getData() {
-          return new Promise((resolve, reject) => {
+          return new Promise(async(resolve, reject) => {
                try {
-                    return rData().then(data => resolve(data)).catch(error => reject(error));
+                    let data;
+                    if (this.DATA)
+                         data = this.DATA;
+                    else
+                         data = this.DATA = await rData();
+
+                    resolve({
+                         slide: data.slide,
+                         hightlights: data.hightlights,
+                         logo: data.brandLogo,
+                         various: data.products.filter((i) => i.isVarious),
+                         Blog: data.Blog.filter((i) => i.isHight)
+                    });
                } catch (error) {
+                    console.log(error);
                     reject("read data error");
                }
           })

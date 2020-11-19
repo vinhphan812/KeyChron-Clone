@@ -185,6 +185,7 @@ footer {
 }
 
 .flex-item {
+     margin: 1rem 0;
      padding: 0 20px;
      width: 50%;
      flex-grow: 1;
@@ -262,6 +263,10 @@ footer {
 
 .flex-item-col>.detail>.price {
      font-size: 1rem;
+}
+
+.flex-item-col>.detail>.price>span {
+     text-decoration: line-through;
 }
 
 .checked {
@@ -350,8 +355,10 @@ video {
 }
 
 .footerbg {
-     height: auto;
+     margin-top: 5rem;
+     padding: 2rem;
      width: 100%;
+     box-shadow: 0 0 5px 0 #333;
 }
 
 .iconrow {
@@ -378,9 +385,6 @@ video {
 
 .copyright {
      text-align: left;
-     margin-top: 5rem;
-     margin-bottom: 3rem;
-     margin-left: 10%;
      font-size: 12px;
 }
 
@@ -396,11 +400,15 @@ input {
 }
 
 .carousel-caption {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
      position: absolute;
      right: 10%;
      bottom: 0;
      left: 10%;
-     top: 30%;
+     top: 0;
      z-index: 4;
      color: #fff;
      text-shadow: 0 0 5px #000;
@@ -410,7 +418,6 @@ input {
 .carousel-caption>.button {
      background-color: #ffffff33;
      border: 2px solid #fff;
-     margin: auto;
      border-radius: 0;
      text-shadow: 0 0 5px #333;
      transition: box-shadow 300ms, border-radius 300ms;

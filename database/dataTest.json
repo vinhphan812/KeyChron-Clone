@@ -107,21 +107,66 @@
           "sale": 0,
           "isVarious": true,
           "isStock": true
+     }, {
+          "name": "Keychron K1 Wireless Mechanical Keyboard (Version 4)",
+          "URL": "#",
+          "imgURL": "",
+          "star": 4,
+          "reviews": 482,
+          "price": 69,
+          "sale": 0
+     }, {
+          "name": "Keychron K8 Wireless Mechanical Keyboard",
+          "URL": "#",
+          "imgURL": "",
+          "star": 4,
+          "reviews": 103,
+          "price": 69,
+          "sale": 0
+     }, {
+          "name": "Keychron K2 (Hot-swappable) Wireless Mechanical Keyboard",
+          "URL": "#",
+          "imgURL": "#",
+          "star": 4,
+          "reviews": 8,
+          "price": 79,
+          "sale": 0
      }],
      "Blog": [{
           "imgURL": "./img/product/Keychron_keyboards_Video_Review_-_August_2020_400x.jpeg",
-          "date": "SEP 26,2020",
+          "date": "SEP 26, 2020",
           "title": "Keychron Keyboards Video Review-August 2020",
-          "URL": "#"
+          "URL": "#",
+          "isHight": false
      }, {
           "imgURL": "./img/product/Keychron_K8_400x.jpg",
-          "date": "SEP 02,2020",
+          "date": "SEP 02, 2020",
           "title": "Keychron keyboard Article Review-August 2020",
-          "URL": "#"
+          "URL": "#",
+          "isHight": false
      }, {
           "imgURL": "./img/product/Keychron_keyboards_video_review_400x.jpg",
-          "date": "AUG 29,2020",
+          "date": "AUG 29, 2020",
           "title": "Keychron keyboards Video Review-July 2020",
-          "URL": "#"
+          "URL": "#",
+          "isHight": false
+     }, {
+          "imgURL": "/img/product/thumbnail22.jpg",
+          "date": "NOV 16, 2020",
+          "title": "How We Designed the Low Profile Optical Switch Differently",
+          "URL": "#",
+          "isHight": true
+     }, {
+          "imgURL": "/img/product/blog_thumbnail.jpg",
+          "date": "NOV 16, 2020",
+          "title": "Keychron keyboards Article Review- October 2020",
+          "URL": "",
+          "isHight": true
+     }, {
+          "imgURL": "/img/product/Lark20201113.jpg",
+          "date": "NOV 16, 2020",
+          "title": "Keychron Keyboards Video Review — October 2020",
+          "URL": "#",
+          "isHight": true
      }]
 }

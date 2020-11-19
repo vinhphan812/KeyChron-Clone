@@ -13,7 +13,6 @@ var cookie = {
      name: 'user',
      keys: ['key1', 'key2'],
      secret: 'keyboard cat',
-     // genid: (req) => genuuid(),
      cookie: { maxAge: 10000 }
 }
 
@@ -47,6 +46,10 @@ app.get('/HOME', (req, res) => {
 
 app.get('/data', async(req, res) => {
      res.json(await db.getData());
+})
+
+app.get('/data/slide', async(req, res) => {
+
 })
 
 app.get('/data/products', async(req, res) => {
