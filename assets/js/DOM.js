@@ -77,10 +77,10 @@ class HightLight extends React.Component {
           var data = props.data, index = props.index;
           return (
           <div className={"flex-container" + (index%2 != 0 ? ' reverse' : "")}>
-               <div className="flex-item" data-aos="fade-up-right" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
+               <div className="flex-item" data-aos="fade-up-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                     <img src={data.imgURL}/>
                </div>
-               <div class="flex-item" data-aos="fade-up-left" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
+               <div class="flex-item" data-aos="fade-up-left" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                     <h2 className="title">{data.title}</h2>
                     <p className="subtitle">{data.content}</p>
                     <button className="button"><span>{data.btnContent}</span></button>

@@ -52,10 +52,23 @@ function showMenuBar() {
 function show() {
      menu.className = 'top__container active';
      $(document.body).addClass('open__menu__right');
-     main.onclick = closeMenu;
+     $('#main').on('click', closeMenu);
 }
 
 function closeMenu() {
      menu.classList.remove('active');
      $(document.body).removeClass('open__menu__right');
+     $('#main').off('click', closeMenu);
+}
+
+function showSearch() {
+     $('#searchBox').addClass('active');
+     $(document.body).addClass('open__menu__right');
+     $('#main').on('click', closeSearch);
+}
+
+function closeSearch() {
+     $('#searchBox').removeClass('active');
+     $(document.body).removeClass('open__menu__right');
+     $('#main').off('click', closeSearch);
 }
