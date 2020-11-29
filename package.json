@@ -9,14 +9,14 @@
      },
      "repository": {
           "type": "git",
-          "url": "git+https://github.com/longshaww/KeychronClone.git"
+          "url": "git+https://github.com/vinhphan812/KeyChron-Clone.git"
      },
      "author": "",
      "license": "ISC",
      "bugs": {
-          "url": "https://github.com/longshaww/KeychronClone/issues"
+          "url": "https://github.com/vinhphan812/KeyChron-Clone/issues"
      },
-     "homepage": "https://github.com/longshaww/KeychronClone#readme",
+     "homepage": "https://github.com/vinhphan812/KeyChron-Clone#readme",
      "dependencies": {
           "body-parser": "^1.19.0",
           "express": "^4.17.1",
