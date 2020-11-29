@@ -16,11 +16,6 @@ var cookie = {
      cookie: { maxAge: 10000 }
 }
 
-// if (app.get('env') === 'production') {
-//      app.set('trust proxy', 1) // trust first proxy
-//      sess.cookie.secure = true // serve secure cookies
-// }
-
 app.set('trust proxy', 1);
 app.use(session(cookie));
 
@@ -87,10 +82,6 @@ app.post('/login', async(req, res) => {
           return res.send(user.pass == req.body.pass);
      res.send(false);
 })
-
-// app.get(/a/, function(req, res) {
-//      res.send('/a/')
-// })
 
 app.get('/users/:userId/books/:bookId', function(req, res) {
      res.send(req.params)

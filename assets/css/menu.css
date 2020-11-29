@@ -1,205 +1,211 @@
 .text_notification {
-     background-color: #000;
-     color: #fff;
-     font-size: 1rem;
-     line-height: 2rem;
-     text-align: center;
+	background-color: #000;
+	color: #fff;
+	font-size: 1rem;
+	line-height: 2rem;
+	text-align: center;
+	position: sticky;
+	z-index: 11;
 }
 
 .top {
-     background-color: #fff;
-     height: 6rem;
-     width: 100%;
-     transition: top ease 300ms;
-     z-index: 5;
-     box-shadow: 0 0 5px 0 #999;
+	background-color: #fff;
+	height: 6rem;
+	width: 100%;
+	transition: top ease 300ms;
+	z-index: 5;
+	box-shadow: 0 0 5px 0 #999;
 }
 
 .top__nav {
-     position: fixed;
-     top: 0rem;
-     animation: translateY 1s;
+	position: fixed;
+	top: 0rem;
+	animation: translateY 1s;
 }
 
-.top>.top__component {
-     position: relative;
-     display: flex;
-     align-items: center;
-     justify-content: space-evenly;
-     height: 100%;
+.top > .top__component {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 100%;
 }
 
-.top>.top__component>.top__icon__user {
-     height: 100%;
-     display: flex;
-     align-items: center;
-     justify-self: center;
+.top > .top__component > .top__icon__user {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-self: center;
 }
 
-.top>.top__component>.top__icon__user>a>i {
-     margin: 0 1rem;
-     padding: .5rem;
-     color: #888;
+.top > .top__component > .top__icon__user > a > i {
+	margin: 0 1rem;
+	padding: 0.5rem;
+	color: #888;
 }
 
-.top>.top__component>.top__icon__user>a>i:hover {
-     opacity: 1;
-     color: #000;
+.top > .top__component > .top__icon__user > a > i:hover {
+	opacity: 1;
+	color: #000;
 }
 
-.top>.top__component>.top__icon__user>.hidden {
-     display: none;
+.top > .top__component > .top__icon__user > .hidden {
+	display: none;
 }
 
 .top__container {
-     height: 100%;
-     transition: width linear 300ms, right linear 300ms;
+	height: 100%;
+	transition: width linear 300ms, right linear 300ms;
 }
 
 .btn__close {
-     display: none;
-     margin-left: auto;
+	display: none;
+	margin-left: auto;
 }
 
 .menu {
-     display: flex;
-     flex-wrap: wrap;
-     align-items: center;
-     font-size: 1.3rem;
-     font-weight: 400;
-     width: 100%;
-     height: 100%;
-     padding-left: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-size: 1.3rem;
+	font-weight: 400;
+	width: 100%;
+	height: 100%;
+	padding-left: 1rem;
 }
 
-.menu>.menu__item {
-     position: relative;
-     height: 2rem;
-     opacity: .75;
+.menu > .menu__item {
+	position: relative;
+	height: 2rem;
+	opacity: 0.75;
 }
 
-.menu>.menu__item>a {
-     color: #000;
-     font-size: 1.4rem;
-     text-decoration: none;
-     padding: .5rem 1.5rem;
+.menu > .menu__item > a {
+	color: #000;
+	font-size: 1.4rem;
+	text-decoration: none;
+	padding: 0.5rem 1.5rem;
 }
 
-.menu>.menu__item:hover {
-     opacity: 1;
+.menu > .menu__item:hover {
+	opacity: 1;
 }
 
 .dropdown {
-     visibility: hidden;
-     position: absolute;
-     left: 0;
-     background-color: #fff;
-     width: 20rem;
-     font-size: .9em;
-     margin: .5rem 0 0 0;
-     transform: translateY(-1rem);
-     z-index: 5;
-     box-shadow: 0 1px 2px 2px #33333309;
-     transition: transform ease .2s, visibility 0.1s;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	background-color: #fff;
+	width: 20rem;
+	font-size: 0.9em;
+	margin: 0.5rem 0 0 0;
+	transform: translateY(-1rem);
+	z-index: 5;
+	box-shadow: 0 1px 2px 2px #33333309;
+	transition: transform ease 0.2s, visibility 0.1s;
 }
 
-.act__drop:hover>.dropdown,
+.act__drop:hover > .dropdown,
 .dropdown:hover {
-     visibility: visible;
-     transform: translateY(0);
+	visibility: visible;
+	transform: translateY(0);
 }
 
-.act__drop:hover>a::before {
-     content: '';
-     position: absolute;
-     left: 1.5rem;
-     right: 3rem;
-     bottom: 0;
-     display: block;
-     background-color: #dedfe0;
-     height: 1px;
-     animation: translateX 1s;
+.act__drop:hover > a::before {
+	content: "";
+	position: absolute;
+	left: 1.5rem;
+	right: 3rem;
+	bottom: 0;
+	display: block;
+	background-color: #dedfe0;
+	height: 1px;
+	animation: translateX 1s;
 }
 
-.act__drop>a>i {
-     transition: transform linear 200ms;
+.act__drop > a > i {
+	transition: transform linear 200ms;
 }
 
-.act__drop:hover a>i {
-     transform: rotate(90deg);
+.act__drop:hover a > i {
+	transform: rotate(90deg);
 }
 
-.dropdown>li {
-     padding: .5rem 2rem .5rem 1rem;
+.dropdown > li {
+	padding: 0.5rem 2rem 0.5rem 1rem;
 }
 
-.dropdown>li>a {
-     text-decoration: none;
-     color: #000;
+.dropdown > li > a {
+	text-decoration: none;
+	color: #000;
 }
 
 .up__top {
-     position: fixed;
-     bottom: 1rem;
-     right: -5rem;
-     opacity: .6;
-     transition: right ease 400ms, opacity ease 400ms;
+	position: fixed;
+	bottom: 1rem;
+	right: -5rem;
+	opacity: 0.6;
+	transition: right ease 400ms, opacity ease 400ms;
 }
 
 .visible {
-     right: 1rem;
+	right: 1rem;
 }
 
 .visible:hover {
-     color: #000;
-     opacity: 1;
+	color: #000;
+	opacity: 1;
 }
 
-.visible>i {
-     text-shadow: 0 0 1px #333;
-     transition: text-shadow 300ms;
+.visible > i {
+	text-shadow: 0 0 1px #333;
+	transition: text-shadow 300ms;
 }
 
-.visible:hover>i {
-     text-shadow: 0 0 3px #333;
+.visible:hover > i {
+	text-shadow: 0 0 3px #333;
 }
 
 .open__menu__right .main::after {
-     content: '';
-     display: block;
-     position: fixed;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     z-index: 1;
-     animation: delay-off 0.4 forwards;
+	content: "";
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	animation: delay-off 0.4 forwards;
 }
 
 .search__box.active {
-     transform: translateY(0);
+	transform: translateY(0);
 }
 
 .search__box {
-     position: absolute;
-     top: 0;
-     bottom: 0;
-     right: 0;
-     left: 0;
-     z-index: 10;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     background-color: #fff;
-     padding: 0 1rem;
-     transform: translateY(-200%);
-     transition: transform 300ms;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	padding: 0 1rem;
+	transform: translateY(-200%);
+	transition: transform 300ms;
 }
 
-.search__box>input {
-     flex-grow: 1;
-     border: 0;
-     height: 100%;
-     padding: 0 1rem;
-     font-size: 24px;
+.search__box > i:last-child {
+	cursor: pointer;
+}
+
+.search__box > input {
+	width: 80%;
+	border: 0;
+	height: 100%;
+	padding: 0 1rem;
+	font-size: 24px;
 }
