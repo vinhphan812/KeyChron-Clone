@@ -1,6 +1,6 @@
 /* Responsive layout - makes a one column-layout instead of two-column layout */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 920px) {
 	.top > .top__component > .top__container > .btn__close {
 		display: block;
 		padding: 1rem;
@@ -37,10 +37,10 @@
 		top: 0;
 	}
 	.carousel-caption > .title {
-		font-size: 2.5rem;
+		font-size: 2.5rem !important;
 	}
 	.carousel-caption > .subtitle {
-		font-size: 1rem;
+		font-size: 1rem !important;
 		margin: 1rem 0;
 	}
 	.flex-container {
@@ -79,7 +79,7 @@
 		height: 50%;
 		margin: 1rem 0;
 	}
-	.footer {
+	.footer-inner {
 		flex-direction: column;
 	}
 	.fontres {
@@ -92,7 +92,7 @@
 		font-size: 14px;
 	}
 	.carousel-caption > .title {
-		font-size: 2rem;
+		font-size: 2rem !important;
 	}
 	.carousel-caption > .subtitle {
 		margin: 1rem 0;
@@ -109,14 +109,14 @@
 	}
 	.h2sig {
 		margin-left: 1rem;
-		font-size: 1.5rem;
+		font-size: 1.5rem !important;
 	}
 }
 
 @media only screen and (max-width: 1400px) {
 }
 
-@media (min-width: 900px) and (max-width: 1400px) {
+@media (min-width: 920px) and (max-width: 1400px) {
 	.flex-container {
 		padding: 2.5rem 10%;
 	}
@@ -125,7 +125,7 @@
 		height: 28rem;
 	}
 	.flex-col-3 > .flex-item-col {
-		height: auto;
+		height: 50vh;
 		width: 30%;
 	}
 	.table__logo {

@@ -103,7 +103,7 @@
           </div>
      </div>
      <div class="main" id="main">
-          <div id="mySlide" class="carousel" data-ride="carousel">
+          <div id="mySlide" class="carousel lazy" data-ride="carousel">
                <div class="carousel-inner" id="slide"></div>
 
                <a class="carousel-control left" href="#mySlide" role="button" data-slide="prev">
@@ -115,6 +115,7 @@
                     <span class="sr-only">Next</span>
                </a>
           </div>
+
           <h2 class="h2sig">Signature Keychron Features</h2>
 
           <!-- DOM hightlight React -->
@@ -148,15 +149,13 @@
           <div class="flex-col-3" id="blog"></div>
           <!--Content//-->
           <!--footer-->
-          <div class="footerbg">
-               <div class="footer">
+          <div class="footer">
+               <div class="footer-inner">
                     <div class="iconrow">
-                         <i class="fa fa-facebook fa-2x" aria-hidden="true"> 
-            <i class="fa fa-twitter" aria-hidden="true"> 
-                <i class="fa fa-instagram " aria-hidden="true"> 
-                    <i class="fa fa-youtube-play " aria-hidden="true"> </i></i>
-                         </i>
-                         </i>
+                         <a href="#"><i class="fab fa-facebook fa-2x" aria-hidden="true"></i></a>
+                         <a href="#"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
+                         <a href="#"><i class="fab fa-instagram fa-2x" aria-hidden="true"> </i></a>
+                         <a href="#"><i class="fab fa-youtube fa-2x" aria-hidden="true"> </i></a>
                     </div>
                     <div class="keychronrow">
                          <h4 class="bold">KEYCHRON</h4>About us<br>Where to Buy<br>Careers<br>Blog<br>Contact us
@@ -169,9 +168,8 @@
                     <div class="bethefirstrow">
                          <h4 class="bold">BE THE FIRST TO KNOW</h4>
                          Get the latest product news, special offers and interesting behind-the-scenes stories from us
-                         <form action="/action_page.php" class='email'>
-                              <label for="email"></label>
-                              <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+                         <form action="/action_page.php" class="email">
+                              <i class="far fa-envelope fa-2x"></i>
                               <input type="email" id="email" name="email" placeholder="Enter your email">
                          </form>
                     </div>

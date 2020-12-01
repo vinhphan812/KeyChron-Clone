@@ -191,9 +191,15 @@ footer {
 }
 
 .flex-item-col {
+	background-color: #fff;
 	margin: 10px;
-	box-shadow: 0 0 5px 0 #333;
+	box-shadow: 0 0 5px 0 #999;
 	width: 30%;
+	transition: box-shadow 300ms;
+}
+
+.flex-item-col:hover {
+	box-shadow: 0 0 8px 0 #999;
 }
 
 .flex-item-col > img {
@@ -313,42 +319,29 @@ video {
 	border-radius: 50%;
 }
 
-.footer {
+.footer-inner {
 	display: flex;
 	width: 80%;
 	line-height: 2.8rem;
 	justify-content: center;
-	align-items: stretch;
 	margin: 5rem auto;
 }
 
-.footerbg {
+.footer {
 	margin-top: 5rem;
 	padding: 2rem;
 	width: 100%;
 	box-shadow: 0 0 5px 0 #333;
 }
 
+.footer-inner > div {
+	flex: 25%;
+}
+
 .iconrow {
-	margin-bottom: auto;
-	flex: 25%;
 	display: flex;
-	justify-content: center;
-}
-
-.keychronrow {
-	text-align: left;
-	flex: 25%;
-}
-
-.helprow {
-	text-align: left;
-	flex: 25%;
-}
-
-.bethefirstrow {
-	text-align: left;
-	flex: 25%;
+	justify-content: space-evenly;
+	align-items: flex-start;
 }
 
 .copyright {

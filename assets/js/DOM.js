@@ -50,10 +50,18 @@ function App(data) {
 		ReactDOM.render(<Various data={data.various} />, $("#various")[0]);
 		ReactDOM.render(<Blog blog={data.Blog} />, $("#blog")[0]);
 
+		checkkLoadImage();
 		AOS.init(); // animation on scroll
 	} catch (error) {
 		AOS.init(); // animation on scroll
 	}
+}
+
+function checkkLoadImage() {
+	$("#slide img").load(() => {
+		console.log("DONE");
+	});
+	console.log($("#slide img"));
 }
 
 //component render Carousel
@@ -62,14 +70,15 @@ class Slide extends React.Component {
 		return this.props.list.map((item) => <this.SlideItem data={item} />);
 	}
 	SlideItem(props) {
-		var data = props.data;
+		var data = props.data,
+			img = new Image();
 		return (
 			<div className="carousel-item">
 				<div
 					className="img-slide"
 					style={{ backgroundImage: `url(${data.imgURL})` }}
 				>
-					<img src={data.imgURL} style={{ display: "none" }} />
+					{/* <img src={data.imgURL} style={{ visibility: "hidden" }} /> */}
 				</div>
 				<div className="carousel-caption">
 					<div className="title">
@@ -100,11 +109,7 @@ class HightLight extends React.Component {
 		var data = props.data,
 			index = props.index;
 		return (
-			<div
-				className={
-					"flex-container" + (index % 2 != 0 ? " reverse" : "")
-				}
-			>
+			<div className={"flex-container" + (index % 2 != 0 ? " reverse" : "")}>
 				<div
 					className="flex-item"
 					data-aos="fade-up-right"
@@ -166,20 +171,14 @@ class Product extends React.Component {
 				<div className="detail col">
 					<p className="name__product">{product.name}</p>
 					<div className="reviews">
-						<this.StarReview
-							star={product.star}
-							reviews={product.reviews}
-						/>
+						<this.StarReview star={product.star} reviews={product.reviews} />
 					</div>
 					<div className="price">
 						<span>
-							{product.sale > 0
-								? `$${product.price.toFixed(2)}`
-								: ""}
+							{product.sale > 0 ? `$${product.price.toFixed(2)}` : ""}
 						</span>
 						<span>
-							&nbsp; form $
-							{(product.price - product.sale).toFixed(2)}
+							&nbsp; form ${(product.price - product.sale).toFixed(2)}
 						</span>
 					</div>
 				</div>
@@ -203,20 +202,18 @@ class Product extends React.Component {
 
 class Blog extends React.Component {
 	render() {
-		return <this.itemBlog blog={this.props.blog} />;
+		return this.props.blog.map((item) => <this.itemBlog blog={item} />);
 	}
 	itemBlog(props) {
-		var data = props.blog;
-		return data.map(function (item) {
-			return (
-				<a className="flex-item-col">
-					<img src={item.imgURL} alt={item.title} />
-					<div className="detail">
-						<p className="date__upload">{item.date}</p>
-						<p className="title">{item.title}</p>
-					</div>
-				</a>
-			);
-		});
+		var item = props.blog;
+		return (
+			<a className="flex-item-col">
+				<img src={item.imgURL} alt={item.title} />
+				<div className="detail">
+					<p className="date__upload">{item.date}</p>
+					<p className="title">{item.title}</p>
+				</div>
+			</a>
+		);
 	}
 }
