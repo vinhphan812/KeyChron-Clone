@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+const product = require("./routers/product.router");
 const DataBase = require("./Control/dataBase");
 var session = require("express-session");
 
@@ -22,6 +23,7 @@ app.use(session(cookie));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("assets"));
+app.use("/product", product);
 
 app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname, "./assets/view/landingpage.html"));
@@ -66,7 +68,9 @@ app.get("/login", async (req, res) => {
 		req.session.views++;
 		res.setHeader("Content-Type", "text/html");
 		res.write("<p>views: " + req.session.views + "</p>");
-		res.write("<p>expires in: " + req.session.cookie.maxAge / 1000 + "s</p>");
+		res.write(
+			"<p>expires in: " + req.session.cookie.maxAge / 1000 + "s</p>"
+		);
 		res.end();
 	} else {
 		req.session.views = 1;

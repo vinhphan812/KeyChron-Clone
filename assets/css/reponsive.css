@@ -76,7 +76,6 @@
 	}
 	.flex-col-3 > .flex-item-col {
 		width: 100%;
-		height: 50%;
 		margin: 1rem 0;
 	}
 	.footer-inner {
@@ -125,7 +124,6 @@
 		height: 28rem;
 	}
 	.flex-col-3 > .flex-item-col {
-		height: 50vh;
 		width: 30%;
 	}
 	.table__logo {

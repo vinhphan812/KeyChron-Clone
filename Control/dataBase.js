@@ -29,21 +29,19 @@ function wData(path = pathDB, data) {
 }
 
 class dataBase {
-	DATA = false;
+	DATA;
 	contructor() {}
 	getData() {
 		return new Promise(async (resolve, reject) => {
 			try {
-				let data;
-				if (this.DATA) data = this.DATA;
-				else data = this.DATA = await rData();
+				if (!this.DATA) this.DATA = await rData();
 
 				resolve({
-					slide: data.slide,
-					hightlights: data.hightlights,
-					logo: data.brandLogo,
-					various: data.products.filter((i) => i.isVarious),
-					Blog: data.Blog.filter((i) => i.isHight),
+					slide: this.DATA.slide,
+					hightlights: this.DATA.hightlights,
+					logo: this.DATA.brandLogo,
+					various: this.DATA.products.filter((i) => i.isVarious),
+					Blog: this.DATA.Blog.filter((i) => i.isHight),
 				});
 			} catch (error) {
 				console.log(error);
@@ -52,15 +50,20 @@ class dataBase {
 		});
 	}
 	getProducts() {
-		return new Promise((resolve, reject) => {
+		return new Promise(async (resolve, reject) => {
 			try {
-				return rData()
-					.then((data) => resolve(data.products))
-					.catch((err) => reject(err));
+				if (!this.DATA) this.DATA = await rData();
+				resolve(this.DATA.products);
+				// return rData()
+				// 	.then((data) => resolve(data.products))
+				// 	.catch((err) => reject(err));
 			} catch (error) {
 				reject(error);
 			}
 		});
+	}
+	findProducts(name) {
+		name = name.split("-").join(" ");
 	}
 	getUser() {
 		return new Promise(async (resolve, reject) => {
