@@ -1,10 +1,13 @@
 :root {
 	font-size: 16px;
-	font-family: "Lato", sans-serif;
 }
 
 html {
 	scroll-behavior: smooth;
+}
+
+hr {
+	margin: 10rem;
 }
 
 body {
@@ -14,6 +17,7 @@ body {
 	margin: 0;
 	font-weight: 400;
 	transition: background-color linear 500ms;
+	font-family: "Lato" !important;
 }
 
 button {
@@ -44,6 +48,7 @@ a {
 	text-decoration: none;
 	color: #000;
 	cursor: pointer;
+	transition: color 300ms;
 }
 
 a:hover {
@@ -53,6 +58,8 @@ a:hover {
 
 a:focus {
 	outline: none;
+	text-decoration: none;
+	color: #333;
 }
 
 #loading {
@@ -91,12 +98,6 @@ footer {
 
 .bold {
 	font-weight: Bold;
-}
-
-.h2sig {
-	font-weight: Bold;
-	margin: 10rem 0 0 8rem;
-	font-size: 1.7rem;
 }
 
 .button {
@@ -178,16 +179,17 @@ footer {
 
 .flex-item > .subtitle {
 	width: auto;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	text-align: left;
 	margin: 1rem 0;
 }
 
 .flex-col-3 {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-self: center;
-	margin: 0 20%;
+	margin: 5%;
 }
 
 .flex-item-col {
@@ -196,16 +198,17 @@ footer {
 	box-shadow: 0 0 5px 0 #999;
 	width: 30%;
 	height: 500px;
-	transition: box-shadow 300ms;
+	transition: box-shadow 300ms, transform 300ms;
 }
 
 .flex-item-col:hover {
-	box-shadow: 0 0 8px 0 #999;
+	box-shadow: 0 0 10px 0 #999;
+	transform: translateY(-15px);
 }
 
 .flex-item-col > div:first-child {
 	background: round;
-	background-size: cover;
+	background-size: contain;
 	background-position: center center;
 	border-bottom: 1px solid #eaeaea;
 	background-repeat: no-repeat;
@@ -223,6 +226,10 @@ footer {
 	height: 40%;
 	padding: 20px 10px 10px 10px;
 	background-color: #fff;
+	color: #555;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
 
 .flex-item-col > .detail > .date__upload {
@@ -231,25 +238,38 @@ footer {
 }
 
 .flex-item-col > .detail > .title {
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	text-align: left;
 }
 
 .flex-item-col > .detail > .name__product {
 	margin: 0;
 	font-size: 1.5rem;
+	color: #000;
 }
 
 .flex-item-col > .detail > .price {
 	font-size: 1rem;
 }
 
+.flex-item-col > .detail > .reviews > i {
+	text-shadow: 0 0 1px #333;
+}
+
+.flex-item-col > .detail > .reviews > i:not(.checked) {
+	color: #aaa;
+}
+
 .flex-item-col > .detail > .price > span:first-child {
 	text-decoration: line-through;
 }
 
-.checked {
-	color: orange;
+.flex-item-col > .detail > .reviews > i.fa.fa-star {
+	-webkit-text-stroke: 1px #715903cf;
+}
+
+.flex-item-col > .detail > .reviews > i.checked {
+	color: #f5ce57;
 }
 
 .logo__scroll > img {
@@ -276,14 +296,14 @@ video {
 	height: auto;
 }
 
-.contain {
+.media__video {
 	position: relative;
 	text-align: left;
 	color: black;
 	display: flex;
 }
 
-.centered {
+.media__video > .media__content {
 	position: absolute;
 	top: 50%;
 	left: 25%;
@@ -293,23 +313,22 @@ video {
 	width: 25rem;
 	height: 25rem;
 	border: 1px;
-	border-radius: 0.5rem;
 	max-width: 100%;
-	box-shadow: 0 0 5px 0 #333;
+	box-shadow: 0 0 5px 0 #aaa;
 }
 
-.centered > h2,
-.centered > p {
+.media__content > h2,
+.media__content > p {
 	width: 80%;
 }
 
-.centered > h2 {
+.media__content > h2 {
 	margin: 10px auto;
 	font-weight: bold;
 	font-size: 2.5rem;
 }
 
-.centered > p {
+.media__content > p {
 	margin: 0 auto 15px auto;
 	font-size: 1.1rem;
 }
@@ -340,7 +359,8 @@ video {
 }
 
 .footer-inner > div {
-	flex: 25%;
+	flex-basis: 100px;
+	flex-grow: 1;
 }
 
 .iconrow {
@@ -382,4 +402,11 @@ input {
 	width: 100%;
 	position: absolute;
 	padding-left: 46px;
+}
+
+.h2-title {
+	font-weight: bold;
+	text-indent: 16%;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
 }

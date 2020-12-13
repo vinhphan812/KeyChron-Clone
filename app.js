@@ -18,15 +18,16 @@ var cookie = {
 };
 
 app.set("trust proxy", 1);
-app.use(session(cookie));
+app.set("views", "./assets/view");
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static("assets"));
+app.use(session(cookie));
 app.use("/product", product);
+app.use(express.static("assets"));
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-	res.sendFile(path.join(__dirname, "./assets/view/landingpage.html"));
+	res.sendFile(path.join(__dirname, "./assets/view/index.html"));
 });
 
 app.get("/test", function (req, res, next) {
@@ -34,11 +35,7 @@ app.get("/test", function (req, res, next) {
 	req.session.views = (req.session.views || 0) + 1;
 
 	// Write response
-	res.end(req.session.views + " views");
-});
-
-app.get("/HOME", (req, res) => {
-	res.sendFile(path.join(__dirname, "./assets/view/index.html"));
+	res.end(req.session.views + "views");
 });
 
 app.get("/data", async (req, res) => {

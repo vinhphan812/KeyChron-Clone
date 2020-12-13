@@ -2,192 +2,254 @@
 <html lang="vi">
 
 <head>
-     <title>Keychron</title>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-     <link rel="shortcut icon" href="favicon.png" type="image/png">
-     <!-- labrary -->
-     <!-- AOS -->
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-     <!-- Css Bootstrap 3-4 -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-     <!-- Font awesome -->
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-     <!-- ReactJs -->
-     <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-     <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-     <!-- css page -->
-     <link rel="stylesheet" href="./css/style.css" type="text/css" />
-     <link rel="stylesheet" href="./css/darkmode.css" type="text/css" />
-     <link rel="stylesheet" href="./css/menu.css" type="text/css" />
-     <link rel="stylesheet" href="./css/reponsive.css" type="text/css" />
-     <link rel="stylesheet" href="./css/anime.css" type="text/css" />
-     <link rel="stylesheet" href="./css/carousel.css" type="text/css" />
+	<title>Keychron</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/ico" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<!-- labrary -->
+	<!-- AOS -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<!-- Css Bootstrap 3-4 -->
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+		integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
+	<!-- ReactJs -->
+	<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	<!-- <script src="./js/DOM.js" type="text/babel"></script> -->
+	<script src="./js/HOME.js" type="text/babel"></script>
+	<!-- css page -->
+	<link rel="stylesheet" href="./css/style.css" type="text/css" />
+	<link rel="stylesheet" href="./css/darkmode.css" type="text/css" />
+	<link rel="stylesheet" href="./css/menu.css" type="text/css" />
+	<link rel="stylesheet" href="./css/reponsive.css" type="text/css" />
+	<link rel="stylesheet" href="./css/anime.css" type="text/css" />
+	<link rel="stylesheet" href="./css/carousel.css" type="text/css" />
 </head>
 
 <body id="top__page" class="loading">
-     <div class="text_notification" id="notify"></div>
-     <div class="top" id="top">
-          <div class="top__component">
-               <div class="top__logo">
-                    <img src="./img/logo/update0101-2_160x.jpg" alt="Logo">
-               </div>
-               <div class="top__container" id="menu">
-                    <button class="btn__close" id="close__menu">
-                         <svg width="2rem" height="2rem" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                         </svg>
-                    </button>
-                    <ul class="menu">
-                         <li class="menu__item act__drop">
-                              <a href="#">
-                                   <span>Keyboards</span>
-                                   <i class="fa fa-chevron-right fa-xs"></i>
-                              </a>
-                              <ul class="dropdown">
-                                   <li><a href="#">KeyChron K1</a></li>
-                                   <li><a href="#">KeyChron K2</a></li>
-                                   <li><a href="#">KeyChron K2(Hot-swappable)</a></li>
-                                   <li><a href="#">KeyChron K4</a></li>
-                                   <li><a href="#">KeyChron K6</a></li>
-                                   <li><a href="#">KeyChron K8</a></li>
-                                   <li><a href="#">KeyChron K3 (Pre-order)</a></li>
-                                   <li><a href="#">KeyChron ISO Layout Collection</a></li>
-                              </ul>
-                         </li>
-                         <li class="menu__item act__drop">
-                              <a href="#">
-                                   <span>Accessories</span>
-                                   <i class="fa fa-chevron-right fa-xs"></i>
-                              </a>
-                              <ul class="dropdown">
-                                   <li><a href="#">Low Profile Keycap Set for K1</a></li>
-                                   <li><a href="#">K2 PBT Retro Mac Keycap Set</a></li>
-                                   <li><a href="#">K2 Walnut Wood Palm Rest</a></li>
-                                   <li><a href="#">K4 Keycap Set</a></li>
-                                   <li><a href="#">K4 Walnut Wood Palm Rest</a></li>
-                                   <li><a href="#">K6 Keycap Set</a></li>
-                                   <li><a href="#">K6 Walnut Wood Palm Rest</a></li>
-                                   <li><a href="#">K8 Keycap Set</a></li>
-                                   <li><a href="#">K8 Walnut Wood Palm Rest</a></li>
-                                   <li><a href="#">Switches</a></li>
-                                   <li><a href="#">T10 USB-C Hub</a></li>
-                              </ul>
-                         </li>
-                         <li class="menu__item">
-                              <a href="#">Buyers' Showcase</a>
-                         </li>
-                         <li class="menu__item">
-                              <a href="#">Get 10% off</a>
-                         </li>
-                         <li class="menu__item">
-                              <a href="#">Blog</a>
-                         </li>
-                    </ul>
-               </div>
-               <div class="top__icon__user" id="icon__bar">
-                    <a><i class="fa fa-user fa-lg"></i></a>
-                    <a><i class="fa fa-search fa-lg" onclick="showSearch()"></i></a>
-                    <a class="hidden" onclick="show()"><i class="fas fa-bars fa-lg"></i></a>
-                    <a><i class="fa fa-shopping-cart fa-lg"></i></a>
-                    <a><i class="fa fa-adjust fa-lg" aria-hidden="true" onclick="darkMode()"></i></a>
-               </div>
-               <div class="search__box" id="searchBox">
-                    <i class="fas fa-search fa-2x"></i>
-                    <input type="text" id="search" name="search" placeholder="Search our store" />
-                    <i class="fas fa-times fa-2x" onclick="closeSearch()"></i>
-               </div>
-          </div>
-     </div>
-     <div class="main" id="main">
-          <div id="mySlide" class="carousel lazy" data-ride="carousel">
-               <div class="carousel-inner" id="slide"></div>
+	<div class="text_notification" id="notify"></div>
+	<div class="top" id="top">
+		<div class="top__component">
+			<div class="top__logo">
+				<img src="./img/logo/update0101-2_160x.jpg" alt="Logo" />
+			</div>
+			<div class="top__container" id="menu">
+				<button class="btn__close close" id="close__menu">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<ul class="menu">
+					<li class="menu__item act__drop">
+						<a href="#">
+							<span>Keyboards</span>
+							<i class="fa fa-chevron-right fa-xs"></i>
+						</a>
+						<ul class="dropdown">
+							<li><a href="#">KeyChron K1</a></li>
+							<li><a href="#">KeyChron K2</a></li>
+							<li>
+								<a href="#">KeyChron K2(Hot-swappable)</a>
+							</li>
+							<li><a href="#">KeyChron K4</a></li>
+							<li><a href="#">KeyChron K6</a></li>
+							<li><a href="#">KeyChron K8</a></li>
+							<li>
+								<a href="#">KeyChron K3 (Pre-order)</a>
+							</li>
+							<li>
+								<a href="#">KeyChron ISO Layout
+									Collection</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu__item act__drop">
+						<a href="#">
+							<span>Accessories</span>
+							<i class="fa fa-chevron-right fa-xs"></i>
+						</a>
+						<ul class="dropdown">
+							<li>
+								<a href="#">Low Profile Keycap Set for
+									K1</a>
+							</li>
+							<li>
+								<a href="#">K2 PBT Retro Mac Keycap
+									Set</a>
+							</li>
+							<li>
+								<a href="#">K2 Walnut Wood Palm Rest</a>
+							</li>
+							<li><a href="#">K4 Keycap Set</a></li>
+							<li>
+								<a href="#">K4 Walnut Wood Palm Rest</a>
+							</li>
+							<li><a href="#">K6 Keycap Set</a></li>
+							<li>
+								<a href="#">K6 Walnut Wood Palm Rest</a>
+							</li>
+							<li><a href="#">K8 Keycap Set</a></li>
+							<li>
+								<a href="#">K8 Walnut Wood Palm Rest</a>
+							</li>
+							<li><a href="#">Switches</a></li>
+							<li><a href="#">T10 USB-C Hub</a></li>
+						</ul>
+					</li>
+					<li class="menu__item">
+						<a href="#">Buyers' Showcase</a>
+					</li>
+					<li class="menu__item">
+						<a href="#">Get 10% off</a>
+					</li>
+					<li class="menu__item">
+						<a href="#">Blog</a>
+					</li>
+				</ul>
+			</div>
+			<div class="top__icon__user" id="icon__bar">
+				<a><i class="fa fa-user fa-lg"></i></a>
+				<a>
+					<i class="fa fa-search fa-lg" onclick="showSearch()">
+					</i>
+				</a>
+				<a class="hidden" onclick="show()">
+					<i class="fas fa-bars fa-lg"></i>
+				</a>
+				<a>
+					<i class="fa fa-shopping-cart fa-lg"></i>
+				</a>
+				<a>
+					<i class="fa fa-adjust fa-lg" aria-hidden="true" onclick="darkMode()">
+					</i>
+				</a>
+			</div>
+			<div class="search__box" id="searchBox">
+				<i class="fas fa-search fa-2x"></i>
+				<input type="text" id="search" name="search" placeholder="Search our store" />
+				<button onclick="closeSearch()">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="main" id="main">
+		<div id="mySlide" class="carousel" data-ride="carousel">
+			<div class="carousel-inner" id="slide"></div>
+			<a class="carousel-control left" href="#mySlide" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control right" href="#mySlide" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
 
-               <a class="carousel-control left" href="#mySlide" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-               </a>
-               <a class="carousel-control right" href="#mySlide" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-               </a>
-          </div>
+		<h2 class="h2-title">Signature Keychron Features</h2>
 
-          <h2 class="h2sig">Signature Keychron Features</h2>
-
-          <!-- DOM hightlight React -->
-          <div id="hightlights"></div>
-          <!--logo-->
-          <div class="logo__scroll" id="logoBrand"></div>
-
-          <!--logo//-->
-          <!--Video 
-        Cần fix lại khúc này vì làm tràn trang !!!!-->
-          <div class="contain">
-               <video src="./img/videos/KeyChron_Front.mp4" autoplay loop muted></video>
-               <div class="centered">
-                    <h2>The keyboard Meets All Your Needs</h2>
-                    <p>“It stands out from the crowd with its design.” - TNW</p>
-                    <p>“I had a very specific set of needs: Wireless. Arrow keys. No numpad. Mac compatible. Backlit. Found this Keychron K2.” - MKBHD</p>
-               </div>
-          </div>
-          <!--Video//-->
-
-
-          <!--divide bar-->
-          <hr style="margin:10rem">
-          <!--divide bar//-->
-
-          <!--3 column-->
-          <h2 style="font-weight: bold;text-indent: 16%;">Various Layout</h2>
-          <div class="flex-col-3" id="various"></div>
-          <!--3 column//-->
-          <h2 style="font-weight: bold;text-indent:16%;margin-top:5rem;margin-bottom: 5rem;">Blog posts</h2>
-          <div class="flex-col-3" id="blog"></div>
-          <!--Content//-->
-          <!--footer-->
-          <div class="footer">
-               <div class="footer-inner">
-                    <div class="iconrow">
-                         <a href="#"><i class="fab fa-facebook fa-2x" aria-hidden="true"></i></a>
-                         <a href="#"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
-                         <a href="#"><i class="fab fa-instagram fa-2x" aria-hidden="true"> </i></a>
-                         <a href="#"><i class="fab fa-youtube fa-2x" aria-hidden="true"> </i></a>
-                    </div>
-                    <div class="keychronrow">
-                         <h4 class="bold">KEYCHRON</h4>About us<br>Where to Buy<br>Careers<br>Blog<br>Contact us
-                         <br>Influencer</div>
-                    <div class="helprow">
-                         <h4 class="bold">HELP & SUPPORT</h4>User Manual<br>Firmwares
-                         <br>Help Center <br> Shipping Policy <br> Return Policy <br> Warranty
-                         <br>Privacy Policy<br>Terms Of Service<br>Different Layout Survey<br> Sitemap
-                    </div>
-                    <div class="bethefirstrow">
-                         <h4 class="bold">BE THE FIRST TO KNOW</h4>
-                         Get the latest product news, special offers and interesting behind-the-scenes stories from us
-                         <form action="/action_page.php" class="email">
-                              <i class="far fa-envelope fa-2x"></i>
-                              <input type="email" id="email" name="email" placeholder="Enter your email">
-                         </form>
-                    </div>
-               </div>
-               <div class="copyright">© 2020 Keychron | Wireless Mechanical Keyboards for Mac, Windows and Android</div>
-          </div>
-          <a href="#top__page" id="up__top" class="up__top"><i class="far fa-caret-square-up fa-3x"></i></a>
-          <div id="loading">
-               <div class="spinner-border text-light position-fixed" style="width: 5rem; height: 5rem; margin: auto; top: 50%" role="status">
-                    <span class="sr-only">Loading...</span>
-               </div>
-          </div>
-     </div>
-     <!--footer-->
-     <script src="./js/DOM.js" type="text/babel"></script>
-     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-     <script src="./js/scroll.js" type="text/javascript"></script>
+		<!-- DOM hightlight React -->
+		<div id="hightlights"></div>
+		<div classr="logo__scoll" id="logoBrand"></div>
+		<div class="media__video">
+			<video src="./img/videos/KeyChron_Front.mp4" autoplay loop muted></video>
+			<div class="media__content">
+				<h2>The keyboard Meets All Your Needs</h2>
+				<p>
+					“It stands out from the crowd with its design.” -
+					TNW
+				</p>
+				<p>
+					“I had a very specific set of needs: Wireless.
+					Arrow keys. No numpad. Mac compatible. Backlit.
+					Found this Keychron K2.” - MKBHD
+				</p>
+			</div>
+		</div>
+		<hr />
+		<h2 class="h2-title">Various Layout</h2>
+		<div class="flex-col-3" id="various"></div>
+		<!--3 column//-->
+		<h2 class="h2-title">Blog posts</h2>
+		<div class="flex-col-3" id="blog"></div>
+		<!--Content//-->
+		<a href="#top__page" id="up__top" class="up__top"><i class="far fa-caret-square-up fa-3x"></i></a>
+		<div id="loading">
+			<div class="spinner-border text-light position-fixed" style="
+						width: 5rem;
+						height: 5rem;
+						margin: auto;
+						top: 50%;
+					" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+		</div>
+	</div>
+	<!--footer-->
+	<div class="footer">
+		<div class="footer-inner">
+			<div>
+				<a href="#"><i class="fab fa-facebook fa-2x" aria-hidden="true"></i></a>
+				<a href="#"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
+				<a href="#"><i class="fab fa-instagram fa-2x" aria-hidden="true">
+					</i></a>
+				<a href="#"><i class="fab fa-youtube fa-2x" aria-hidden="true">
+					</i></a>
+			</div>
+			<div>
+				<h4 class="bold">KEYCHRON</h4>
+				<div>About us</div>
+				<div>Where to Buy</div>
+				<div>Careers</div>
+				<div>Blog</div>
+				<div>Contact us </div>
+				<div>Influencer </div>
+			</div>
+			<div class="helprow">
+				<h4 class="bold">HELP & SUPPORT</h4>
+				<div>User Manual</div>
+				<div>Firmwares </div>
+				<div>Help Center</div>
+				<div>Shipping Policy </div>
+				<div>Return Policy </div>
+				<div>Warranty </div>
+				<div>Privacy Policy</div>
+				<div>Terms Of Service</div>
+				<div>Different Layout Survey</div>
+				<div>Sitemap</div>
+			</div>
+			<div>
+				<h4 class="bold">BE THE FIRST TO KNOW</h4>
+				<div>Get the latest product news, special offers and interesting behind-the-scenes stories from
+					us</div>
+				<form action="/action_page.php" class="email">
+					<i class="far fa-envelope fa-2x"></i>
+					<input type="email" id="email" name="email" placeholder="Enter your email" />
+				</form>
+			</div>
+		</div>
+		<div class="copyright">
+			© 2020 Keychron | Wireless Mechanical Keyboards for
+			Mac, Windows and Android
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="./js/scroll.js" type="text/javascript"></script>
 </body>
 
 </html>

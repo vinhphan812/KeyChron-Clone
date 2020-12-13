@@ -3,28 +3,20 @@ const pathUser = "./database/users.json";
 const pathDB = "./database/dataTest.json";
 
 function rData(path = pathDB) {
-	return new Promise(async (resolve, reject) => {
-		try {
-			fs.readFile(path, { encoding: "utf8" }, function (err, data) {
-				if (err) return reject("read file error");
-				resolve(JSON.parse(data));
-			});
-		} catch (error) {
-			reject("read File error");
-		}
+	return new Promise((resolve, reject) => {
+		fs.readFile(path, { encoding: "utf8" }, function (err, data) {
+			if (err) reject({ err: true });
+			resolve(JSON.parse(data));
+		});
 	});
 }
 
 function wData(path = pathDB, data) {
-	return new Promise(async (resolve, reject) => {
-		try {
-			fs.writeFile(path, JSON.stringify(data), (error) => {
-				if (error) return reject(error);
-				resolve("sucess");
-			});
-		} catch (error) {
-			reject("write File error");
-		}
+	return new Promise((resolve, reject) => {
+		fs.writeFile(path, JSON.stringify(data), (error) => {
+			if (error) return reject(error);
+			resolve("sucess");
+		});
 	});
 }
 
@@ -35,13 +27,24 @@ class dataBase {
 		return new Promise(async (resolve, reject) => {
 			try {
 				if (!this.DATA) this.DATA = await rData();
-
+				if (this.DATA.err) reject("Read data error");
+				const data = this.DATA;
 				resolve({
-					slide: this.DATA.slide,
-					hightlights: this.DATA.hightlights,
-					logo: this.DATA.brandLogo,
-					various: this.DATA.products.filter((i) => i.isVarious),
-					Blog: this.DATA.Blog.filter((i) => i.isHight),
+					slide: data.slide,
+					hightlights: {
+						title: data.TitleHome[0],
+						items: data.hightlights,
+					},
+					logo: data.brandLogo,
+					various: {
+						title: data.TitleHome[1],
+						items: data.products.filter((i) => i.isVarious),
+					},
+					Blog: {
+						title: data.TitleHome[2],
+						items: data.Blog.filter((i) => i.isHight),
+					},
+					MediaVideo: data.MediaVideo,
 				});
 			} catch (error) {
 				console.log(error);

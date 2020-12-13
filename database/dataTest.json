@@ -1,172 +1,253 @@
 {
-     "slide": [{
-          "title": "K2 WIRELESS <br> MECHANICAL KEYBOARD",
-          "sub": "Compact yet Functional to Boost Productivity",
-          "URL": "/K2-WIRELESS-MECHANICAL-KEYBOARD",
-          "imgURL": "./img/product/Keychron-K2-version2.jpg",
-          "btnContent": "Shop Now"
-     }, {
-          "title": "K6 WIRELESS MECHANICAL <br> KEYBOARD",
-          "sub": "65% Compact. Hot-swappable Switch Option",
-          "URL": "/K6-WIRELESS-MECHANICAL-KEYBOARD",
-          "imgURL": "./img/product/Keychron-K6.jpg",
-          "btnContent": "Shop Now"
-     }, {
-          "title": "K8 Tenkeyless Wireless Mechanical Keyboard",
-          "sub": "Hot-swappable option | Optical or Gateron switch",
-          "URL": "/K8-Tenkeyless-Wireless-Mechanical-Keyboard",
-          "imgURL": "./img/product/Keychron-K8.png",
-          "btnContent": "Shop Now"
-     }, {
-          "title": "K3 WIRELESS MECHANICAL KEYBOARD",
-          "sub": "Ultra-slim | Lightweight | Hot-swappable option",
-          "URL": "/K3-WIRELESS-MECHANICAL-KEYBOARD",
-          "imgURL": "./img/product/Keychron-K3.png",
-          "btnContent": "Pre-order Now"
-     }, {
-          "title": "K4 WIRELESS MECHANICAL KEYBOARD",
-          "sub": "With Number Pad | Gateron or LK Optical Switches",
-          "URL": "/K4-WIRELESS-MECHANICAL-KEYBOARD",
-          "imgURL": "./img/product/Keychron-K4.jpg",
-          "btnContent": "Shop Now"
-     }],
-     "hightlights": [{
-          "imgURL": "./img/product/K2-hero2_540x.jpg",
-          "title": "Wireless & Wired",
-          "content": "Connect the keyboard with up to 3 devices via Bluetooth or to a single device with the USB Type-C wired option. Pair it up with your smartphone, laptop and iPad, and switch amongst the devices swiftly, that is best for home, office and light gaming uses.",
-          "btnContent": "Discovery Keyboard"
-     }, {
-          "imgURL": "./img/product/Keychron_ultra_slim_RGB_backlight_wireless_mechanical_keyboard_Gateron_low_profile_switch_Mac_multimedia_layout_540x.jpg",
-          "title": "Keychron's Mac Layout",
-          "content": "Keychron is one of the few mechanical keyboards that features macOS media keys (F1 to F12) in a Mac layout with the same as conventional Mac systems.",
-          "btnContent": "View Details"
-     }, {
-          "imgURL": "./img/product/k4-frontpage_540x.jpg",
-          "title": "Compatible With All Devices",
-          "content": "Keychron keyboards are 100% compatible with multiple operating systems. Perfectly suitable for macOS, Windows, iOS, as well as Android.",
-          "btnContent": "Explore More"
-     }],
-     "brandLogo": [{
-          "name": "The Verge",
-          "imgURL": "./img/logo/verge.jpg"
-     }, {
-          "name": "Unbox Therapy",
-          "imgURL": "./img/logo/unboxTheRapy.jpg"
-     }, {
-          "name": "Marques Brownnlee",
-          "imgURL": "./img/logo/mkbhd_300_180x.png"
-     }, {
-          "name": "Cult Of Mac",
-          "imgURL": "./img/logo/CultOfMac.png"
-     }, {
-          "name": "9 To 5 Mac",
-          "imgURL": "./img/logo/9To5Mac.png"
-     }, {
-          "name": "Dave 2D",
-          "imgURL": "./img/logo/Dave2D.png"
-     }, {
-          "name": "Apple Insider",
-          "imgURL": "./img/logo/Apple_Insider.png"
-     }, {
-          "name": "Digital Trends",
-          "imgURL": "./img/logo/Digital.png"
-     }, {
-          "name": "Android Central",
-          "imgURL": "./img/logo/android.png"
-     }, {
-          "name": "The Next Web",
-          "imgURL": "./img/logo/tnw.png"
-     }],
-     "products": [{
-          "name": "Keychron K2 Wireless Mechanical Keyboard (Version2)",
-          "URL": "#",
-          "imgURL": "./img/product/KeyChronK2-V2.jpg",
-          "star": 5,
-          "reviews": 424,
-          "price": 69.00,
-          "sale": 0,
-          "isVarious": true,
-          "isStock": true
-     }, {
-          "name": "Keychron K4 Wireless Mechanical Keyboard",
-          "URL": "#",
-          "imgURL": "./img/product/KeyChronK4.jpg",
-          "star": 4,
-          "reviews": 202,
-          "price": 69,
-          "sale": 10,
-          "isVarious": true,
-          "isStock": true
-     }, {
-          "name": "Keychron K6 Wireless Mechanical Keyboard",
-          "URL": "#",
-          "imgURL": "./img/product/KeyChronK6.jpg",
-          "star": 5,
-          "reviews": 147,
-          "price": 69,
-          "sale": 0,
-          "isVarious": true,
-          "isStock": true
-     }, {
-          "name": "Keychron K1 Wireless Mechanical Keyboard (Version 4)",
-          "URL": "#",
-          "imgURL": "",
-          "star": 4,
-          "reviews": 482,
-          "price": 69,
-          "sale": 0
-     }, {
-          "name": "Keychron K8 Wireless Mechanical Keyboard",
-          "URL": "#",
-          "imgURL": "",
-          "star": 4,
-          "reviews": 103,
-          "price": 69,
-          "sale": 0
-     }, {
-          "name": "Keychron K2 (Hot-swappable) Wireless Mechanical Keyboard",
-          "URL": "#",
-          "imgURL": "#",
-          "star": 4,
-          "reviews": 8,
-          "price": 79,
-          "sale": 0
-     }],
-     "Blog": [{
-          "imgURL": "./img/product/Keychron_keyboards_Video_Review_-_August_2020_400x.jpeg",
-          "date": "SEP 26, 2020",
-          "title": "Keychron Keyboards Video Review-August 2020",
-          "URL": "#",
-          "isHight": false
-     }, {
-          "imgURL": "./img/product/Keychron_K8_400x.jpg",
-          "date": "SEP 02, 2020",
-          "title": "Keychron keyboard Article Review-August 2020",
-          "URL": "#",
-          "isHight": false
-     }, {
-          "imgURL": "./img/product/Keychron_keyboards_video_review_400x.jpg",
-          "date": "AUG 29, 2020",
-          "title": "Keychron keyboards Video Review-July 2020",
-          "URL": "#",
-          "isHight": false
-     }, {
-          "imgURL": "/img/product/thumbnail22.jpg",
-          "date": "NOV 16, 2020",
-          "title": "How We Designed the Low Profile Optical Switch Differently",
-          "URL": "#",
-          "isHight": true
-     }, {
-          "imgURL": "/img/product/blog_thumbnail.jpg",
-          "date": "NOV 16, 2020",
-          "title": "Keychron keyboards Article Review- October 2020",
-          "URL": "#",
-          "isHight": true
-     }, {
-          "imgURL": "/img/product/Lark20201113.jpg",
-          "date": "NOV 16, 2020",
-          "title": "Keychron Keyboards Video Review — October 2020",
-          "URL": "#",
-          "isHight": true
-     }]
+	"slide": [
+		{
+			"title": "K2 WIRELESS <br> MECHANICAL KEYBOARD",
+			"sub": "Compact yet Functional to Boost Productivity",
+			"URL": "/K2-WIRELESS-MECHANICAL-KEYBOARD",
+			"imgURL": "./img/product/Keychron-K2-version2.jpg",
+			"btnContent": "Shop Now"
+		},
+		{
+			"title": "K6 WIRELESS MECHANICAL <br> KEYBOARD",
+			"sub": "65% Compact. Hot-swappable Switch Option",
+			"URL": "/K6-WIRELESS-MECHANICAL-KEYBOARD",
+			"imgURL": "./img/product/Keychron-K6.jpg",
+			"btnContent": "Shop Now"
+		},
+		{
+			"title": "K8 Tenkeyless Wireless Mechanical Keyboard",
+			"sub": "Hot-swappable option | Optical or Gateron switch",
+			"URL": "/K8-Tenkeyless-Wireless-Mechanical-Keyboard",
+			"imgURL": "./img/product/Keychron-K8.png",
+			"btnContent": "Shop Now"
+		},
+		{
+			"title": "K3 WIRELESS MECHANICAL KEYBOARD",
+			"sub": "Ultra-slim | Lightweight | Hot-swappable option",
+			"URL": "/K3-WIRELESS-MECHANICAL-KEYBOARD",
+			"imgURL": "./img/product/Keychron-K3.png",
+			"btnContent": "Pre-order Now"
+		},
+		{
+			"title": "K4 WIRELESS MECHANICAL KEYBOARD",
+			"sub": "With Number Pad | Gateron or LK Optical Switches",
+			"URL": "/K4-WIRELESS-MECHANICAL-KEYBOARD",
+			"imgURL": "./img/product/Keychron-K4.jpg",
+			"btnContent": "Shop Now"
+		}
+	],
+	"hightlights": [
+		{
+			"imgURL": "./img/product/K2-hero2_540x.jpg",
+			"title": "Wireless & Wired",
+			"content": "Connect the keyboard with up to 3 devices via Bluetooth or to a single device with the USB Type-C wired option. Pair it up with your smartphone, laptop and iPad, and switch amongst the devices swiftly, that is best for home, office and light gaming uses.",
+			"btnContent": "Discovery Keyboard"
+		},
+		{
+			"imgURL": "./img/product/Keychron_ultra_slim_RGB_backlight_wireless_mechanical_keyboard_Gateron_low_profile_switch_Mac_multimedia_layout_540x.jpg",
+			"title": "Keychron's Mac Layout",
+			"content": "Keychron is one of the few mechanical keyboards that features macOS media keys (F1 to F12) in a Mac layout with the same as conventional Mac systems.",
+			"btnContent": "View Details"
+		},
+		{
+			"imgURL": "./img/product/k4-frontpage_540x.jpg",
+			"title": "Compatible With All Devices",
+			"content": "Keychron keyboards are 100% compatible with multiple operating systems. Perfectly suitable for macOS, Windows, iOS, as well as Android.",
+			"btnContent": "Explore More"
+		}
+	],
+	"brandLogo": [
+		{
+			"name": "The Verge",
+			"imgURL": "./img/logo/verge.jpg",
+			"URL": "#"
+		},
+		{
+			"name": "Unbox Therapy",
+			"imgURL": "./img/logo/unboxTheRapy.jpg",
+			"URL": "#"
+		},
+		{
+			"name": "Marques Brownnlee",
+			"imgURL": "./img/logo/mkbhd_300_180x.png",
+			"URL": "#"
+		},
+		{
+			"name": "Cult Of Mac",
+			"imgURL": "./img/logo/CultOfMac.png",
+			"URL": "#"
+		},
+		{
+			"name": "9 To 5 Mac",
+			"imgURL": "./img/logo/9To5Mac.png",
+			"URL": "#"
+		},
+		{
+			"name": "Dave 2D",
+			"imgURL": "./img/logo/Dave2D.png",
+			"URL": "#"
+		},
+		{
+			"name": "Apple Insider",
+			"imgURL": "./img/logo/Apple_Insider.png",
+			"URL": "#"
+		},
+		{
+			"name": "Digital Trends",
+			"imgURL": "./img/logo/Digital.png",
+			"URL": "#"
+		},
+		{
+			"name": "Android Central",
+			"imgURL": "./img/logo/android.png",
+			"URL": "#"
+		},
+		{
+			"name": "The Next Web",
+			"imgURL": "./img/logo/tnw.png",
+			"URL": "#"
+		}
+	],
+	"products": [
+		{
+			"name": "Keychron K2 Wireless Mechanical Keyboard (Version 2)",
+			"URL": "#",
+			"imgURL": "./img/product/Keychron-K2-wireless-mechanical-keyboard-for-Mac-Windows-iOS-Gateron-switch-red-with-type-C-RGB-white-backlight_540x.jpg",
+			"reviews": 508,
+			"price": 69.0,
+			"star": 5,
+			"sale": 0,
+			"isVarious": true,
+			"isStock": true,
+			"version": [
+				"White Backlight",
+				"RGB Backlight",
+				"RGB Backlight Aluminum Frame"
+			],
+			"switch": ["Red", "Blue", "Brown"]
+		},
+		{
+			"name": "Keychron K1 Wireless Mechanical Keyboard (Version 4)",
+			"URL": "#",
+			"imgURL": "./img/product/Keychron-K4-96_percent-wireless-mechanical-keyboard-for-Mac-Windows-iPad-tablet-RGB-white-backlight-with-USB_C-type_c-cable-Gateron-mechanical-switch-red_540x.jpg",
+			"reviews": 532,
+			"price": 89,
+			"star": 4,
+			"sale": 10,
+			"isVarious": true,
+			"isStock": true
+		},
+		{
+			"name": "Keychron K6 Wireless Mechanical Keyboard",
+			"URL": "#",
+			"imgURL": "./img/product/Keychron-K6-hot-swappable-compact-65-percent-wireless-mechanical-keyboard-for-Mac-Windows-iOS-Gateron-switch-red-with-type-C-RGB-white-backlight_540x.jpg",
+			"reviews": 193,
+			"price": 69,
+			"star": 5,
+			"sale": 0,
+			"isVarious": true,
+			"isStock": true
+		},
+		{
+			"name": "Keychron K4 Wireless Mechanical Keyboard (Version 2)",
+			"URL": "#",
+			"imgURL": "./img/product/Keychron-K4-version2-hot-swappable-wireless-mechanical-keyboard-96percent-layout-for-Mac-Windows-iOS-Gateron-switch-red-with-type-C-RGB-white-backlight_540x.jpg",
+			"reviews": 1,
+			"price": 69,
+			"star": 5,
+			"sale": 0,
+			"isVarious": true,
+			"isStock": true
+		},
+		{
+			"name": "Keychron K1 Wireless Mechanical Keyboard (Version 4)",
+			"URL": "#",
+			"imgURL": "./img/product/Keychron-K1_v4-ultra-slim-wireless-mechanical-keyboard-87_keys-white-backlight-Gateron-low-profile-red-switch_360x.jpg",
+			"isVarious": true,
+			"isStock": true,
+			"reviews": 532,
+			"price": 69,
+			"star": 4,
+			"sale": 0
+		},
+		{
+			"name": "Keychron K8 Wireless Mechanical Keyboard",
+			"URL": "#",
+			"imgURL": "./img/product/Keychron-K8-tenkeyless-wireless-mechanical-keyboard-for-Mac-Windows-iOS-RGB-white-backlight-with-Hot-swappable-Gateron-switch-red_360x.jpg",
+			"isVarious": true,
+			"isStock": true,
+			"reviews": 123,
+			"price": 69,
+			"star": 4,
+			"sale": 0
+		},
+		{
+			"name": "Keychron K2 (Hot-swappable) Wireless Mechanical Keyboard",
+			"URL": "#",
+			"imgURL": "#",
+			"isVarious": false,
+			"isStock": true,
+			"reviews": 8,
+			"price": 79,
+			"star": 4,
+			"sale": 0
+		}
+	],
+	"Blog": [
+		{
+			"imgURL": "./img/product/Keychron_keyboards_Video_Review_-_August_2020_400x.jpeg",
+			"date": "SEP 26, 2020",
+			"title": "Keychron Keyboards Video Review-August 2020",
+			"URL": "#",
+			"isHight": false
+		},
+		{
+			"imgURL": "./img/product/Keychron_K8_400x.jpg",
+			"date": "SEP 02, 2020",
+			"title": "Keychron keyboard Article Review-August 2020",
+			"URL": "#",
+			"isHight": false
+		},
+		{
+			"imgURL": "./img/product/Keychron_keyboards_video_review_400x.jpg",
+			"date": "AUG 29, 2020",
+			"title": "Keychron keyboards Video Review-July 2020",
+			"URL": "#",
+			"isHight": false
+		},
+		{
+			"imgURL": "/img/product/thumbnail22.jpg",
+			"date": "NOV 16, 2020",
+			"title": "How We Designed the Low Profile Optical Switch Differently",
+			"URL": "#",
+			"isHight": true
+		},
+		{
+			"imgURL": "/img/product/blog_thumbnail.jpg",
+			"date": "NOV 16, 2020",
+			"title": "Keychron keyboards Article Review- October 2020",
+			"URL": "#",
+			"isHight": true
+		},
+		{
+			"imgURL": "/img/product/Lark20201113.jpg",
+			"date": "NOV 16, 2020",
+			"title": "Keychron Keyboards Video Review — October 2020",
+			"URL": "#",
+			"isHight": true
+		}
+	],
+	"MediaVideo": {
+		"vdURL": "./img/videos/KeyChron_Front.mp4",
+		"title": "The keyboard Meets All Your Needs",
+		"content": [
+			"“It stands out from the crowd with its design.” - TNW",
+			"“I had a very specific set of needs: Wireless. Arrow keys. No numpad. Mac compatible. Backlit. Found this Keychron K2.” - MKBHD"
+		]
+	},
+	"TitleHome": [
+		"Signature Keychron Features",
+		"Various Layout",
+		"Blog posts"
+	]
 }

@@ -5,6 +5,9 @@
 		display: block;
 		padding: 1rem;
 	}
+	.top > .top__component > .top__container > .btn__close > span {
+		font-size: 3rem;
+	}
 	.top > .top__component > .top__container {
 		position: fixed;
 		right: -100%;
@@ -52,6 +55,9 @@
 	.flex-container > .flex-item {
 		width: 100%;
 	}
+	.flex-container > .flex-item > .subtitle {
+		font-size: 1.2rem;
+	}
 	.logo__scroll {
 		margin: 2rem 0;
 		width: 100%;
@@ -62,10 +68,7 @@
 	.table__logo > img {
 		width: 128px;
 	}
-	.h2sig {
-		margin-left: 2rem;
-	}
-	.centered {
+	.media__content {
 		display: none;
 	}
 	.flex-col-3 {
@@ -106,10 +109,6 @@
 	.top > .top__component > .top__container {
 		width: 70vw;
 	}
-	.h2sig {
-		margin-left: 1rem;
-		font-size: 1.5rem !important;
-	}
 }
 
 @media only screen and (max-width: 1400px) {
@@ -118,10 +117,6 @@
 @media (min-width: 920px) and (max-width: 1400px) {
 	.flex-container {
 		padding: 2.5rem 10%;
-	}
-	.flex-col-3 {
-		margin: 0 5%;
-		height: 28rem;
 	}
 	.flex-col-3 > .flex-item-col {
 		width: 30%;

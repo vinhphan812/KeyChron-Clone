@@ -5,7 +5,8 @@ const main = document.getElementById("main");
 $(document).ready(function () {
 	stopLoading();
 	window.location.hash
-		? (window.location.href = window.location.origin + window.location.pathname)
+		? (window.location.href =
+				window.location.origin + window.location.pathname)
 		: "";
 	$("#mySlide").ready(() => {
 		setTimeout(() => $("#mySlide").addClass("slide"), 1000);

@@ -11,14 +11,14 @@
 	position: absolute;
 	right: 0;
 	top: 0;
-	z-index: 100;
+	z-index: 11;
 	transform: translateY(0);
 	transition: transform 0.5s;
 }
 .slide::after {
 	transform: translateY(-100%);
 }
-.slide > .carousel-inner > .carousel-item > div.img-slide {
+.slide > .carousel-inner > .carousel-item > img.img-slide {
 	opacity: 1;
 	transform: scale(1);
 }
@@ -27,8 +27,8 @@
 	height: 100%;
 	opacity: 0;
 	transform: scale(1.5);
-	background-size: cover;
-	background-position: center center;
+	object-fit: cover;
+	object-position: center;
 	transition: opacity linear 1s, transform linear 1s;
 }
 
@@ -95,4 +95,18 @@
 
 .carousel-caption > .subtitle > span {
 	transform: translateY(1rem);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+	transition: background 300ms ease;
+}
+
+.carousel-control-next:hover {
+	background: rgb(122, 122, 122);
+	background: linear-gradient(270deg, #333333aa 0%, transparent 100%);
+}
+.carousel-control-prev:hover {
+	background: rgb(122, 122, 122);
+	background: linear-gradient(90deg, #333333aa 0%, transparent 100%);
 }

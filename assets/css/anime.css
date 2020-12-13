@@ -1,79 +1,79 @@
 @keyframes fade {
-     from {
-          height: 0;
-     }
-     to {
-          height: auto;
-     }
+	from {
+		height: 0;
+	}
+	to {
+		height: auto;
+	}
 }
 
 @keyframes fade-up {
-     from {
-          opacity: 0;
-          transform: translateY(2rem);
-     }
-     to {
-          opacity: 1;
-          transform: translateY(0);
-     }
+	from {
+		opacity: 0;
+		transform: translateY(2rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @keyframes fadeScroll {
-     0% {
-          opacity: 0.5;
-          transform: translateY(0);
-     }
-     50% {
-          opacity: 1;
-          transform: translateY(10px);
-     }
-     75% {
-          opacity: 0.7;
-          transform: translateY(5px);
-     }
-     100% {
-          opacity: 0.5;
-          transform: translateY(0);
-     }
+	0% {
+		opacity: 0.5;
+		transform: translateY(0);
+	}
+	50% {
+		opacity: 1;
+		transform: translateY(10px);
+	}
+	75% {
+		opacity: 0.7;
+		transform: translateY(5px);
+	}
+	100% {
+		opacity: 0.5;
+		transform: translateY(0);
+	}
 }
 
 @keyframes shaw {
-     0% {
-          box-shadow: 0 0 5px 0 #fff;
-     }
-     50% {
-          box-shadow: 0 0 10px 0 #fff;
-     }
-     100% {
-          box-shadow: 0 0 5px 0 #fff;
-     }
+	0% {
+		box-shadow: 0 0 5px 0 #fff;
+	}
+	50% {
+		box-shadow: 0 0 10px 0 #fff;
+	}
+	100% {
+		box-shadow: 0 0 5px 0 #fff;
+	}
 }
 
 @keyframes translateY {
-     0% {
-          top: -6rem
-     }
-     100% {
-          top: 0
-     }
+	0% {
+		top: -6rem;
+	}
+	100% {
+		top: 0;
+	}
 }
 
 @keyframes delay-off {
-     to {
-          opacity: 0;
-          background-color: #000000aa;
-     }
-     from {
-          opacity: 1;
-          background-color: #000000ff;
-     }
+	to {
+		opacity: 0;
+		background-color: #a0a0a0aa;
+	}
+	from {
+		opacity: 1;
+		background-color: #a0a0a0ff;
+	}
 }
 
 @keyframes translateX {
-     from {
-          right: 100%;
-     }
-     to {
-          right: 3rem;
-     }
+	from {
+		right: 100%;
+	}
+	to {
+		right: 3rem;
+	}
 }
