@@ -3,12 +3,12 @@ $("#notify").text(
 	"K1, K2, K4, K6 nodeand K8 will be shipped out in three business days. K3 pre-orders will be shipped out in early January."
 );
 getData().then(render);
-//function Promise GET DATA from http://localhost:300/data
+//* function Promise GET DATA from http://localhost:300/data
 function getData() {
 	return new Promise(async (resolve, reject) => {
 		try {
-			xhr.open("GET", "/data"); // method GET, http://localhost:300/data
-			xhr.setRequestHeader("Content-Type", "application/json"); // get json
+			xhr.open("GET", "/data"); //* method GET, http://localhost:300/data
+			xhr.setRequestHeader("Content-Type", "application/json"); //TODO get json
 			xhr.onreadystatechange = function () {
 				if (this.readyState == 4)
 					resolve(JSON.parse(this.responseText));
@@ -22,10 +22,10 @@ function getData() {
 //* render Home Page
 function render(data) {
 	ReactDOM.render(<HOME data={data} />, document.getElementById("main"));
-	AOS.init({ once: true });
+	$("#main").removeClass("main__loading");
+	AOS.init({ once: true }); //TODO create animatipn on scroll website
 }
 
-//* render Image Product and Blog
 //TODO create image element
 function Image(props) {
 	return React.createElement("img", props.data);
@@ -295,7 +295,7 @@ class MediaVideo extends React.Component {
 		});
 	}
 }
-//* render Various
+//* class render posts
 class Posts extends React.Component {
 	constructor(props) {
 		super(props);
@@ -317,7 +317,10 @@ class Posts extends React.Component {
 		);
 	}
 	ProductContainer(props) {
-		return <div className="flex-col-3">{props.children}</div>;
+		return React.createElement("div", {
+			children: props.children,
+			className: "flex-col-3",
+		});
 	}
 }
 //* render Product
@@ -374,7 +377,6 @@ class Blog extends React.Component {
 		super(props);
 	}
 	render() {
-		console.log(this.props.data.date);
 		return (
 			<div className="flex-item-col">
 				<BgImage src={this.props.data.imgURL} />

@@ -1,9 +1,11 @@
 const menu = document.getElementById("menu");
 const main = document.getElementById("main");
 
+var load = setInterval(window.scrollTo(0, 0), 1);
+
 //start....
 $(document).ready(function () {
-	stopLoading();
+	clearInterval(load);
 	window.location.hash
 		? (window.location.href =
 				window.location.origin + window.location.pathname)
@@ -14,13 +16,8 @@ $(document).ready(function () {
 	topBar();
 	showMenuBar();
 	$(window).scroll(topBar).resize(showMenuBar);
-	$("#close__menu").click(closeMenu);
+	$("#close__menu").click(closeLayerMain);
 });
-
-function stopLoading() {
-	$("#loading").remove();
-	$(document.body).removeClass("loading");
-}
 
 function darkMode() {
 	var body = $(document.body);
@@ -59,23 +56,21 @@ function showMenuBar() {
 function show() {
 	menu.className = "top__container active";
 	$(document.body).addClass("open__menu__right");
-	$("#main").on("click", closeMenu);
-}
-
-function closeMenu() {
-	menu.classList.remove("active");
-	$(document.body).removeClass("open__menu__right");
-	$("#main").off("click", closeMenu);
+	$("#main").on("click", closeLayerMain);
 }
 
 function showSearch() {
 	$("#searchBox").addClass("active");
 	$(document.body).addClass("open__menu__right");
-	$("#main").on("click", closeSearch);
+	$("#main").on("click", closeLayerMain);
 }
 
-function closeSearch() {
-	$("#searchBox").removeClass("active");
+function closeLayerMain() {
+	if ($("#searchBox").hasClass("active"))
+		$("#searchBox").removeClass("active");
+	else if ($("#menu").hasClass("active") >= 0)
+		menu.classList.remove("active");
+
+	$("#main").off("click", closeLayerMain);
 	$(document.body).removeClass("open__menu__right");
-	$("#main").off("click", closeSearch);
 }

@@ -19,6 +19,7 @@ var cookie = {
 
 app.set("trust proxy", 1);
 app.set("views", "./assets/view");
+app.set("view engine", "pug");
 
 app.use(express.json());
 app.use(session(cookie));
@@ -27,7 +28,8 @@ app.use(express.static("assets"));
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-	res.sendFile(path.join(__dirname, "./assets/view/index.html"));
+	// res.sendFile(path.join(__dirname, "./assets/view/index.html"));
+	res.render("index", { script: "./js/HOME.js" });
 });
 
 app.get("/test", function (req, res, next) {
@@ -60,19 +62,7 @@ app.get("/data/user/:id", async (req, res) => {
 });
 
 app.get("/login", async (req, res) => {
-	console.log(req.sessionID);
-	if (req.session.views) {
-		req.session.views++;
-		res.setHeader("Content-Type", "text/html");
-		res.write("<p>views: " + req.session.views + "</p>");
-		res.write(
-			"<p>expires in: " + req.session.cookie.maxAge / 1000 + "s</p>"
-		);
-		res.end();
-	} else {
-		req.session.views = 1;
-		res.end("welcome to the session demo. refresh!");
-	}
+	res.render("index", { script: "./js/LOGIN.js" });
 });
 
 app.post("/login", async (req, res) => {

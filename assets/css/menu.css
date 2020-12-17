@@ -1,3 +1,67 @@
+:root {
+	font-size: 16px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+hr {
+	margin: 10rem;
+}
+
+body {
+	background-color: white;
+	color: black;
+	letter-spacing: 0.025em;
+	margin: 0;
+	font-weight: 400;
+	transition: background-color linear 500ms;
+	font-family: "Lato" !important;
+}
+
+button {
+	background-color: #fff;
+	border: 0;
+}
+
+button:focus,
+button:active {
+	outline: none;
+}
+
+input:focus {
+	outline: none;
+}
+
+p {
+	margin: 0;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+	transition: color 300ms;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #333;
+}
+
+a:focus {
+	outline: none;
+	text-decoration: none;
+	color: #333;
+}
+
 .text_notification {
 	background-color: #000;
 	color: #fff;
@@ -174,8 +238,8 @@
 	left: 0;
 	bottom: 0;
 	right: 0;
+	background-color: #33333350;
 	z-index: 11;
-	animation: delay-off 0.4 forwards;
 }
 
 .search__box.active {
@@ -211,4 +275,81 @@
 }
 .search__box > button > span {
 	font-size: 3rem;
+}
+/* FOOTER */
+.footer-inner {
+	display: flex;
+
+	line-height: 2.8rem;
+	justify-content: center;
+	margin: 5rem auto;
+}
+
+.footer {
+	margin-top: 5rem;
+	padding: 2rem;
+	width: 100%;
+	box-shadow: 0 0 5px 0 #333;
+}
+
+.footer-inner > div {
+	flex-basis: 100px;
+	flex-grow: 1;
+}
+
+.footer-inner > div:first-child {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.iconrow {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
+.copyright {
+	text-align: left;
+	font-size: 12px;
+}
+
+input {
+	border-radius: 5px;
+	border: 1px solid;
+}
+
+.fontres {
+	width: 50%;
+	font-size: 2rem;
+	text-align: left;
+}
+
+.email {
+	display: flex;
+	position: relative;
+	height: 5rem;
+	align-items: center;
+}
+
+.email > i {
+	position: absolute;
+	z-index: 1;
+	left: 10px;
+}
+
+.email > input {
+	width: 100%;
+	position: absolute;
+	padding-left: 46px;
+}
+
+.h2-title {
+	font-weight: bold;
+	text-indent: 16%;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+
+.main__loading {
+	height: 200vh;
 }
