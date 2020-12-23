@@ -6,6 +6,7 @@ var load = setInterval(window.scrollTo(0, 0), 1);
 //start....
 $(document).ready(function () {
 	clearInterval(load);
+	$(main).removeClass("main__loading");
 	window.location.hash
 		? (window.location.href =
 				window.location.origin + window.location.pathname)

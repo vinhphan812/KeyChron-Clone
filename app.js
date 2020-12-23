@@ -5,11 +5,10 @@ const product = require("./routers/product.router");
 const DataBase = require("./Control/dataBase");
 var session = require("express-session");
 
-const db = new DataBase();
+const app = express(),
+	db = new DataBase(),
+	host = process.env.PORT || 3000;
 
-const host = process.env.PORT || 3000;
-
-const app = express();
 var cookie = {
 	name: "user",
 	keys: ["key1", "key2"],
@@ -29,15 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
 	// res.sendFile(path.join(__dirname, "./assets/view/index.html"));
-	res.render("index", { script: "./js/HOME.js" });
-});
-
-app.get("/test", function (req, res, next) {
-	// Update views
-	req.session.views = (req.session.views || 0) + 1;
-
-	// Write response
-	res.end(req.session.views + "views");
+	res.render("index", { script: "./js/HOME.js", styles: [] });
 });
 
 app.get("/data", async (req, res) => {
@@ -62,7 +53,10 @@ app.get("/data/user/:id", async (req, res) => {
 });
 
 app.get("/login", async (req, res) => {
-	res.render("index", { script: "./js/LOGIN.js" });
+	res.render("index", {
+		script: "./js/LOGIN.js",
+		styles: ["./css/login.css"],
+	});
 });
 
 app.post("/login", async (req, res) => {

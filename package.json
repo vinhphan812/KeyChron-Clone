@@ -1,30 +1,30 @@
 {
-     "name": "keychronclone",
-     "version": "1.0.0",
-     "description": "[Long Shaww](https://www.facebook.com/long.shaww/)",
-     "main": "pace.js",
-     "scripts": {
-          "test": "nodemon app.js",
-          "start": "node app.js"
-     },
-     "repository": {
-          "type": "git",
-          "url": "git+https://github.com/vinhphan812/KeyChron-Clone.git"
-     },
-     "author": "",
-     "license": "ISC",
-     "bugs": {
-          "url": "https://github.com/vinhphan812/KeyChron-Clone/issues"
-     },
-     "homepage": "https://github.com/vinhphan812/KeyChron-Clone#readme",
-     "dependencies": {
-          "body-parser": "^1.19.0",
-          "express": "^4.17.1",
-          "express-session": "^1.17.1",
-          "pug": "^3.0.0"
-     },
-     "devDependencies": {
-          "nodemon": "^2.0.6",
-          "prettier": "2.2.1"
-     }
+	"name": "keychronclone",
+	"version": "1.0.0",
+	"description": "[Long Shaww](https://www.facebook.com/long.shaww/)",
+	"main": "pace.js",
+	"scripts": {
+		"test": "nodemon app.js",
+		"start": "node app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vinhphan812/KeyChron-Clone.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/vinhphan812/KeyChron-Clone/issues"
+	},
+	"homepage": "https://github.com/vinhphan812/KeyChron-Clone#readme",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"express": "^4.17.1",
+		"express-session": "^1.17.1",
+		"pug": "^3.0.0"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.6",
+		"prettier": "2.2.1"
+	}
 }

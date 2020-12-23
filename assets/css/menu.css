@@ -84,6 +84,7 @@ a:focus {
 .top__nav {
 	position: fixed;
 	top: 0rem;
+	z-index: 12;
 	animation: translateY 1s;
 }
 

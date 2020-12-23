@@ -378,13 +378,13 @@ class Blog extends React.Component {
 	}
 	render() {
 		return (
-			<div className="flex-item-col">
+			<a href={this.props.URL} className="flex-item-col">
 				<BgImage src={this.props.data.imgURL} />
 				<this.BlogDetail
 					date={this.props.data.date}
 					title={this.props.data.title}
 				/>
-			</div>
+			</a>
 		);
 	}
 	BlogDetail(props) {

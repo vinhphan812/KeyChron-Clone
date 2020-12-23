@@ -1,0 +1,51 @@
+body {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	background: white;
+	line-height: 1.6;
+}
+
+a {
+	text-decoration: none;
+	font-family: "Lato", sans-serif;
+	font-weight: 1000;
+	font-size: 15px;
+	color: black;
+}
+a:hover {
+	text-decoration: underline;
+}
+.text-box h4 {
+	margin: 0;
+	padding: 0;
+}
+.text-box > .forgot {
+	float: right;
+}
+input {
+	width: 100%;
+	border: 1px solid #f0f1f3;
+	border-radius: 0;
+	box-sizing: border-box;
+	padding: 12px 10px;
+	margin-bottom: 30px;
+}
+
+.login-box {
+	position: absolute;
+	width: 280px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.btn {
+	background-color: black;
+	color: white;
+	font-weight: 600;
+}
+h4 {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
