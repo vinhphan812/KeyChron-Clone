@@ -2,18 +2,23 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const product = require("./routers/product.router");
-const DataBase = require("./Control/dataBase");
 var session = require("express-session");
+const DataBase = require("./Control/dataBase"),
+	User = require("./Control/UserControl");
 
 const app = express(),
+	user = new User(),
 	db = new DataBase(),
 	host = process.env.PORT || 3000;
+let usersAccount = user.getUserAccount(),
+	userInfo = user.getUserInfo();
 
 var cookie = {
 	name: "user",
-	keys: ["key1", "key2"],
-	secret: "keyboard cat",
-	cookie: { maxAge: 10000 },
+	resave: true,
+	saveUninitialized: true,
+	secret: "somesecret",
+	cookie: { maxAge: 24 * 60 * 60 * 1000 },
 };
 
 app.set("trust proxy", 1);
@@ -27,8 +32,11 @@ app.use(express.static("assets"));
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-	// res.sendFile(path.join(__dirname, "./assets/view/index.html"));
-	res.render("index", { script: "./js/HOME.js", styles: [] });
+	res.render("index", {
+		title: "KeyChron",
+		scripts: ["./js/HOME.js"],
+		styles: [],
+	});
 });
 
 app.get("/data", async (req, res) => {
@@ -41,34 +49,105 @@ app.get("/data/products", async (req, res) => {
 	res.json(await db.getProducts());
 });
 
-app.get("/data/user", async (req, res) => {
-	res.send(await db.getUser());
-});
-
 app.get("/data/user/:id", async (req, res) => {
-	var users = (await db.getUser()).users;
-	return users.length > req.params.id
-		? res.send(users[req.params.id])
+	return usersAccount.length > req.params.id
+		? res.send(usersAccount[req.params.id])
 		: res.send("Not Found User ID");
 });
 
-app.get("/login", async (req, res) => {
-	res.render("index", {
-		script: "./js/LOGIN.js",
-		styles: ["./css/login.css"],
-	});
+app.get("/test", (req, res) => {
+	res.sendFile(path.join(__dirname, "/assets/view/index.html"));
 });
 
-app.post("/login", async (req, res) => {
-	const users = (await db.getUser()).users;
-	user = users.find((i) => i.user == req.body.user);
-
-	if (user) return res.send(user.pass == req.body.pass);
-	res.send(false);
+app.get("/account", (req, res) => {
+	// req.session.user = {
+	// 	id: "JUIjEtoa",
+	// 	name: {
+	// 		first: "Phan",
+	// 		last: "Thanh Vinh",
+	// 		fullName: "Thanh Vinh Phan",
+	// 	},
+	// 	phone: "0335499633",
+	// 	address: "Q10,Tp HCM",
+	// 	email: "vinhphan812@gmail.com",
+	// 	shoppingCart: [],
+	// };
+	if (!req.session.user)
+		res.render("index", {
+			title: "Account",
+			scripts: ["./js/LOGIN.js"],
+			styles: ["./css/login.css"],
+		});
+	else
+		res.render("index", {
+			title: `Account - ${req.session.user.name.fullName}`,
+			scripts: ["./js/profile.js"],
+			styles: ["./css/profile.css"],
+		});
 });
 
-app.get("/users/:userId/books/:bookId", function (req, res) {
-	res.send(req.params);
+app.post("/saveInfo", async (req, res) => {});
+
+app.post("/account", async (req, res) => {
+	let data = req.body,
+		response = {};
+	console.log(data);
+	if (!req.session.user) {
+		const user = usersAccount.find((i) => i.user == data.email);
+		if (data.submit === "Sign in") {
+			if (user && user.pass == data.pass) {
+				req.session.user = userInfo.find((i) => i.id == user.id);
+				response.success = true;
+			} else
+				response = {
+					success: false,
+					msg: "Incorrect email or password.",
+				};
+		} else if (data.submit == "Create") {
+			if (
+				data.firstName &&
+				data.lastName &&
+				data.email &&
+				data.pass &&
+				!user
+			)
+				response = {
+					success: true,
+					msg: "Create account failed.",
+				};
+			else
+				response = {
+					success: false,
+					msg: "Email has been registered.",
+				};
+		} else if (data.submit == "Submit") {
+			if (user)
+				response = {
+					success: true,
+					verify: true,
+					msg:
+						"We've sent you an email with a link to update your password.",
+				};
+			else
+				response = {
+					success: false,
+					verify: false,
+					msg: "Email hasn't been registered",
+				};
+			res.status(302);
+		}
+	}
+	res.send(response);
+});
+
+app.get("/info", (req, res) => {
+	res.json(req.session.user);
+});
+
+app.get("/user", async (req, res) => {
+	var us = await user.getUserList();
+	console.log(us);
+	res.json(us);
 });
 
 app.post("/data", async (req, res) => {
@@ -82,6 +161,12 @@ app.post("/data", async (req, res) => {
 		});
 	else return res.send("Wrong info");
 	res.send("oki");
+});
+
+app.get("/signout", async (req, res) => {
+	req.session.destroy();
+	// res.send("oki");
+	res.redirect("/account");
 });
 
 app.listen(host, function () {

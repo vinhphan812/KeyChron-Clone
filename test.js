@@ -1,15 +1,26 @@
-const fs = require("fs");
+const low = require("lowdb");
+const FileSync = require("lowdb/adapters/FileSync");
+const { nanoid } = require("nanoid");
+const idlength = 10;
 
-async function R() {
-	var i = await fs.readFile(
-		"./database/data.json",
-		{ encoding: "utf8" },
-		function (err, data) {
-			if (err) return err;
-			// console.log(JSON.parse(data));
-			return JSON.parse(data);
-		}
-	);
-	console.log(i);
-}
-R();
+const Adapter = new FileSync("./database/dataTest.json");
+const db = low(Adapter);
+
+const AAdapter = new FileSync("./database/product.json");
+const dbb = low(AAdapter);
+
+// var product = db.get("products").value();
+var product = dbb.get("Keyboards").value();
+
+product.map(function (keyboard) {
+	// keyboard.id = nanoid(idlength);
+	console.log(keyboard);
+	// console.table(keyboard);
+	return keyboard;
+});
+
+// console.table(product);
+
+// dbb.set("Accessories", product).write();
+
+// console.log(product.length);

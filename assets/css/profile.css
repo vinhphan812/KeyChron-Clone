@@ -1,0 +1,80 @@
+.main {
+	display: flex;
+	padding: 2rem;
+}
+
+.main > div {
+	margin: 2rem;
+	padding: 1rem;
+	box-shadow: 0 0 5px 0 #aaa;
+	flex-grow: 1;
+}
+
+#info > button {
+	display: block;
+	width: 80px;
+	height: 30px;
+	border: 1px solid #888;
+	color: var(--text-color-primary);
+	background-color: #eeeeee99;
+	box-shadow: 0 0 1px 0 var(--text-color-primary);
+	transition: box-shadow 300ms;
+	margin: auto;
+}
+
+#info > button:hover {
+	box-shadow: 0 0 3px 0 var(--text-color-primary);
+}
+
+.info__box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.info__box:hover > a {
+	opacity: 0.5;
+}
+
+.info__box > div {
+	flex-grow: 1;
+	margin: 1rem 0;
+}
+
+.info__box > div > span {
+	display: inline-block;
+	width: 70px;
+}
+
+.info__box input {
+	width: 190px;
+	border-radius: 0;
+	margin: 0 0.5rem;
+}
+
+.info__box input:disabled {
+	border: 0;
+	background-color: transparent;
+}
+
+.info__box > div > .info__bold {
+	font-weight: 700;
+}
+
+.edit {
+	opacity: 0;
+}
+
+.edit::after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f303";
+	width: 32px;
+	height: 32px;
+	color: #ccc;
+	transition: color 300ms;
+}
+
+.edit:hover::after {
+	color: #999;
+}

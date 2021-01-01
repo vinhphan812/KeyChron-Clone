@@ -1,6 +1,6 @@
 doctype html
 head
-  title Keychron
+  title #{title}
   meta(charset='utf-8')
   meta(name='viewport', content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
   link(rel='shortcut icon', href='favicon.ico', type='image/ico')
@@ -9,18 +9,23 @@ head
   // labrary
   // AOS
   link(href='https://unpkg.com/aos@2.3.1/dist/aos.css', rel='stylesheet')
-  script(src='https://unpkg.com/aos@2.3.1/dist/aos.js')
+  script(defer src='https://unpkg.com/aos@2.3.1/dist/aos.js')
   // Css Bootstrap 3-4
   link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css', integrity='sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2', crossorigin='anonymous')
   // Font awesome
   link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.15.1/css/all.css', integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp', crossorigin='anonymous')
   // ReactJs
-  script(src=`${script}` type="text/babel")
+  script(src='https://unpkg.com/react@17/umd/react.development.js')
+  script(src='https://unpkg.com/react-dom@17/umd/react-dom.development.js')
+  //- script(crossorigin='', src='https://unpkg.com/react@17/umd/react.production.min.js')
+  //- script(crossorigin='', src='https://unpkg.com/react-dom@17/umd/react-dom.production.min.js')
+
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js')
+  each script in scripts
+    script(src=`${script}` type="text/babel")
   each style in styles
     link(href=`${style}` type="text/css" rel="stylesheet")
-  script(src='https://unpkg.com/react@16/umd/react.production.min.js')
-  script(src='https://unpkg.com/react-dom@16/umd/react-dom.production.min.js')
-  script(src='https://unpkg.com/babel-standalone@6.15.0/babel.min.js')
+
   // css page
   link(rel='stylesheet', href='./css/style.css', type='text/css')
   link(rel='stylesheet', href='./css/darkmode.css', type='text/css')
@@ -32,7 +37,7 @@ body#top__page
 #notify.text_notification
 #top.top
   .top__component
-    .top__logo
+    a.top__logo(href='/')
       img(src='./img/logo/update0101-2_160x.jpg', alt='Logo')
     #menu.top__container
       button#close__menu.btn__close.close
@@ -50,7 +55,7 @@ body#top__page
             li
               a(href='#') KeyChron K2(Hot-swappable)
             li
-              a(href='#') KeyChron K4
+              a(href='#') KeyChron K4 (Version 2)
             li
               a(href='#') KeyChron K6
             li
@@ -67,17 +72,17 @@ body#top__page
             i.fa.fa-chevron-right.fa-xs
           ul.dropdown
             li
-              a(href='#')
-                | Low Profile Keycap Set for
-                | K1
+              a(href='#') Low Profile Keycap Set for K1
             li
-              a(href='#')
-                | K2 PBT Retro Mac Keycap
-                | Set
+              a(href="#") K2 Keycap Set
             li
-              a(href='#') K2 Walnut Wood Palm Rest
+              a(href='#') K2 PBT Retro Mac Keycap Set
             li
-              a(href='#') K4 Keycap Set
+              a(href='#') K2 Wooden Palm Rest
+            li
+              a(href='#') K3 Wooden Palm Rest
+            li
+              a(href='#') K3 Keycap Set
             li
               a(href='#') K4 Walnut Wood Palm Rest
             li
@@ -87,7 +92,7 @@ body#top__page
             li
               a(href='#') K8 Keycap Set
             li
-              a(href='#') K8 Walnut Wood Palm Rest
+              a(href='#') K8 Wooden Palm Rest
             li
               a(href='#') Switches
             li
@@ -99,7 +104,7 @@ body#top__page
         li.menu__item
           a(href='#') Blog
     #icon__bar.top__icon__user
-      a(href="login")
+      a(href="/account")
         i.fa.fa-user.fa-lg
       a
         i.fa.fa-search.fa-lg(onclick='showSearch()')
@@ -138,7 +143,7 @@ a#up__top.up__top(href='#top__page')
       div Blog
       div Contact us 
       div Influencer 
-    .helprow
+    div
       h4.bold HELP &amp; SUPPORT
       div User Manual
       div Firmwares 
@@ -154,7 +159,7 @@ a#up__top.up__top(href='#top__page')
       h4.bold BE THE FIRST TO KNOW
       div
         | Get the latest product news, special offers and interesting behind-the-scenes stories from
-        | us
+        | us.
       form.email(action='/action_page.php')
         i.far.fa-envelope.fa-2x
         input#email(type='email', name='email', placeholder='Enter your email')
@@ -164,4 +169,4 @@ a#up__top.up__top(href='#top__page')
 script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
 script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1', crossorigin='anonymous')
 script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM', crossorigin='anonymous')
-script(src='./js/scroll.js', type='text/javascript')
+script(async src='./js/scroll.js', type='text/javascript')

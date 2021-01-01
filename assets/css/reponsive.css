@@ -33,6 +33,12 @@
 		width: 100%;
 		padding: 0;
 	}
+
+	.main {
+		display: flex;
+		flex-direction: column;
+	}
+
 	.carousel {
 		height: 50vh !important;
 	}

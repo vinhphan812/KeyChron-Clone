@@ -1,2 +1,4 @@
-/node_modules/
-/.vscode/
+# NPM
+node_modules/
+# VSCode
+.vscode/

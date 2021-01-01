@@ -1,5 +1,9 @@
 :root {
 	font-size: 16px;
+	--text-color-primary: #000;
+	--text-color-secondary: #fff;
+	--background-color-primary: #000;
+	--background-color-theme: #fff;
 }
 
 html {
@@ -11,7 +15,7 @@ hr {
 }
 
 body {
-	background-color: white;
+	background-color: var(--background-color-theme);
 	color: black;
 	letter-spacing: 0.025em;
 	margin: 0;
@@ -21,8 +25,8 @@ body {
 }
 
 button {
-	background-color: #fff;
 	border: 0;
+	background-color: transparent;
 }
 
 button:focus,
@@ -46,9 +50,9 @@ ul {
 
 a {
 	text-decoration: none;
-	color: #000;
+	color: var(--text-color-primary);
 	cursor: pointer;
-	transition: color 300ms;
+	transition: color linear 300ms;
 }
 
 a:hover {
@@ -210,6 +214,7 @@ a:focus {
 	bottom: 1rem;
 	right: -5rem;
 	opacity: 0.6;
+	z-index: 1;
 	transition: right ease 400ms, opacity ease 400ms;
 }
 
@@ -301,6 +306,7 @@ a:focus {
 .footer-inner > div:first-child {
 	display: flex;
 	justify-content: space-evenly;
+	align-items: flex-start;
 }
 
 .iconrow {
@@ -333,6 +339,7 @@ input {
 }
 
 .email > i {
+	color: #000;
 	position: absolute;
 	z-index: 1;
 	left: 10px;

@@ -36,7 +36,7 @@
 			"btnContent": "Shop Now"
 		}
 	],
-	"hightlights": [
+	"highlights": [
 		{
 			"imgURL": "./img/product/K2-hero2_540x.jpg",
 			"title": "Wireless & Wired",
@@ -113,24 +113,18 @@
 			"name": "Keychron K2 Wireless Mechanical Keyboard (Version 2)",
 			"URL": "#",
 			"imgURL": "./img/product/Keychron-K2-wireless-mechanical-keyboard-for-Mac-Windows-iOS-Gateron-switch-red-with-type-C-RGB-white-backlight_540x.jpg",
-			"reviews": 508,
-			"price": 69.0,
+			"reviews": 517,
+			"price": 69,
 			"star": 5,
 			"sale": 0,
 			"isVarious": true,
-			"isStock": true,
-			"version": [
-				"White Backlight",
-				"RGB Backlight",
-				"RGB Backlight Aluminum Frame"
-			],
-			"switch": ["Red", "Blue", "Brown"]
+			"isStock": true
 		},
 		{
-			"name": "Keychron K1 Wireless Mechanical Keyboard (Version 4)",
+			"name": "Keychron K4 Wireless Mechanical Keyboard (Version 1)",
 			"URL": "#",
 			"imgURL": "./img/product/Keychron-K4-96_percent-wireless-mechanical-keyboard-for-Mac-Windows-iPad-tablet-RGB-white-backlight-with-USB_C-type_c-cable-Gateron-mechanical-switch-red_540x.jpg",
-			"reviews": 532,
+			"reviews": 240,
 			"price": 89,
 			"star": 4,
 			"sale": 10,
@@ -165,7 +159,7 @@
 			"imgURL": "./img/product/Keychron-K1_v4-ultra-slim-wireless-mechanical-keyboard-87_keys-white-backlight-Gateron-low-profile-red-switch_360x.jpg",
 			"isVarious": true,
 			"isStock": true,
-			"reviews": 532,
+			"reviews": 555,
 			"price": 69,
 			"star": 4,
 			"sale": 0
@@ -184,7 +178,7 @@
 		{
 			"name": "Keychron K2 (Hot-swappable) Wireless Mechanical Keyboard",
 			"URL": "#",
-			"imgURL": "#",
+			"imgURL": "/img/product/K2.jpg",
 			"isVarious": false,
 			"isStock": true,
 			"reviews": 8,
@@ -199,42 +193,42 @@
 			"date": "SEP 26, 2020",
 			"title": "Keychron Keyboards Video Review-August 2020",
 			"URL": "#",
-			"isHight": false
+			"isHigh": false
 		},
 		{
 			"imgURL": "./img/product/Keychron_K8_400x.jpg",
 			"date": "SEP 02, 2020",
 			"title": "Keychron keyboard Article Review-August 2020",
 			"URL": "#",
-			"isHight": false
+			"isHigh": false
 		},
 		{
 			"imgURL": "./img/product/Keychron_keyboards_video_review_400x.jpg",
 			"date": "AUG 29, 2020",
 			"title": "Keychron keyboards Video Review-July 2020",
 			"URL": "#",
-			"isHight": false
+			"isHigh": false
 		},
 		{
 			"imgURL": "/img/product/thumbnail22.jpg",
 			"date": "NOV 16, 2020",
 			"title": "How We Designed the Low Profile Optical Switch Differently",
 			"URL": "#",
-			"isHight": true
+			"isHigh": true
 		},
 		{
 			"imgURL": "/img/product/blog_thumbnail.jpg",
 			"date": "NOV 16, 2020",
 			"title": "Keychron keyboards Article Review- October 2020",
 			"URL": "#",
-			"isHight": true
+			"isHigh": true
 		},
 		{
 			"imgURL": "/img/product/Lark20201113.jpg",
 			"date": "NOV 16, 2020",
 			"title": "Keychron Keyboards Video Review — October 2020",
 			"URL": "#",
-			"isHight": true
+			"isHigh": true
 		}
 	],
 	"MediaVideo": {

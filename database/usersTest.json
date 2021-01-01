@@ -31,8 +31,7 @@
 			"phone": "0335499633",
 			"address": "Q10,Tp HCM",
 			"email": "vinhphan812@gmail.com",
-			"shoppingCart": [],
-			"historyOrder": []
+			"shoppingCart": []
 		},
 		{
 			"id": "D8BvVZtx",
@@ -42,10 +41,9 @@
 				"fullName": "Long Trần"
 			},
 			"phone": "0335499633",
-			"address": "Q8,Tp HCM",
 			"email": "at400123@gmail.com",
-			"shoppingCart": [],
-			"historyOrder": []
+			"address": "Q8,Tp HCM",
+			"shoppingCart": []
 		}
 	]
 }

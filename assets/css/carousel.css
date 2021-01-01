@@ -71,6 +71,7 @@
 .carousel-caption > .button {
 	background-color: #ffffff33;
 	border: 2px solid #fff;
+	color: #fff;
 	border-radius: 0;
 	text-shadow: 0 0 5px #333;
 	transition: box-shadow 300ms, border-radius 300ms;

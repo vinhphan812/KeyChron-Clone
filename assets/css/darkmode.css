@@ -1,9 +1,13 @@
 .dark-mode {
-	background-color: #100e17;
-	color: white;
+	background-color: var(--background-color-theme);
+	color: var(--text-color-primary);
+	--background-color-primary: #fff;
+	--text-color-primary: #fff;
+	--text-color-secondary: #000;
+	--background-color-theme: #100e17;
 }
 
-.dark-mode input {
+/* .dark-mode input {
 	color: #000;
 }
 
@@ -40,4 +44,4 @@
 }
 .dark-mode .footer-inner > div > a > i {
 	color: #fff;
-}
+} */

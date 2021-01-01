@@ -1,7 +1,5 @@
 const xhr = new XMLHttpRequest();
-$("#notify").text(
-	"K1, K2, K4, K6 nodeand K8 will be shipped out in three business days. K3 pre-orders will be shipped out in early January."
-);
+
 getData().then(render);
 //* function Promise GET DATA from http://localhost:300/data
 function getData() {
@@ -59,12 +57,12 @@ class HOME extends React.Component {
 	render() {
 		const data = this.state.data;
 		return [
-			<Slide list={data.slide} />,
-			<HightLight data={data.hightlights} />,
-			<LogoBar data={data.logo} />,
-			<MediaVideo videos={data.MediaVideo} />,
-			<Posts data={data.various} />,
-			<Posts data={data.Blog} />,
+			<Slide list={data.slide} key="Carousel" />,
+			<HighLight data={data.highlights} key="HighLight" />,
+			<LogoBar data={data.logo} key="LogoBar" />,
+			<MediaVideo videos={data.MediaVideo} key="MediaVideo" />,
+			<Posts data={data.various} key="Various" />,
+			<Posts data={data.Blog} key="Blog" />,
 		];
 	}
 }
@@ -77,7 +75,12 @@ class Slide extends React.Component {
 	}
 	render() {
 		return (
-			<div id="mySlide" class="carousel" data-ride="carousel">
+			<div
+				id="mySlide"
+				className="carousel"
+				data-ride="carousel"
+				key="Carousel"
+			>
 				<this.SlideInner />
 				<this.SlideControlRender
 					direction="left"
@@ -163,8 +166,8 @@ class Slide extends React.Component {
 	}
 }
 
-//* render HightLight
-class HightLight extends React.Component {
+//* render HighLight
+class HighLight extends React.Component {
 	constructor(props) {
 		super(props);
 		this.Item = this.Item.bind(this);
@@ -180,7 +183,9 @@ class HightLight extends React.Component {
 		);
 	}
 	Container(props) {
-		return React.createElement("div", { children: props.children });
+		return React.createElement("div", {
+			children: props.children,
+		});
 	}
 	Item(props) {
 		return React.createElement("div", {
@@ -202,7 +207,7 @@ class HightLight extends React.Component {
 			"data-aos": "fade-up-right",
 			"data-aos-duration": "1000",
 			"data-aos-anchor-placement": "top-bottom",
-			children: <img src={props.imgURL}></img>,
+			children: <img src={props.imgURL} />,
 		});
 	}
 	ContentHL(props) {
@@ -290,7 +295,7 @@ class MediaVideo extends React.Component {
 			className: "media__content",
 			children: [
 				<h2>{props.title}</h2>,
-				props.content.map((para) => <p>{para}</p>),
+				props.content.map((para, i) => <p key={i}>{para}</p>),
 			],
 		});
 	}
@@ -305,11 +310,11 @@ class Posts extends React.Component {
 			<div>
 				<Title title={this.props.data.title} />
 				<this.ProductContainer>
-					{this.props.data.items.map((item) =>
+					{this.props.data.items.map((item, i) =>
 						item.date ? (
-							<Blog data={item} />
+							<Blog data={item} key={item.title} />
 						) : (
-							<Product data={item} />
+							<Product data={item} key={item.name} />
 						)
 					)}
 				</this.ProductContainer>
@@ -340,6 +345,7 @@ class Product extends React.Component {
 						<this.StarReview
 							star={product.star}
 							reviews={product.reviews}
+							key={product.star}
 						/>
 					</div>
 					<div className="price">

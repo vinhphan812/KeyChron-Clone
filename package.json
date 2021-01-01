@@ -1,8 +1,8 @@
 {
 	"name": "keychronclone",
 	"version": "1.0.0",
-	"description": "[Long Shaww](https://www.facebook.com/long.shaww/)",
-	"main": "pace.js",
+	"description": "Web Clone",
+	"main": "app.js",
 	"scripts": {
 		"test": "nodemon app.js",
 		"start": "node app.js"
@@ -21,6 +21,8 @@
 		"body-parser": "^1.19.0",
 		"express": "^4.17.1",
 		"express-session": "^1.17.1",
+		"lowdb": "^1.0.0",
+		"nanoid": "^3.1.20",
 		"pug": "^3.0.0"
 	},
 	"devDependencies": {

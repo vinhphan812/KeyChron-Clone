@@ -1,65 +1,47 @@
-const fs = require("fs");
-const pathUser = "./database/users.json";
-const pathDB = "./database/dataTest.json";
+const low = require("lowdb");
+const FileSync = require("lowdb/adapters/FileSync");
 
-function rData(path = pathDB) {
-	return new Promise((resolve, reject) => {
-		fs.readFile(path, { encoding: "utf8" }, function (err, data) {
-			if (err) reject({ err: true });
-			resolve(JSON.parse(data));
-		});
-	});
-}
+const adapter = new FileSync("./database/dataTest.json");
+const db = low(adapter);
 
-function wData(path = pathDB, data) {
-	return new Promise((resolve, reject) => {
-		fs.writeFile(path, JSON.stringify(data), (error) => {
-			if (error) return reject(error);
-			resolve("sucess");
-		});
-	});
-}
-
-class dataBase {
-	DATA;
+class database {
 	contructor() {}
 	getData() {
 		return new Promise(async (resolve, reject) => {
 			try {
-				if (!this.DATA) this.DATA = await rData();
-				if (this.DATA.err) reject("Read data error");
-				const data = this.DATA;
+				const title = db.get("TitleHome").value();
 				resolve({
-					slide: data.slide,
-					hightlights: {
-						title: data.TitleHome[0],
-						items: data.hightlights,
+					slide: db.get("slide").value(),
+					highlights: {
+						title: title[0],
+						items: db.get("highlights").value(),
 					},
-					logo: data.brandLogo,
+					logo: db.get("brandLogo").value(),
 					various: {
-						title: data.TitleHome[1],
-						items: data.products.filter((i) => i.isVarious),
+						title: title[1],
+						items: db
+							.get("products")
+							.filter({ isVarious: true })
+							.value(),
 					},
 					Blog: {
-						title: data.TitleHome[2],
-						items: data.Blog.filter((i) => i.isHight),
+						title: title[2],
+						items: db
+							.get("Blog")
+							.filter({ isHigh: true })
+							.value(),
 					},
-					MediaVideo: data.MediaVideo,
+					MediaVideo: db.get("MediaVideo").value(),
 				});
 			} catch (error) {
-				console.log(error);
-				reject("read data error");
+				reject(error);
 			}
 		});
 	}
 	getProducts() {
 		return new Promise(async (resolve, reject) => {
 			try {
-				if (!this.DATA) this.DATA = await rData();
-				resolve(this.DATA.products);
-				// return rData()
-				// 	.then((data) => resolve(data.products))
-				// 	.catch((err) => reject(err));
+				resolve(db.get("products").value());
 			} catch (error) {
 				reject(error);
 			}
@@ -68,33 +50,6 @@ class dataBase {
 	findProducts(name) {
 		name = name.split("-").join(" ");
 	}
-	getUser() {
-		return new Promise(async (resolve, reject) => {
-			try {
-				return await rData(pathUser)
-					.then((data) => resolve(data))
-					.catch((err) => reject(err));
-			} catch (error) {
-				reject(error);
-			}
-		});
-	}
-	addUser(info = { user, pass, name, email }) {
-		return new Promise(async (resolve, reject) => {
-			rData(pathUser)
-				.then((data) => {
-					data.users.push(info);
-					wData(pathUser, data)
-						.then((data) => {
-							resolve("success");
-						})
-						.catch((err) => reject(err));
-				})
-				.catch((err) => {
-					reject(err);
-				});
-		});
-	}
 }
 
-module.exports = dataBase;
+module.exports = database;

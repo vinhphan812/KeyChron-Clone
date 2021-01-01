@@ -2,6 +2,9 @@ const menu = document.getElementById("menu");
 const main = document.getElementById("main");
 
 var load = setInterval(window.scrollTo(0, 0), 1);
+$("#notify").text(
+	"K1, K2, K4, K6 nodeand K8 will be shipped out in three business days. K3 pre-orders will be shipped out in early January."
+);
 
 //start....
 $(document).ready(function () {

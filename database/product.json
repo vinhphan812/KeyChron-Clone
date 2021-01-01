@@ -1,0 +1,181 @@
+{
+	"Keyboards": [
+		{
+			"name": "Keychron K1 Wireless Mechanical Keyboard (Version 4)",
+			"star": 4,
+			"reviews": 555,
+			"Keys": [87, 104],
+			"version": [
+				"White Backlight Aluminum Body",
+				"RGB Backlight Aluminum Body"
+			],
+			"White Backlight Aluminum Body": {
+				"87": {
+					"price": 69,
+					"imgURL": [
+						"/img/product/Keychron-K1_v4/White_Backlight/87_keys-Gateron-low-profile-red-switch.jpg",
+						"/img/product/Keychron-K1_v4/White_Backlight/87_keys-Gateron-low-profile-blue-switch.jpg",
+						"/img/product/Keychron-K1_v4/White_Backlight/87_keys-Gateron-low-profile-brown-switch.jpg"
+					]
+				},
+				"104": {
+					"price": 82,
+					"imgURL": [
+						"/img/product/Keychron-K1_v4/White_Backlight/104_keys-Gateron-low-profile-red-switch.jpg",
+						"/img/product/Keychron-K1_v4/White_Backlight/104_keys-Gateron-low-profile-blue-switch.jpg",
+						"/img/product/Keychron-K1_v4/White_Backlight/104_keys-Gateron-low-profile-brown-switch.jpg"
+					]
+				}
+			},
+			"RGB Backlight Aluminum Body": {
+				"87": {
+					"price": 79,
+					"imgURL": [
+						"/img/product/Keychron-K1_v4/RGB_Backlight/87_keys-Gateron-low-profile-red-switch.jpg",
+						"/img/product/Keychron-K1_v4/RGB_Backlight/87_keys-Gateron-low-profile-redblue-switch.jpg",
+						"/img/product/Keychron-K1_v4/RGB_Backlight/87_keys-Gateron-low-profile-brown-switch.jpg"
+					]
+				},
+				"104": {
+					"price": 89,
+					"imgURL": [
+						"/img/product/Keychron-K1_v4/RGB_Backlight/104_keys-Gateron-low-profile-red-switch.jpg",
+						"/img/product/Keychron-K1_v4/RGB_Backlight/104_keys-Gateron-low-profile-blue-switch.jpg",
+						"/img/product/Keychron-K1_v4/RGB_Backlight/104_keys-Gateron-low-profile-brown-switch.jpg"
+					]
+				}
+			},
+			"switch": [
+				"Gateron Low Profile Red",
+				"Gateron Low Profile Blue",
+				"Gateron Low Profile Brown"
+			],
+			"description": [
+				"Please drop your email on &quot;Notify Me When Available&quot; if the product model is out of stock.",
+				"Keychron K1 Wireless mechanical keyboard has included keycaps for both Windows and Mac operating systems."
+			],
+			"id": "x7ohNf8XQL"
+		},
+		{
+			"name": "Keychron K2 Wireless Mechanical Keyboard (Version 2)",
+			"star": 5,
+			"reviews": 522,
+			"version": [
+				"White Backlight",
+				"RGB Backlight",
+				"RGB Backlight Aluminum Frame"
+			],
+			"switch": ["Red", "Blue", "Brown"],
+			"White Backlight": {
+				"price": 69,
+				"imgURL": ["", "", ""]
+			},
+			"RGB Backlight": {
+				"price": 79,
+				"imgURL": ["", "", ""]
+			},
+			"RGB Backlight Aluminum Frame": {
+				"price": 89,
+				"imgURL": ["", "", ""]
+			},
+
+			"id": "pxwyGmylaY"
+		},
+		{
+			"name": "Keychron K2 (Hot-swappable) Wireless Mechanical Keyboard (Version 2)",
+			"star": 5,
+			"reviews": 45,
+			"version": ["White Backlight", "RGB Backlight Aluminum Frame"],
+			"switch": ["Red", "Blue", "Brown"],
+			"White Backlight": {
+				"price": 79,
+				"imgURL": ["", "", ""]
+			},
+			"RGB Backlight Aluminum Frame": {
+				"price": 99,
+				"imgURL": ["", "", ""]
+			},
+			"id": "epLKN9-OwA"
+		},
+		{
+			"name": "Keychron K4 Wireless Mechanical Keyboard (Version 2)",
+			"star": 5,
+			"reviews": 9,
+			"version": [
+				"White Backlight",
+				"RGB Backlight",
+				"White Backlight Aluminum Frame"
+			],
+			"switchType": ["Gateron", "Gateron (Hot-swappable)"],
+			"switch": ["Red", "Blue", "Brown"],
+			"White Backlight": {
+				"Gateron": {
+					"price": 69
+				},
+				"Gateron (Hot-swappable)": {
+					"price": 79
+				}
+			},
+
+			"id": "uSC-YR2FqW"
+		},
+		{
+			"name": "Keychron K6 Wireless Mechanical Keyboard",
+			"id": "6inAYNow7u"
+		},
+		{
+			"name": "Keychron K8 Wireless Mechanical Keyboard",
+			"id": "2nVOuSn-KA"
+		},
+		{
+			"name": "Keychron K3 Ultra-slim Wireless Mechanical Keyboard",
+			"id": "Q6o9YLraBM"
+		}
+	],
+	"Accessories": [
+		{
+			"name": "Low Profile Curved Keycap Set for K1 Version 4",
+			"id": "TYTCCciiUK"
+		},
+		{
+			"name": "Keychron K2 KEYCAP Set",
+			"id": "NRqUe0YSwq"
+		},
+		{
+			"name": "Keychron K2 PBT Retro Mac Keycap Set",
+			"id": "FrB_WkDWOk"
+		},
+		{
+			"name": "Keychron K2 Wooden Palm Rest",
+			"id": "ILll1e3q08"
+		},
+		{
+			"name": "Keychron K3 Wooden Palm Rest",
+			"id": "EeVNAGw_jq"
+		},
+		{
+			"name": "Keychron K3 Keycap Set",
+			"id": "RQtPvZMXiq"
+		},
+		{
+			"name": "Keychron K4 Wooden Palm Rest",
+			"id": "_87Rt-D4BP"
+		},
+		{
+			"name": "Keychron K6 Keycap Set",
+			"id": "CIGxyLI3HC"
+		},
+		{
+			"name": "Keychron K8 Keycap Set",
+			"id": "MTSelx6zoX"
+		},
+		{
+			"name": "Keychron K8 Wooden Palm Rest",
+			"price": 20,
+			"star": 1,
+			"reviews": 1,
+			"imageSlide": [],
+			"id": "ey1Z3HsdSK"
+		}
+	]
+}
