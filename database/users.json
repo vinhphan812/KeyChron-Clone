@@ -1,26 +1,22 @@
 {
 	"usersAccount": [
-		{ "id": "eYBKgZja", "user": "admin", "pass": "admin" },
-		{ "id": "FxOP6tws", "user": "client", "pass": "client" },
 		{
 			"id": "JUIjEtoa",
 			"user": "vinhphan812@gmail.com",
 			"pass": "12345678"
 		},
 		{
-			"id": "yMSXuEzt",
-			"user": "vinhphan812",
+			"id": "D8BvVZtx",
+			"user": "at400123@gmail.com",
 			"pass": "12345678"
 		},
 		{
-			"id": "D8BvVZtx",
-			"user": "at400123@gmail.com",
+			"id": "DeBys4OT",
+			"email": "phanvinh637@gmail.com",
 			"pass": "12345678"
 		}
 	],
 	"userInfo": [
-		{ "id": "eYBKgZja" },
-		{ "id": "FxOP6tws" },
 		{
 			"id": "JUIjEtoa",
 			"name": {

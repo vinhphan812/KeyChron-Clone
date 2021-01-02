@@ -4,56 +4,45 @@
 			"name": "Keychron K1 Wireless Mechanical Keyboard (Version 4)",
 			"star": 4,
 			"reviews": 555,
+			"description": [
+				"Please drop your email on &quot;Notify Me When Available&quot; if the product model is out of stock.",
+				"Keychron K1 Wireless mechanical keyboard has included keycaps for both Windows and Mac operating systems."
+			],
 			"Keys": [87, 104],
 			"version": [
 				"White Backlight Aluminum Body",
 				"RGB Backlight Aluminum Body"
 			],
-			"White Backlight Aluminum Body": {
-				"87": {
-					"price": 69,
-					"imgURL": [
-						"/img/product/Keychron-K1_v4/White_Backlight/87_keys-Gateron-low-profile-red-switch.jpg",
-						"/img/product/Keychron-K1_v4/White_Backlight/87_keys-Gateron-low-profile-blue-switch.jpg",
-						"/img/product/Keychron-K1_v4/White_Backlight/87_keys-Gateron-low-profile-brown-switch.jpg"
-					]
-				},
-				"104": {
-					"price": 82,
-					"imgURL": [
-						"/img/product/Keychron-K1_v4/White_Backlight/104_keys-Gateron-low-profile-red-switch.jpg",
-						"/img/product/Keychron-K1_v4/White_Backlight/104_keys-Gateron-low-profile-blue-switch.jpg",
-						"/img/product/Keychron-K1_v4/White_Backlight/104_keys-Gateron-low-profile-brown-switch.jpg"
-					]
-				}
-			},
-			"RGB Backlight Aluminum Body": {
-				"87": {
-					"price": 79,
-					"imgURL": [
-						"/img/product/Keychron-K1_v4/RGB_Backlight/87_keys-Gateron-low-profile-red-switch.jpg",
-						"/img/product/Keychron-K1_v4/RGB_Backlight/87_keys-Gateron-low-profile-redblue-switch.jpg",
-						"/img/product/Keychron-K1_v4/RGB_Backlight/87_keys-Gateron-low-profile-brown-switch.jpg"
-					]
-				},
-				"104": {
-					"price": 89,
-					"imgURL": [
-						"/img/product/Keychron-K1_v4/RGB_Backlight/104_keys-Gateron-low-profile-red-switch.jpg",
-						"/img/product/Keychron-K1_v4/RGB_Backlight/104_keys-Gateron-low-profile-blue-switch.jpg",
-						"/img/product/Keychron-K1_v4/RGB_Backlight/104_keys-Gateron-low-profile-brown-switch.jpg"
-					]
-				}
-			},
 			"switch": [
 				"Gateron Low Profile Red",
 				"Gateron Low Profile Blue",
 				"Gateron Low Profile Brown"
 			],
-			"description": [
-				"Please drop your email on &quot;Notify Me When Available&quot; if the product model is out of stock.",
-				"Keychron K1 Wireless mechanical keyboard has included keycaps for both Windows and Mac operating systems."
+
+			"imgURL": [
+				"/img/product/Keychron-K1_v4/White_Backlight/87_keys-Gateron-low-profile-red-switch.jpg",
+				"/img/product/Keychron-K1_v4/White_Backlight/87_keys-Gateron-low-profile-blue-switch.jpg",
+				"/img/product/Keychron-K1_v4/White_Backlight/87_keys-Gateron-low-profile-brown-switch.jpg",
+				"/img/product/Keychron-K1_v4/White_Backlight/104_keys-Gateron-low-profile-red-switch.jpg",
+				"/img/product/Keychron-K1_v4/White_Backlight/104_keys-Gateron-low-profile-blue-switch.jpg",
+				"/img/product/Keychron-K1_v4/White_Backlight/104_keys-Gateron-low-profile-brown-switch.jpg"
 			],
+			"White Backlight Aluminum Body": {
+				"87": {
+					"price": 69
+				},
+				"104": {
+					"price": 82
+				}
+			},
+			"RGB Backlight Aluminum Body": {
+				"87": {
+					"price": 79
+				},
+				"104": {
+					"price": 89
+				}
+			},
 			"id": "x7ohNf8XQL"
 		},
 		{

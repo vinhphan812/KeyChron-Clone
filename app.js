@@ -7,11 +7,11 @@ const DataBase = require("./Control/dataBase"),
 	User = require("./Control/UserControl");
 
 const app = express(),
-	user = new User(),
+	dbUser = new User(),
 	db = new DataBase(),
 	host = process.env.PORT || 3000;
-let usersAccount = user.getUserAccount(),
-	userInfo = user.getUserInfo();
+let usersAccount = dbUser.getUserAccount(),
+	userInfo = dbUser.getUserInfo();
 
 var cookie = {
 	name: "user",
@@ -60,18 +60,6 @@ app.get("/test", (req, res) => {
 });
 
 app.get("/account", (req, res) => {
-	// req.session.user = {
-	// 	id: "JUIjEtoa",
-	// 	name: {
-	// 		first: "Phan",
-	// 		last: "Thanh Vinh",
-	// 		fullName: "Thanh Vinh Phan",
-	// 	},
-	// 	phone: "0335499633",
-	// 	address: "Q10,Tp HCM",
-	// 	email: "vinhphan812@gmail.com",
-	// 	shoppingCart: [],
-	// };
 	if (!req.session.user)
 		res.render("index", {
 			title: "Account",
@@ -91,7 +79,6 @@ app.post("/saveInfo", async (req, res) => {});
 app.post("/account", async (req, res) => {
 	let data = req.body,
 		response = {};
-	console.log(data);
 	if (!req.session.user) {
 		const user = usersAccount.find((i) => i.user == data.email);
 		if (data.submit === "Sign in") {
@@ -110,12 +97,18 @@ app.post("/account", async (req, res) => {
 				data.email &&
 				data.pass &&
 				!user
-			)
+			) {
+				await dbUser.addUser({
+					email: data.email,
+					firstName: data.firstName,
+					lastName: data.lastName,
+					pass: data.pass,
+				});
 				response = {
 					success: true,
 					msg: "Create account failed.",
 				};
-			else
+			} else
 				response = {
 					success: false,
 					msg: "Email has been registered.",
