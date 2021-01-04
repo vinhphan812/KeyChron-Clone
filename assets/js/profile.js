@@ -17,7 +17,7 @@ class Profile extends React.Component {
 		super(props);
 		console.log(props.data);
 		this.state = {
-			name: props.data.name.fullName || "Update Name",
+			name: props.data.name || "Update Name",
 			email: props.data.email || "Update Email",
 			phone: props.data.phone || "Update Phone",
 			address: props.data.address || "Update Address",
@@ -26,6 +26,7 @@ class Profile extends React.Component {
 		this.Change = this.Change.bind(this);
 		this.EditClick = this.EditClick.bind(this);
 		this.EnterKey = this.EnterKey.bind(this);
+		this.Save = this.Save.bind(this);
 	}
 	render() {
 		return [
@@ -48,23 +49,35 @@ class Profile extends React.Component {
 					userContent={this.state.address}
 				/>
 				<a href="/signout">
-					Sign Out <i class="fas fa-sign-out-alt"></i>
+					Sign Out <i className="fas fa-sign-out-alt"></i>
 				</a>
 			</div>,
 			<div>
 				<this.Title title="Order History" />
+				<ul className="OrderList"></ul>
 			</div>,
-			// <div>
-			// 	<this.Title title="Empty san hak fkasbs hkfbaib" />
-			// </div>,
 		];
 	}
-	Save() {}
+	Save() {
+		var formData = `email=${this.state.email}&name=${this.state.name}&phone=${this.state.phone}&address=${this.state.address}`;
+		console.log(formData);
+		xhr.open("POST", "/saveInfo");
+		xhr.setRequestHeader(
+			"Content-Type",
+			"application/x-www-form-urlencoded"
+		);
+		xhr.onreadystatechange = function () {
+			if (this.readyState === 4)
+				console.log(JSON.parse(this.responseText));
+		};
+		xhr.send(formData);
+	}
 	EditClick(event) {
 		var input = $(event.target).parent().find("input");
 		this.setState({ [input.attr("name") + "Current"]: input.val() });
 		disabledInput();
 		input.removeAttr("disabled");
+		input.focus();
 	}
 	Title(props) {
 		return <h2>{props.title}</h2>;
@@ -92,12 +105,19 @@ class Profile extends React.Component {
 		var el = event.target;
 		if (event.code != "Enter") return;
 		el.disabled = true;
-		// console.log();
+		console.log(this.state);
 		if (el.name == "email" && !validateEmail(el.value)) {
-			this.setState({ email: this.state.emailCurrent });
+			return this.setState({ email: this.state.emailCurrent });
 		}
+		if (el.value == "" || el.value.length < 10)
+			return this.setState({
+				[el.name]: this.state[el.name + "Current"],
+			});
+		this.Save({ info: el.name, data: el.value });
 	}
-	Change(event) {}
+	Change(event) {
+		this.setState({ [event.target.name]: event.target.value });
+	}
 }
 
 function disabledInput() {

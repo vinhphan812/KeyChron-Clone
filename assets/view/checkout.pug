@@ -1,0 +1,227 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Check Out
+  link#bootstrap-css(href='//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css', rel='stylesheet')
+  script(src='//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')
+  script(src='//code.jquery.com/jquery-1.11.1.min.js')
+  link(rel='stylesheet', href='../css/checkout.css')
+.container.wrapper
+  .row.cart-head
+    .container
+      .row
+        p
+      .row
+        div(style='display: table; margin: auto;')
+          span.step.step_complete
+            a.check-bc(href='#') Cart
+            span.step_line.step_complete &nbsp;
+            span.step_line.backline &nbsp;
+          span.step.step_complete
+            a.check-bc(href='#') Checkout
+            span.step_line &nbsp;
+            span.step_line.step_complete &nbsp;
+          span.step_thankyou.check-bc.step_complete Thank you
+      .row
+        p
+  .row.cart-body
+    form.form-horizontal(method='post', action='')
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.col-md-push-6.col-sm-push-6
+        // REVIEW ORDER
+        .panel.panel-info
+          .panel-heading
+            | Review Order
+            .pull-right
+              small
+                a.afix-1(href='#') Edit Cart
+          .panel-body
+            .form-group
+              .col-sm-3.col-xs-3
+                img.img-responsive(src='/img/product/Keychron-K1_v4/87_keys-Gateron-low-profile-red-switch.jpg')
+              .col-sm-6.col-xs-6
+                .col-xs-12 Keychron K1 
+                .col-xs-12
+                  small
+                    | Quantity:
+                    span 1
+              .col-sm-3.col-xs-3.text-right
+                h6
+                  span $
+                  | 69.00
+            .form-group
+              hr
+            .form-group
+              .col-sm-3.col-xs-3
+                img.img-responsive(src='/img/product/Keychron-K4-V2/Keychron-K4-V2-Blue.jpg')
+              .col-sm-6.col-xs-6
+                .col-xs-12 Keychron K4
+                .col-xs-12
+                  small
+                    | Quantity:
+                    span 1
+              .col-sm-3.col-xs-3.text-right
+                h6
+                  span $
+                  | 69.00
+            .form-group
+              hr
+            .form-group
+              .col-sm-3.col-xs-3
+                img.img-responsive(src='/img/product/Keychron-K8/Keychron-K8-Red.jpg')
+              .col-sm-6.col-xs-6
+                .col-xs-12 Keychron K8
+                .col-xs-12
+                  small
+                    | Quantity:
+                    span 2
+              .col-sm-3.col-xs-3.text-right
+                h6
+                  span $
+                  | 79.00
+            .form-group
+              hr
+            .form-group
+              .col-xs-12
+                strong Subtotal
+                .pull-right
+                  span $
+                  span 217.00
+              .col-xs-12
+                small Shipping
+                |  $13.00
+                .pull-right
+                  span -
+            .form-group
+              hr
+            .form-group
+              .col-xs-12
+                strong Order Total
+                .pull-right
+                  span $
+                  span 230.00
+        // REVIEW ORDER END
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12.col-md-pull-6.col-sm-pull-6
+        // SHIPPING METHOD
+        .panel.panel-info
+          .panel-heading Address
+          .panel-body
+            .form-group
+              .col-md-12
+                h4 Shipping Address
+            .form-group
+              .col-md-12
+                strong Country:
+              .col-md-12
+                input.form-control(type='text', name='country', value='')
+            .form-group
+              .col-md-6.col-xs-12
+                strong First Name:
+                input.form-control(type='text', name='first_name', value='')
+              .span1
+              .col-md-6.col-xs-12
+                strong Last Name:
+                input.form-control(type='text', name='last_name', value='')
+            .form-group
+              .col-md-12
+                strong Address:
+              .col-md-12
+                input.form-control(type='text', name='address', value='')
+            .form-group
+              .col-md-12
+                strong City:
+              .col-md-12
+                input.form-control(type='text', name='city', value='')
+            .form-group
+              .col-md-12
+                strong State:
+              .col-md-12
+                input.form-control(type='text', name='state', value='')
+            .form-group
+              .col-md-12
+                strong Zip / Postal Code:
+              .col-md-12
+                input.form-control(type='text', name='zip_code', value='')
+            .form-group
+              .col-md-12
+                strong Phone Number:
+              .col-md-12
+                input.form-control(type='text', name='phone_number', value='')
+            .form-group
+              .col-md-12
+                strong Email Address:
+              .col-md-12
+                input.form-control(type='text', name='email_address', value='')
+        // SHIPPING METHOD END
+        // CREDIT CART PAYMENT
+        .panel.panel-info
+          .panel-heading
+            span
+              i.glyphicon.glyphicon-lock
+            |  Secure Payment
+          .panel-body
+            .form-group
+              .col-md-12
+                strong Card Type:
+              .col-md-12
+                select#CreditCardType.form-control(name='CreditCardType')
+                  option(value='5') Visa
+                  option(value='6') MasterCard
+                  option(value='7') American Express
+                  option(value='8') Discover
+            .form-group
+              .col-md-12
+                strong Credit Card Number:
+              .col-md-12
+                input.form-control(type='text', name='car_number', value='')
+            .form-group
+              .col-md-12
+                strong Card CVV:
+              .col-md-12
+                input.form-control(type='text', name='car_code', value='')
+            .form-group
+              .col-md-12
+                strong Expiration Date
+              .col-lg-6.col-md-6.col-sm-6.col-xs-12
+                select.form-control(name='')
+                  option(value='') Month
+                  option(value='01') 01
+                  option(value='02') 02
+                  option(value='03') 03
+                  option(value='04') 04
+                  option(value='05') 05
+                  option(value='06') 06
+                  option(value='07') 07
+                  option(value='08') 08
+                  option(value='09') 09
+                  option(value='10') 10
+                  option(value='11') 11
+                  option(value='12') 12
+              .col-lg-6.col-md-6.col-sm-6.col-xs-12
+                select.form-control(name='')
+                  option(value='') Year
+                  option(value='2015') 2015
+                  option(value='2016') 2016
+                  option(value='2017') 2017
+                  option(value='2018') 2018
+                  option(value='2019') 2019
+                  option(value='2020') 2020
+                  option(value='2021') 2021
+                  option(value='2022') 2022
+                  option(value='2023') 2023
+                  option(value='2024') 2024
+                  option(value='2025') 2025
+            .form-group
+              .col-md-12
+                span Pay secure using your credit card.
+              .col-md-12
+                ul.cards
+                  li.visa.hand Visa
+                  li.mastercard.hand MasterCard
+                  li.amex.hand Amex
+                .clearfix
+            .form-group
+              .col-md-6.col-sm-6.col-xs-12
+                button.btn.btn-primary.btn-submit-fix(type='submit') Place Order
+        // CREDIT CART PAYMENT END
+  .row.cart-footer

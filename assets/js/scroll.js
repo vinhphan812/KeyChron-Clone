@@ -22,6 +22,20 @@ $(document).ready(function () {
 	$(window).scroll(topBar).resize(showMenuBar);
 	$("#close__menu").click(closeLayerMain);
 });
+$(".btn-plus, .btn-minus").on("click", function (e) {
+	const isNegative = $(e.target).closest(".btn-minus").is(".btn-minus");
+	const input = $(e.target).closest(".input-group").find("input");
+	console.log(input);
+	if (input.is("input")) {
+		input[0][isNegative ? "stepDown" : "stepUp"]();
+	}
+});
+
+function openNav() {
+	$(document.body).addClass("open__menu__right");
+	$("#main").on("click", closeLayerMain);
+	$("#mySidenav").addClass("active");
+}
 
 function darkMode() {
 	var body = $(document.body);
@@ -72,9 +86,9 @@ function showSearch() {
 function closeLayerMain() {
 	if ($("#searchBox").hasClass("active"))
 		$("#searchBox").removeClass("active");
-	else if ($("#menu").hasClass("active") >= 0)
-		menu.classList.remove("active");
-
+	else if ($("#menu").hasClass("active")) menu.classList.remove("active");
+	else if ($("#mySidenav").hasClass("active"))
+		$("#mySidenav").removeClass("active");
 	$("#main").off("click", closeLayerMain);
 	$(document.body).removeClass("open__menu__right");
 }

@@ -115,11 +115,21 @@
 	.top > .top__component > .top__container {
 		width: 70vw;
 	}
+	.form-box {
+		width: 100%;
+		padding: 1rem;
+	}
+	.main > div {
+		margin: 1rem 0;
+	}
+	.sidenav {
+		width: 60vw;
+		right: -60vw;
+	}
 }
 
 @media only screen and (max-width: 1400px) {
 }
-
 @media (min-width: 920px) and (max-width: 1400px) {
 	.flex-container {
 		padding: 2.5rem 10%;
@@ -129,5 +139,16 @@
 	}
 	.table__logo {
 		width: 120%;
+	}
+	.sidenav {
+		width: 35vw;
+		right: -35vw;
+	}
+}
+
+@media only screen and (min-width: 500px) and (max-width: 980px) {
+	.sidenav {
+		width: 45vw;
+		right: -45vw;
 	}
 }

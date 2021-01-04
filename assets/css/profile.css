@@ -26,6 +26,10 @@
 	box-shadow: 0 0 3px 0 var(--text-color-primary);
 }
 
+#info > a {
+	float: right;
+}
+
 .info__box {
 	display: flex;
 	justify-content: space-between;

@@ -27,13 +27,52 @@
 	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 	<script src="./js/profile.js" type="text/babel"></script>
 	<link rel="stylesheet" href="./css/profile.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
 	<!-- css page -->
-	<link rel="stylesheet" href="/css/style.css" type="text/css" />
-	<link rel="stylesheet" href="/css/darkmode.css" type="text/css" />
-	<link rel="stylesheet" href="/css/menu.css" type="text/css" />
-	<link rel="stylesheet" href="/css/reponsive.css" type="text/css" />
-	<link rel="stylesheet" href="/css/anime.css" type="text/css" />
-	<link rel="stylesheet" href="/css/carousel.css" type="text/css" />
+	<link rel="stylesheet" href="../css/style.css" type="text/css" />
+	<link rel="stylesheet" href="../css/darkmode.css" type="text/css" />
+	<link rel="stylesheet" href="../css/menu.css" type="text/css" />
+	<link rel="stylesheet" href="../css/reponsive.css" type="text/css" />
+	<link rel="stylesheet" href="../css/anime.css" type="text/css" />
+	<link rel="stylesheet" href="../css/carousel.css" type="text/css" />
+	<style>
+		.slider-for {
+			width: 50%;
+			height: 500px;
+			margin: auto;
+		}
+
+		.slider-for img {
+			object-position: center;
+			width: 100%;
+		}
+
+		/* .slider-nav div, */
+		.slider-nav {
+			width: 50%;
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.slider-nav img {
+			width: 100px;
+			height: 100px;
+		}
+
+		.slider-nav .slick-slide {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.slider-for .slick-slide,
+		.slider-nav .slick-slide:focus {
+			outline: none;
+		}
+	</style>
 </head>
 
 <body id="top__page">
@@ -41,7 +80,7 @@
 	<div class="top" id="top">
 		<div class="top__component">
 			<div class="top__logo">
-				<img src="./img/logo/update0101-2_160x.jpg" alt="Logo" />
+				<img src="../img/logo/update0101-2_160x.jpg" alt="Logo" />
 			</div>
 			<div class="top__container" id="menu">
 				<button class="btn__close close" id="close__menu">
@@ -115,6 +154,15 @@
 					</li>
 				</ul>
 			</div>
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeLayerMain()">&times;</a>
+				<a href="#">Cart</a>
+				<hr>
+				<ul>
+					<li>Your cart is currently empty.</li>
+				</ul>
+
+			</div>
 			<div class="top__icon__user" id="icon__bar">
 				<a><i class="fa fa-user fa-lg"></i></a>
 				<a>
@@ -124,7 +172,7 @@
 				<a class="hidden" onclick="show()">
 					<i class="fas fa-bars fa-lg"></i>
 				</a>
-				<a>
+				<a onclick="openNav()">
 					<i class="fa fa-shopping-cart fa-lg"></i>
 				</a>
 				<a>
@@ -141,7 +189,48 @@
 			</div>
 		</div>
 	</div>
-	<div class="main main__loading" id="main"></div>
+	<div class="main main__loading" id="main">
+		<div class="slider-nav">
+			<div>
+				<img src="../img/product/Keychron-K1_v4/87_keys-Gateron-low-profile-blue-switch.jpg" alt="">
+			</div>
+			<div>
+				<img src="../img/product/Keychron-K1_v4/87_keys-Gateron-low-profile-red-switch.jpg" alt="">
+			</div>
+			<div>
+				<img src="../img/product/Keychron-K1_v4/87_keys-Gateron-low-profile-brown-switch.jpg" alt="">
+			</div>
+			<div>
+				<img src="../img/product/Keychron-K1_v4/104_keys-Gateron-low-profile-blue-switch.jpg" alt="">
+			</div>
+			<div>
+				<img src="../img/product/Keychron-K1_v4/104_keys-Gateron-low-profile-red-switch.jpg" alt="">
+			</div>
+			<div>
+				<img src="../img/product/Keychron-K1_v4/104_keys-Gateron-low-profile-brown-switch.jpg" alt="">
+			</div>
+		</div>
+		<div class="slider-for">
+			<div>
+				<img src="../img/product/Keychron-K1_v4/87_keys-Gateron-low-profile-blue-switch.jpg" alt="">
+			</div>
+			<div>
+				<img src="../img/product/Keychron-K1_v4/87_keys-Gateron-low-profile-red-switch.jpg" alt="">
+			</div>
+			<div>
+				<img src="../img/product/Keychron-K1_v4/87_keys-Gateron-low-profile-brown-switch.jpg" alt="">
+			</div>
+			<div>
+				<img src="../img/product/Keychron-K1_v4/104_keys-Gateron-low-profile-blue-switch.jpg" alt="">
+			</div>
+			<div>
+				<img src="../img/product/Keychron-K1_v4/104_keys-Gateron-low-profile-red-switch.jpg" alt="">
+			</div>
+			<div>
+				<img src="../img/product/Keychron-K1_v4/104_keys-Gateron-low-profile-brown-switch.jpg" alt="">
+			</div>
+		</div>
+	</div>
 	<!--footer-->
 	<a href="#top__page" id="up__top" class="up__top"><i class="far fa-caret-square-up fa-3x"></i></a>
 	<div class="footer">
@@ -200,7 +289,28 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
-	<script src="./js/scroll.js" type="text/javascript"></script>
+	<script src="../js/scroll.js" type="text/javascript"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			$('.slider-for').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				// fade: true,
+				asNavFor: '.slider-nav'
+			});
+			$('.slider-nav').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				asNavFor: '.slider-for',
+				vertical: true,
+				centerMode: true,
+				focusOnSelect: true
+			});
+		});
+	</script>
 </body>
 
 </html>

@@ -1,47 +1,19 @@
 {
-	"usersAccount": [
-		{
-			"id": "JUIjEtoa",
-			"user": "vinhphan812@gmail.com",
-			"pass": "12345678"
-		},
-		{
-			"id": "D8BvVZtx",
-			"user": "at400123@gmail.com",
-			"pass": "12345678"
-		},
-		{
-			"id": "DeBys4OT",
-			"email": "phanvinh637@gmail.com",
-			"pass": "12345678"
-		}
-	],
-	"userInfo": [
-		{
-			"id": "JUIjEtoa",
-			"name": {
-				"first": "Phan",
-				"last": "Thanh Vinh",
-				"fullName": "Thanh Vinh Phan"
-			},
-			"phone": "0335499633",
-			"address": "Q10,Tp HCM",
-			"email": "vinhphan812@gmail.com",
-			"shoppingCart": [],
-			"historyOrder": []
-		},
-		{
-			"id": "D8BvVZtx",
-			"name": {
-				"first": "Trần",
-				"last": "Long",
-				"fullName": "Long Trần"
-			},
-			"phone": "0335499633",
-			"address": "Q8,Tp HCM",
-			"email": "at400123@gmail.com",
-			"shoppingCart": [],
-			"historyOrder": []
-		}
-	]
+  "usersAccount": [
+    {
+      "id": "JDUwlPMa",
+      "email": "vinhphan812@gmail.com",
+      "pass": "12345678"
+    }
+  ],
+  "userInfo": [
+    {
+      "id": "JDUwlPMa",
+      "name": "vinh Phan",
+      "phone": "0335499633",
+      "email": "vinhphan812@gmail.com",
+      "address": "99/15 Tô  Hiến Thành, P13, Q10, TP.HCM",
+      "shoppingCart": []
+    }
+  ]
 }

@@ -5,6 +5,7 @@ const product = require("./routers/product.router");
 var session = require("express-session");
 const DataBase = require("./Control/dataBase"),
 	User = require("./Control/UserControl");
+const { DH_UNABLE_TO_CHECK_GENERATOR } = require("constants");
 
 const app = express(),
 	dbUser = new User(),
@@ -45,9 +46,37 @@ app.get("/data", async (req, res) => {
 
 app.get("/data/slide", async (req, res) => {});
 
-app.get("/data/products", async (req, res) => {
-	res.json(await db.getProducts());
+app.get("/ShowCase", function (req, res) {
+	res.render("index", {
+		title: "Buyers' Showcase",
+		scripts: ["./js/buyShowCase.js"],
+		styles: ["./css/showcase.css"],
+	});
 });
+
+app.get("/CheckOut", function (req, res) {
+	res.render("checkout");
+});
+
+app.route("/products/:product")
+	.get(async (req, res) => {
+		var productName = [],
+			params = req.params.product.split("-");
+		for (var i = 0; i < params.length; i++) {
+			productName.push(
+				params[i][0].toUpperCase() + params[i].slice(1)
+			);
+		}
+		productName = productName.join(" ");
+		res.render("product", {
+			title: productName,
+			scripts: ["../js/product.js"],
+			styles: ["../css/product.css"],
+		});
+	})
+	.post(async (req, res) => {
+		res.json(await db.findProduct(req.params.product));
+	});
 
 app.get("/data/user/:id", async (req, res) => {
 	return usersAccount.length > req.params.id
@@ -59,88 +88,94 @@ app.get("/test", (req, res) => {
 	res.sendFile(path.join(__dirname, "/assets/view/index.html"));
 });
 
-app.get("/account", (req, res) => {
-	if (!req.session.user)
-		res.render("index", {
-			title: "Account",
-			scripts: ["./js/LOGIN.js"],
-			styles: ["./css/login.css"],
-		});
-	else
-		res.render("index", {
-			title: `Account - ${req.session.user.name.fullName}`,
-			scripts: ["./js/profile.js"],
-			styles: ["./css/profile.css"],
-		});
-});
-
-app.post("/saveInfo", async (req, res) => {});
-
-app.post("/account", async (req, res) => {
-	let data = req.body,
-		response = {};
-	if (!req.session.user) {
-		const user = usersAccount.find((i) => i.user == data.email);
-		if (data.submit === "Sign in") {
-			if (user && user.pass == data.pass) {
-				req.session.user = userInfo.find((i) => i.id == user.id);
-				response.success = true;
-			} else
-				response = {
-					success: false,
-					msg: "Incorrect email or password.",
-				};
-		} else if (data.submit == "Create") {
-			if (
-				data.firstName &&
-				data.lastName &&
-				data.email &&
-				data.pass &&
-				!user
-			) {
-				await dbUser.addUser({
-					email: data.email,
-					firstName: data.firstName,
-					lastName: data.lastName,
-					pass: data.pass,
-				});
-				response = {
-					success: true,
-					msg: "Create account failed.",
-				};
-			} else
-				response = {
-					success: false,
-					msg: "Email has been registered.",
-				};
-		} else if (data.submit == "Submit") {
-			if (user)
-				response = {
-					success: true,
-					verify: true,
-					msg:
-						"We've sent you an email with a link to update your password.",
-				};
-			else
-				response = {
-					success: false,
-					verify: false,
-					msg: "Email hasn't been registered",
-				};
-			res.status(302);
+app.route("/account")
+	.get((req, res) => {
+		if (!req.session.user)
+			res.render("index", {
+				title: "Account",
+				scripts: ["./js/LOGIN.js"],
+				styles: ["./css/login.css"],
+			});
+		else
+			res.render("index", {
+				title: `Account - ${req.session.user.name.fullName}`,
+				scripts: ["./js/profile.js"],
+				styles: ["./css/profile.css"],
+			});
+	})
+	.post(async (req, res) => {
+		let data = req.body,
+			response = {};
+		if (!req.session.user) {
+			const user = usersAccount.find((i) => i.email == data.email);
+			if (data.submit === "Sign in") {
+				if (user && user.pass == data.pass) {
+					req.session.user = userInfo.find(
+						(i) => i.id == user.id
+					);
+					response.success = true;
+				} else
+					response = {
+						success: false,
+						msg: "Incorrect email or password.",
+					};
+			} else if (data.submit == "Create") {
+				if (
+					data.firstName &&
+					data.lastName &&
+					data.email &&
+					data.pass &&
+					!user
+				) {
+					await dbUser.addUser({
+						email: data.email,
+						firstName: data.firstName,
+						lastName: data.lastName,
+						pass: data.pass,
+					});
+					usersAccount = dbUser.getUserAccount();
+					userInfo = dbUser.getUserInfo();
+					response = {
+						success: true,
+						msg: "Create account failed.",
+					};
+				} else
+					response = {
+						success: false,
+						msg: "Email has been registered.",
+					};
+			} else if (data.submit == "Submit") {
+				if (user)
+					response = {
+						success: true,
+						verify: true,
+						msg:
+							"We've sent you an email with a link to update your password.",
+					};
+				else
+					response = {
+						success: false,
+						verify: false,
+						msg: "Email hasn't been registered",
+					};
+				res.status(302);
+			}
 		}
+		res.send(response);
+	});
+
+app.post("/saveInfo", async (req, res) => {
+	if (req.session.user) {
+		const id = req.session.user.id;
+		dbUser.EditUser(id, req.body);
+		return res.send(true);
 	}
-	res.send(response);
+
+	res.send(false);
 });
 
 app.get("/info", (req, res) => {
 	res.json(req.session.user);
-});
-
-app.get("/user", async (req, res) => {
-	var us = await user.getUserList();
-	console.log(us);
-	res.json(us);
 });
 
 app.post("/data", async (req, res) => {

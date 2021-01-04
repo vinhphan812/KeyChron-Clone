@@ -25,25 +25,22 @@ class User {
 				},
 				InfoDetail = {
 					id: id,
-					name: {
-						firstName: info.firstName,
-						lastName: info.lastName,
-						fullName: info.lastName + " " + info.firstName,
-					},
+					name: info.lastName + " " + info.firstName,
 					phone: "",
 					email: info.email,
 					address: "",
 					shoppingCart: [],
 				};
-			db.get("usersAccount")
-				.push(loginInfo)
-				.get("userInfo")
-				.push(InfoDetail)
-				.write();
+			db.get("usersAccount").push(loginInfo).write();
+			db.get("userInfo").push(InfoDetail).write();
 			resolve();
 		});
 	}
-	EditUser() {}
+	EditUser(id, data) {
+		data.id = id;
+		db.get("userInfo").find({ id: id }).assign(data).write();
+		return true;
+	}
 }
 
 module.exports = User;

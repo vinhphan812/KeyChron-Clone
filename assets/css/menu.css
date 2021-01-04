@@ -169,7 +169,7 @@ a:focus {
 	font-size: 0.9em;
 	margin: 0.5rem 0 0 0;
 	transform: translateY(-1rem);
-	z-index: 5;
+	z-index: 100;
 	box-shadow: 0 1px 2px 2px #33333309;
 	transition: transform ease 0.2s, visibility 0.1s;
 }
@@ -360,4 +360,46 @@ input {
 
 .main__loading {
 	height: 200vh;
+}
+.sidenav {
+	height: 100%;
+	width: 25vw;
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	right: -25vw;
+	background-color: #fff;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	box-shadow: 0 0 5px 0 #999;
+}
+
+.sidenav.active {
+	right: 0;
+}
+
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #555;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav a:hover {
+	color: #aaa;
+}
+.sidenav hr {
+	margin: 0 2rem;
+	border-color: #bbb;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
 }

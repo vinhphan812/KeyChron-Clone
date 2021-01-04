@@ -195,11 +195,12 @@
 	text-decoration: line-through;
 }
 
-.flex-item-col > .detail > .reviews > i.fa.fa-star {
+i.fa.fa-star {
+	color: #ccc;
 	-webkit-text-stroke: 1px #715903cf;
 }
 
-.flex-item-col > .detail > .reviews > i.checked {
+i.fa.fa-star.checked {
 	color: #f5ce57;
 }
 
