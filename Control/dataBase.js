@@ -51,6 +51,7 @@ class database {
 	}
 	findProduct(name) {
 		name = name.replaceAll("-", " ");
+		console.log(name);
 		var product = productDB
 			.get("Products")
 			// .value()
