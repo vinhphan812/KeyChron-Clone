@@ -75,9 +75,17 @@ app.route("/products/:product")
 		});
 	})
 	.post(async (req, res) => {
-		var product = await db.findProduct(req.params.product);
-		if (product) res.json({ success: true, data: product });
-		else res.send({ success: false, msg: "404 - Not Found Product..." });
+		try {
+			var product = await db.findProduct(req.params.product);
+			if (product) res.json({ success: true, data: product });
+			else
+				res.send({
+					success: false,
+					msg: "404 - Not Found Product...",
+				});
+		} catch (error) {
+			res.send(error);
+		}
 	});
 
 app.get("/data/user/:id", async (req, res) => {
