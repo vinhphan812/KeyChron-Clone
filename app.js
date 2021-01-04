@@ -60,13 +60,6 @@ app.get("/CheckOut", function (req, res) {
 
 app.route("/products/:product")
 	.get(async (req, res) => {
-		req.session.user = {
-			id: "wUqOnnIu",
-			name: "Phan Thanh Vinh",
-			phone: "0335499633",
-			email: "vinhphan812@gmail.com",
-			address: "99/15 Tô  Hiến Thành, P13, Q10, TP.HCM, VietNam",
-		};
 		var productName = [],
 			params = req.params.product.split("-");
 		for (var i = 0; i < params.length; i++) {
