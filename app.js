@@ -98,7 +98,7 @@ app.route("/account")
 			});
 		else
 			res.render("index", {
-				title: `Account - ${req.session.user.name.fullName}`,
+				title: `Account - ${req.session.user.name}`,
 				scripts: ["./js/profile.js"],
 				styles: ["./css/profile.css"],
 			});
