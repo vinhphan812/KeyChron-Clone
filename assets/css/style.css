@@ -274,3 +274,14 @@ video {
 	height: 50px;
 	border-radius: 50%;
 }
+
+.alertError {
+	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 50px;
+	font-weight: 600;
+	color: #979797;
+	background-color: #eee;
+}

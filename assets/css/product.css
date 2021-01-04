@@ -93,6 +93,7 @@
 	display: flex !important;
 	align-items: center;
 	background-color: #efefef;
+	width: 20%;
 }
 
 .slider-nav .slick-slide {
@@ -155,7 +156,7 @@
 
 /* Responsive layout - make the columns stack on top of each other instead of next to each other */
 
-@media (max-width: 400px) {
+@media (max-width: 620px) {
 	.side,
 	.middle {
 		width: 100%;
@@ -173,5 +174,27 @@
 	.first-component > div {
 		width: 100%;
 		margin: 2rem 0;
+	}
+	.slide-product {
+		width: 100%;
+		height: 50vh;
+	}
+	.slider-for {
+		height: 50vh;
+	}
+	.slider-nav {
+		height: 50vh;
+	}
+	.slider-nav .slick-list {
+		height: 80% !important;
+	}
+}
+
+@media only screen and (max-width: 1600px) {
+	.first-component {
+		width: 95%;
+	}
+	.slide-product {
+		width: 50%;
 	}
 }

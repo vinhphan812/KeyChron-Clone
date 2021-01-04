@@ -29,10 +29,14 @@ class User {
 					phone: "",
 					email: info.email,
 					address: "",
+				},
+				ShoppingCartUser = {
+					id: id,
 					shoppingCart: [],
 				};
 			db.get("usersAccount").push(loginInfo).write();
 			db.get("userInfo").push(InfoDetail).write();
+			db.get("ShoppingCartUser").push(ShoppingCartUser).write();
 			resolve();
 		});
 	}
@@ -40,6 +44,16 @@ class User {
 		data.id = id;
 		db.get("userInfo").find({ id: id }).assign(data).write();
 		return true;
+	}
+	addShoppingCart({ uid, id, name, quantity, optionKey, optionValue }) {
+		var data = db.get("ShoppingCartUser").value();
+		console.log(id);
+		console.log(data["wUqOnnIu"]);
+		console.log(data[uid]);
+		// if (db.get("ShoppingCartUser").find(id).value())
+		db.get("ShoppingCartUser")
+			.push({ [uid]: [] })
+			.write();
 	}
 }
 

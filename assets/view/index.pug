@@ -19,6 +19,7 @@ head
   script(crossorigin='', src='https://unpkg.com/react-dom@17/umd/react-dom.production.min.js')
 
   script(src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js')
+  script(src='./js/ShoppingCart.js' type="text/babel")
   each script in scripts
     script(src=`${script}` type="text/babel")
   each style in styles
@@ -70,23 +71,23 @@ body#top__page
             li
               a(href="/products/keychron-k2-keycap-set") K2 Keycap Set
             li
-              a(href='/products/keychron-k2-dye-pbt-retro-mac-keycap-set') K2 PBT Retro Mac Keycap Set
+              a(href='/products/keychron-k2-pbt-retro-mac-keycap-set') K2 PBT Retro Mac Keycap Set
             li
-              a(href='/products/keychron-k2-wood-palm-rest') K2 Wooden Palm Rest
+              a(href='/products/keychron-k2-wooden-palm-rest') K2 Wooden Palm Rest
             li
               a(href='/products/keychron-k3-wooden-palm-rest') K3 Wooden Palm Rest
             li
               a(href='/products/keychron-k3-keycap-set') K3 Keycap Set
             li
-              a(href='/products/keychron-k4-wood-palm-rest') K4 Walnut Wooden Palm Rest
+              a(href='/products/keychron-k4-wooden-palm-rest') K4 Walnut Wooden Palm Rest
             li
               a(href='/products/k6-keycap-set') K6 Keycap Set
             li
-              a(href='/products/k6-wood-palm-rest') K6 Walnut Wooden Palm Rest
+              a(href='/products/k6-wooden-palm-rest') K6 Walnut Wooden Palm Rest
             li
               a(href='/products/keychron-k8-keycap-set') K8 Keycap Set
             li
-              a(href='/products/keychron-k8-wood-palm-rest') K8 Wooden Palm Rest
+              a(href='/products/keychron-k8-wooden-palm-rest') K8 Wooden Palm Rest
             li
               a(href='/products/switches') Switches
             li
@@ -94,15 +95,14 @@ body#top__page
         li.menu__item
           a(href='/ShowCase') Buyers&apos; Showcase
         li.menu__item
-          a(href='#') Get 10% off
+          a(href='/GetSale') Get 10% off
         li.menu__item
-          a(href='#') Blog
+          a(href='Blog') Blog
     #mySidenav.sidenav
       a.closebtn(href='javascript:void(0)', onclick='closeLayerMain()') &times;
-      a(href='#') Cart
+      a(href='') Cart
       hr
-      ul
-        li Your cart is currently empty.
+      ul#shoppingCart
     #icon__bar.top__icon__user
       a(href="/account")
         i.fa.fa-user.fa-lg

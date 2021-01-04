@@ -1,19 +1,21 @@
 {
   "usersAccount": [
     {
-      "id": "JDUwlPMa",
+      "id": "wUqOnnIu",
       "email": "vinhphan812@gmail.com",
       "pass": "12345678"
     }
   ],
   "userInfo": [
     {
-      "id": "JDUwlPMa",
-      "name": "Vinh Thanh Phan",
+      "id": "wUqOnnIu",
+      "name": "Phan Thanh Vinh",
       "phone": "0335499633",
       "email": "vinhphan812@gmail.com",
-      "address": "99/15 Tô  Hiến Thành, P13, Q10, TP.HCM",
-      "shoppingCart": []
+      "address": "99/15 Tô  Hiến Thành, P13, Q10, TP.HCM, VietNam"
     }
-  ]
+  ],
+  "ShoppingCartUser": {
+    "wUqOnnIu": {}
+  }
 }

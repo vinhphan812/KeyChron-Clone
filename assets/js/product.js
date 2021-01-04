@@ -5,7 +5,19 @@ xhr.open("POST", location.pathname);
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 xhr.send(null);
 xhr.onreadystatechange = function () {
-	if (this.readyState == 4) render(JSON.parse(this.responseText));
+	if (this.readyState == 4) {
+		const res = JSON.parse(this.responseText);
+		if (res.success) {
+			render(res.data);
+		} else
+			ReactDOM.render(
+				<div className="alertError">
+					<i class="fas fa-exclamation-circle"></i>&nbsp;
+					{res.msg}
+				</div>,
+				document.getElementById("main")
+			);
+	}
 };
 
 function render(data) {
@@ -17,17 +29,15 @@ function render(data) {
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				arrows: false,
-				mobileFirst: true,
 				asNavFor: ".slider-nav",
 			});
 			$(".slider-nav").slick({
-				slidesToShow: 3,
+				slidesToShow: 1,
 				slidesToScroll: 1,
 				asNavFor: ".slider-for",
 				vertical: true,
 				arrows: false,
 				centerMode: true,
-				mobileFirst: true,
 				centerPadding: "100px",
 				focusOnSelect: true,
 			});
@@ -138,11 +148,21 @@ class Select extends React.Component {
 class InfoProduct extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { quantity: 1, price: price(this.props.data) };
+		this.state = {
+			imgs: props.data.imgURL,
+			id: props.data.id,
+			name: props.data.name,
+			properties: props.data.properties,
+			quantity: 1,
+			price: props.data.price ? props.data.price : price(props.data),
+		};
 		this.Bill = this.Bill.bind(this);
 		this.QuantityBox = this.QuantityBox.bind(this);
 		this.BtnQuantity = this.BtnQuantity.bind(this);
 		this.PlusOrMinus = this.PlusOrMinus.bind(this);
+		this.Buyer = this.Buyer.bind(this);
+		this.AddCart = this.AddCart.bind(this);
+		this.BuyItNow = this.BuyItNow.bind(this);
 	}
 	render() {
 		const data = this.props.data;
@@ -181,6 +201,7 @@ class InfoProduct extends React.Component {
 				<div className="input-group inline-group">
 					<this.BtnQuantity value="minus" />
 					<input
+						name="quantity"
 						type="number"
 						className="form-control quantity"
 						min="0"
@@ -204,7 +225,6 @@ class InfoProduct extends React.Component {
 	}
 	Bill() {
 		const data = this.props.data;
-		console.log(data);
 		var version = document.forms.product.version.value,
 			keys = document.forms.product.keys
 				? document.forms.product.keys.value
@@ -258,24 +278,97 @@ class InfoProduct extends React.Component {
 	Buyer(props) {
 		return (
 			<div className="groupBtn">
-				<button className="addCart">Add to cart</button>
-				<button className="BuyNow">Buy it now</button>
+				<button
+					type="button"
+					className="addCart"
+					onClick={this.AddCart}
+				>
+					Add to cart
+				</button>
+				<button
+					type="button"
+					className="BuyNow"
+					onClick={this.BuyItNow}
+				>
+					Buy it now
+				</button>
 			</div>
 		);
+	}
+	AddCart(event) {
+		const properties = this.state.properties,
+			product = document.forms.product;
+		var data = [],
+			imgs = this.state.imgs;
+		console.log(this.state);
+		for (var i of properties) {
+			i = i.replaceAll(" ", "");
+			if (i != "version" && i != "switchType") {
+				console.log(
+					i,
+					product[i].value.toLowerCase().replaceAll(" ", "-")
+				);
+				imgs = imgs.filter((img) => {
+					return (
+						img.indexOf(
+							product[i].value
+								.toLowerCase()
+								.replaceAll(" ", "-")
+						) >= 0
+					);
+				});
+			}
+
+			data.push(`${i}=${product[i].value}`);
+		}
+		data.push(`properties=${properties}`);
+		data.push(`quantity=${this.state.quantity}`);
+		data.push(`name=${this.state.name}`);
+		data.push(`id=${this.state.id}`);
+		data.push(`img=${imgs}`);
+		data.push(`price=${this.state.price}`);
+		xhr.open("POST", "/addCart");
+		xhr.setRequestHeader(
+			"Content-Type",
+			"application/x-www-form-urlencoded"
+		);
+		xhr.onreadystatechange = function () {
+			if (this.readyState === 4) {
+				if (this.responseText == "true") openNav();
+				else location.href = "/account";
+			}
+		};
+		xhr.send(data.join("&"));
+	}
+	BuyItNow(event) {
+		const properties = this.state.properties,
+			product = document.forms.product;
+		var data = [];
+		for (var i of properties) data.push(`${i}=${product[i].value}`);
+
+		xhr.open("POST", "/Buy");
+		xhr.setRequestHeader(
+			"Content-Type",
+			"application/x-www-form-urlencoded"
+		);
+		xhr.onreadystatechange = function () {
+			if (this.readyState === 4) location.href = this.responseText;
+		};
+		xhr.send(data.join("&"));
 	}
 }
 
 function price(data) {
-	var version = data.version;
-	return recPrice(data[version[0]]);
+	var version = data.version[0];
+	return recPrice(data[version]);
 }
 
-function recPrice(data) {
-	for (var i in data) {
+function recPrice(dataPrice) {
+	for (var i in dataPrice) {
 		if (i == "price") {
-			return data.price;
+			return dataPrice.price;
 		} else {
-			return recPrice(data[i]);
+			return recPrice(dataPrice[i]);
 		}
 	}
 }

@@ -403,3 +403,9 @@ input {
 	font-size: 36px;
 	margin-left: 50px;
 }
+.sidenav > ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}

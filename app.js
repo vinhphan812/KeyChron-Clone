@@ -60,6 +60,13 @@ app.get("/CheckOut", function (req, res) {
 
 app.route("/products/:product")
 	.get(async (req, res) => {
+		req.session.user = {
+			id: "wUqOnnIu",
+			name: "Phan Thanh Vinh",
+			phone: "0335499633",
+			email: "vinhphan812@gmail.com",
+			address: "99/15 Tô  Hiến Thành, P13, Q10, TP.HCM, VietNam",
+		};
 		var productName = [],
 			params = req.params.product.split("-");
 		for (var i = 0; i < params.length; i++) {
@@ -75,7 +82,9 @@ app.route("/products/:product")
 		});
 	})
 	.post(async (req, res) => {
-		res.json(await db.findProduct(req.params.product));
+		var product = await db.findProduct(req.params.product);
+		if (product) res.json({ success: true, data: product });
+		else res.send({ success: false, msg: "404 - Not Found Product..." });
 	});
 
 app.get("/data/user/:id", async (req, res) => {
@@ -176,8 +185,42 @@ app.post("/saveInfo", async (req, res) => {
 	res.send(false);
 });
 
+app.get("/shoppingCart", function (req, res) {
+	if (req.session.user) res.send(["hi"]);
+	else res.send([]);
+});
+
+app.route("/Buy")
+	.get(function (req, res) {
+		res.render("checkout");
+	})
+	.post(function (req, res) {
+		if (req.session.user) res.send("/Buy");
+		else res.send("/account");
+		// res.render("checkout");
+		// res.setHeader("method", "GET");
+		// res.redirect("/Buy");
+	});
+
 app.get("/info", (req, res) => {
 	res.json(req.session.user);
+});
+
+app.post("/addCart", async (req, res) => {
+	if (req.session.user) {
+		const data = req.body,
+			optionKey = data.properties.split(",");
+		var optionValue = {};
+		for (var i of optionKey) optionValue[i] = data[i];
+		dbUser.addShoppingCart({
+			uid: req.session.user.id,
+			id: data.id,
+			quantity: data.quantity,
+			optionKey: data.properties.split(","),
+			optionValue: optionValue,
+		});
+		res.send(true);
+	} else res.send(false);
 });
 
 app.post("/data", async (req, res) => {
@@ -195,8 +238,13 @@ app.post("/data", async (req, res) => {
 
 app.get("/signout", async (req, res) => {
 	req.session.destroy();
-	// res.send("oki");
 	res.redirect("/account");
+});
+
+app.use(function (req, res, next) {
+	res.status(404);
+	// res.send("404: File Not Found");
+	res.render("404");
 });
 
 app.listen(host, function () {
