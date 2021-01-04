@@ -169,6 +169,7 @@ app.post("/saveInfo", async (req, res) => {
 		const id = req.session.user.id;
 		dbUser.EditUser(id, req.body);
 		userInfo = dbUser.getUserInfo();
+		req.session.user = userInfo.find((u) => u.id === id);
 		return res.send(true);
 	}
 
