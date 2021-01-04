@@ -168,6 +168,7 @@ app.post("/saveInfo", async (req, res) => {
 	if (req.session.user) {
 		const id = req.session.user.id;
 		dbUser.EditUser(id, req.body);
+		userInfo = dbUser.getUserInfo();
 		return res.send(true);
 	}
 
