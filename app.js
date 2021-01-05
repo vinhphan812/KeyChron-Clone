@@ -5,7 +5,6 @@ const product = require("./routers/product.router");
 var session = require("express-session");
 const DataBase = require("./Control/dataBase"),
 	User = require("./Control/UserControl");
-const { DH_UNABLE_TO_CHECK_GENERATOR } = require("constants");
 
 const app = express(),
 	dbUser = new User(),
@@ -29,7 +28,7 @@ app.set("view engine", "pug");
 app.use(express.json());
 app.use(session(cookie));
 app.use("/product", product);
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "assets")));
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
