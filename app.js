@@ -243,11 +243,11 @@ app.get("/signout", async (req, res) => {
 	res.redirect("/account");
 });
 
-app.use(function (req, res, next) {
-	res.status(404);
-	// res.send("404: File Not Found");
-	res.render("404");
-});
+// app.use(function (req, res, next) {
+// 	res.status(404);
+// 	// res.send("404: File Not Found");
+// 	res.render("404");
+// });
 
 app.listen(host, function () {
 	console.log(`server running is http://localhost:${host}`);
