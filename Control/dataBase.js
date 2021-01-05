@@ -50,14 +50,16 @@ class database {
 		});
 	}
 	findProduct(name) {
-		name = name.replaceAll("-", " ");
-		console.log(name);
+		var namePlace = name.replaceAll("-", " ").toLowerCase();
+		// console.log(name);
 		var product = productDB
 			.get("Products")
 			// .value()
 			.find(function (product) {
-				if (product.name.toLowerCase().indexOf(name) >= 0)
+				if (product.name.toLowerCase().indexOf(namePlace) >= 0) {
+					console.log(product.name);
 					return product;
+				}
 			})
 			.value();
 		return product;
