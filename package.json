@@ -7,6 +7,9 @@
 		"test": "nodemon app.js",
 		"start": "node app.js"
 	},
+	"engines": {
+		"node": "15.5.1"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/vinhphan812/KeyChron-Clone.git"
