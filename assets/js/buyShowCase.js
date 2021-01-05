@@ -6,52 +6,52 @@ class ShowCase extends React.Component {
 		return [
 			<div>
 				<img
-					src="/img/showcase/image1.jpg"
+					src="/public/img/showcase/image1.jpg"
 					style={{ width: "100%" }}
 				/>
 			</div>,
 			<div className="row">
 				<div className="column">
 					<this.Pricture
-						imgURL="/img/showcase/image2.jpg"
+						imgURL="/public/img/showcase/image2.jpg"
 						user="hi"
 					/>
 					<this.Pricture
-						imgURL="/img/showcase/image4.jpg"
+						imgURL="/public/img/showcase/image4.jpg"
 						user="hi"
 					/>
 					<this.Pricture
-						imgURL="/img/showcase/image5.png"
+						imgURL="/public/img/showcase/image5.png"
 						user="hi"
 					/>
 					<this.Pricture
-						imgURL="/img/showcase/image7.jpg"
+						imgURL="/public/img/showcase/image7.jpg"
 						user="hi"
 					/>
 					<this.Pricture
-						imgURL="/img/showcase/image9.jpg"
+						imgURL="/public/img/showcase/image9.jpg"
 						user="hi"
 					/>
 				</div>
 				<div className="column">
 					<this.Pricture
-						imgURL="/img/showcase/image3.jpg"
+						imgURL="/public/img/showcase/image3.jpg"
 						user="hi"
 					/>
 					<this.Pricture
-						imgURL="/img/showcase/image5.jpg"
+						imgURL="/public/img/showcase/image5.jpg"
 						user="hi"
 					/>
 					<this.Pricture
-						imgURL="/img/showcase/image6.jpg"
+						imgURL="/public/img/showcase/image6.jpg"
 						user="hi"
 					/>
 					<this.Pricture
-						imgURL="/img/showcase/image8.jpg"
+						imgURL="/public/img/showcase/image8.jpg"
 						user="hi"
 					/>
 					<this.Pricture
-						imgURL="/img/showcase/pf-47123f18--1175918377625502412254339082246628156765906n.jpg"
+						imgURL="/public/img/showcase/pf-47123f18--1175918377625502412254339082246628156765906n.jpg"
 						user="hi"
 					/>
 				</div>
