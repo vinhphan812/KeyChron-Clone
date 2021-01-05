@@ -62,9 +62,9 @@
 			],
 			"switch": ["Red", "Blue", "Brown"],
 			"imgURL": [
-				"../public/img/product/Keychron-K2-V2/Keychron-K2-V2-blue.jpg",
-				"../public/img/product/Keychron-K2-V2/Keychron-K2-V2-brown.jpg",
-				"../public/img/product/Keychron-K2-V2/Keychron-K2-V2-red.jpg"
+				"../public/img/product/Keychron-K2-v2/Keychron-K2-v2-blue.jpg",
+				"../public/img/product/Keychron-K2-v2/Keychron-K2-v2-brown.jpg",
+				"../public/img/product/Keychron-K2-v2/Keychron-K2-v2-red.jpg"
 			],
 			"White Backlight": {
 				"price": 69
