@@ -50,7 +50,7 @@ class database {
 		});
 	}
 	findProduct(name) {
-		var namePlace = name.replaceAll("-", " ").toLowerCase();
+		var namePlace = name.toLowerCase();
 		console.log(namePlace);
 		var product = productDB
 			.get("Products")

@@ -76,7 +76,9 @@ app.route("/products/:product")
 	})
 	.post(async (req, res) => {
 		try {
-			var product = await db.findProduct(req.params.product);
+			var product = await db.findProduct(
+				req.params.product.replace(/-/g, " ")
+			);
 			if (product) res.json({ success: true, data: product });
 			else
 				res.send({
