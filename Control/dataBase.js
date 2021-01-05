@@ -51,7 +51,7 @@ class database {
 	}
 	findProduct(name) {
 		var namePlace = name.replaceAll("-", " ").toLowerCase();
-		// console.log(name);
+		console.log(namePlace);
 		var product = productDB
 			.get("Products")
 			// .value()
@@ -62,6 +62,7 @@ class database {
 				}
 			})
 			.value();
+		console.log(product);
 		return product;
 	}
 }
