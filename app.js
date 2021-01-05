@@ -28,13 +28,13 @@ app.set("view engine", "pug");
 app.use(express.json());
 app.use(session(cookie));
 app.use("/product", product);
-app.use(express.static(path.join(__dirname, "./assets/")));
+app.use("/public", express.static(path.join(__dirname, "./assets/")));
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
 	res.render("index", {
 		title: "KeyChron",
-		scripts: ["./js/HOME.js"],
+		scripts: ["./public/js/HOME.js"],
 		styles: [],
 	});
 });
@@ -48,8 +48,8 @@ app.get("/data/slide", async (req, res) => {});
 app.get("/ShowCase", function (req, res) {
 	res.render("index", {
 		title: "Buyers' Showcase",
-		scripts: ["./js/buyShowCase.js"],
-		styles: ["./css/showcase.css"],
+		scripts: ["./public/js/buyShowCase.js"],
+		styles: ["./public/css/showcase.css"],
 	});
 });
 
@@ -69,8 +69,8 @@ app.route("/products/:product")
 		productName = productName.join(" ");
 		res.render("product", {
 			title: productName,
-			scripts: ["../js/product.js"],
-			styles: ["../css/product.css"],
+			scripts: ["../public/js/product.js"],
+			styles: ["../public/css/product.css"],
 		});
 	})
 	.post(async (req, res) => {
@@ -104,14 +104,14 @@ app.route("/account")
 		if (!req.session.user)
 			res.render("index", {
 				title: "Account",
-				scripts: ["./js/LOGIN.js"],
-				styles: ["./css/login.css"],
+				scripts: ["./public/js/LOGIN.js"],
+				styles: ["./public/css/login.css"],
 			});
 		else
 			res.render("index", {
 				title: `Account - ${req.session.user.name}`,
-				scripts: ["./js/profile.js"],
-				styles: ["./css/profile.css"],
+				scripts: ["./public/js/profile.js"],
+				styles: ["./public/css/profile.css"],
 			});
 	})
 	.post(async (req, res) => {

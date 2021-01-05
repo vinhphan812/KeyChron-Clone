@@ -21,12 +21,12 @@
 			],
 
 			"imgURL": [
-				"../img/product/Keychron-K1_v4/87_keys-gateron-low-profile-red-switch.jpg",
-				"../img/product/Keychron-K1_v4/87_keys-gateron-low-profile-blue-switch.jpg",
-				"../img/product/Keychron-K1_v4/87_keys-gateron-low-profile-brown-switch.jpg",
-				"../img/product/Keychron-K1_v4/104_keys-gateron-low-profile-red-switch.jpg",
-				"../img/product/Keychron-K1_v4/104_keys-gateron-low-profile-blue-switch.jpg",
-				"../img/product/Keychron-K1_v4/104_keys-gateron-low-profile-brown-switch.jpg"
+				"../public/img/product/Keychron-K1_v4/87_keys-gateron-low-profile-red-switch.jpg",
+				"../public/img/product/Keychron-K1_v4/87_keys-gateron-low-profile-blue-switch.jpg",
+				"../public/img/product/Keychron-K1_v4/87_keys-gateron-low-profile-brown-switch.jpg",
+				"../public/img/product/Keychron-K1_v4/104_keys-gateron-low-profile-red-switch.jpg",
+				"../public/img/product/Keychron-K1_v4/104_keys-gateron-low-profile-blue-switch.jpg",
+				"../public/img/product/Keychron-K1_v4/104_keys-gateron-low-profile-brown-switch.jpg"
 			],
 			"White Backlight Aluminum Body": {
 				"87": {
@@ -62,9 +62,9 @@
 			],
 			"switch": ["Red", "Blue", "Brown"],
 			"imgURL": [
-				"../img/product/Keychron-K2-V2/Keychron-K2-V2-blue.jpg",
-				"../img/product/Keychron-K2-V2/Keychron-K2-V2-brown.jpg",
-				"../img/product/Keychron-K2-V2/Keychron-K2-V2-red.jpg"
+				"../public/img/product/Keychron-K2-V2/Keychron-K2-V2-blue.jpg",
+				"../public/img/product/Keychron-K2-V2/Keychron-K2-V2-brown.jpg",
+				"../public/img/product/Keychron-K2-V2/Keychron-K2-V2-red.jpg"
 			],
 			"White Backlight": {
 				"price": 69
@@ -89,9 +89,9 @@
 			"version": ["White Backlight", "RGB Backlight Aluminum Frame"],
 			"switch": ["Red", "Blue", "Brown"],
 			"imgURL": [
-				"../img/product/Keychron-K2-V2-HotSwap/Keychron-K2-V2-HotSwap-brown.jpg",
-				"../img/product/Keychron-K2-V2-HotSwap/Keychron-K2-V2-HotSwap-red.jpg",
-				"../img/product/Keychron-K2-V2-HotSwap/Keychron-K2-V2-HotSwap-blue.jpg"
+				"../public/img/product/Keychron-K2-V2-HotSwap/Keychron-K2-V2-HotSwap-brown.jpg",
+				"../public/img/product/Keychron-K2-V2-HotSwap/Keychron-K2-V2-HotSwap-red.jpg",
+				"../public/img/product/Keychron-K2-V2-HotSwap/Keychron-K2-V2-HotSwap-blue.jpg"
 			],
 			"White Backlight": {
 				"price": 79
@@ -117,9 +117,9 @@
 			],
 
 			"imgURL": [
-				"../img/product/Keychron-K4-V2/Keychron-K4-V2-blue.jpg",
-				"../img/product/Keychron-K4-V2/Keychron-K4-V2-red.jpg",
-				"../img/product/Keychron-K4-V2/Keychron-K4-V2-brown.jpg"
+				"../public/img/product/Keychron-K4-V2/Keychron-K4-V2-blue.jpg",
+				"../public/img/product/Keychron-K4-V2/Keychron-K4-V2-red.jpg",
+				"../public/img/product/Keychron-K4-V2/Keychron-K4-V2-brown.jpg"
 			],
 			"switchType": ["Gateron", "Gateron (Hot-swappable)"],
 			"switch": ["Red", "Blue", "Brown"],
@@ -171,9 +171,9 @@
 			],
 			"switch": ["Red", "Brown", "Blue"],
 			"imgURL": [
-				"../img/product/Keychron-K6/Keychron-K6-red.jpg",
-				"../img/product/Keychron-K6/Keychron-K6-blue.jpg",
-				"../img/product/Keychron-K6/Keychron-K6-brown.jpg"
+				"../public/img/product/Keychron-K6/Keychron-K6-red.jpg",
+				"../public/img/product/Keychron-K6/Keychron-K6-blue.jpg",
+				"../public/img/product/Keychron-K6/Keychron-K6-brown.jpg"
 			],
 			"White Backlight": {
 				"Gateron Mechanical": {
@@ -264,9 +264,9 @@
 			},
 			"switch": ["Red", "Blue", "Brown"],
 			"imgURL": [
-				"../img/product/Keychron-K8/Keychron-K8-red.jpg",
-				"../img/product/Keychron-K8/Keychron-K8-blue.jpg",
-				"../img/product/Keychron-K8/Keychron-K8-brown.jpg"
+				"../public/img/product/Keychron-K8/Keychron-K8-red.jpg",
+				"../public/img/product/Keychron-K8/Keychron-K8-blue.jpg",
+				"../public/img/product/Keychron-K8/Keychron-K8-brown.jpg"
 			],
 			"id": "2nVOuSn-KA"
 		},
@@ -301,9 +301,9 @@
 			},
 			"switch": ["Red", "Blue", "Brown"],
 			"imgURL": [
-				"../img/product/Keychron-K3/Keychron-K3-blue.jpg",
-				"../img/product/Keychron-K3/Keychron-K3-red.jpg",
-				"../img/product/Keychron-K3/Keychron-K3-brown.jpg"
+				"../public/img/product/Keychron-K3/Keychron-K3-blue.jpg",
+				"../public/img/product/Keychron-K3/Keychron-K3-red.jpg",
+				"../public/img/product/Keychron-K3/Keychron-K3-brown.jpg"
 			],
 			"id": "Q6o9YLraBM"
 		},
@@ -317,8 +317,8 @@
 				"THIS K1 KEYCAP SET DOES NOT INCLUDE KEYBOARD, AND FOR K1 VERSION 4 ONLY.  Please drop your email on &quot;Notify Me When Available&quot; if the product model is out of stock."
 			],
 			"imgURL": [
-				"../img/product/K1-KeycapSet/K1-KeycapSet-Nghieng.jpg",
-				"../img/product/K1-KeycapSet/K1-KeycapSet-Thang.jpg"
+				"../public/img/product/K1-KeycapSet/K1-KeycapSet-Nghieng.jpg",
+				"../public/img/product/K1-KeycapSet/K1-KeycapSet-Thang.jpg"
 			],
 			"id": "TYTCCciiUK"
 		},
@@ -330,8 +330,8 @@
 			"reviews": 15,
 			"description": [],
 			"imgURL": [
-				"../img/product/K2-KeycapSet/K2-KeycapSet-Thang.jpg",
-				"../img/product/K2-KeycapSet/K2-KeycapSet-Nghieng.jpg"
+				"../public/img/product/K2-KeycapSet/K2-KeycapSet-Thang.jpg",
+				"../public/img/product/K2-KeycapSet/K2-KeycapSet-Nghieng.jpg"
 			],
 			"id": "NRqUe0YSwq"
 		},
@@ -343,8 +343,8 @@
 			"reviews": 17,
 			"description": ["THIS KEYCAP SET DOES NOT INCLUDE KEYBOARD."],
 			"imgURL": [
-				"../img/product/K2-PBT-KeycapSet/K2-PBT-KeycapSet01.jpg",
-				"../img/product/K2-PBT-KeycapSet/K2-PBT-KeycapSet02.jpg"
+				"../public/img/product/K2-PBT-KeycapSet/K2-PBT-KeycapSet01.jpg",
+				"../public/img/product/K2-PBT-KeycapSet/K2-PBT-KeycapSet02.jpg"
 			],
 			"id": "FrB_WkDWOk"
 		},
@@ -356,9 +356,9 @@
 			"reviews": 9,
 			"description": [],
 			"imgURL": [
-				"../img/product/K2-PalmRest/K2-PalmRest01.jpg",
-				"../img/product/K2-PalmRest/K2-PalmRest02.jpg",
-				"../img/product/K2-PalmRest/K2-PalmRest03.jpg"
+				"../public/img/product/K2-PalmRest/K2-PalmRest01.jpg",
+				"../public/img/product/K2-PalmRest/K2-PalmRest02.jpg",
+				"../public/img/product/K2-PalmRest/K2-PalmRest03.jpg"
 			],
 			"id": "ILll1e3q08"
 		},
@@ -372,9 +372,9 @@
 				"THIS PALM REST DOES NOT INCLUDE KEYBOARD. Please drop your email on &quot;Notify Me When Available&quot; if the product model is out of stock."
 			],
 			"imgURL": [
-				"../img/product/K3-PalmRest/K3-PalmRest01.jpg",
-				"../img/product/K3-PalmRest/K3-PalmRest02.jpg",
-				"../img/product/K3-PalmRest/K3-PalmRest03.jpg"
+				"../public/img/product/K3-PalmRest/K3-PalmRest01.jpg",
+				"../public/img/product/K3-PalmRest/K3-PalmRest02.jpg",
+				"../public/img/product/K3-PalmRest/K3-PalmRest03.jpg"
 			],
 			"id": "EeVNAGw_jq"
 		},
@@ -388,8 +388,8 @@
 				"THIS PALM REST DOES NOT INCLUDE KEYBOARD. Please drop your email on &quot;Notify Me When Available&quot; if the product model is out of stock."
 			],
 			"imgURL": [
-				"../img/product/K3-KeycapSet/K3-KeycapSet01.jpg",
-				"../img/product/K3-KeycapSet/K3-KeycapSet02.jpg"
+				"../public/img/product/K3-KeycapSet/K3-KeycapSet01.jpg",
+				"../public/img/product/K3-KeycapSet/K3-KeycapSet02.jpg"
 			],
 			"id": "RQtPvZMXiq"
 		},
@@ -403,9 +403,9 @@
 				" THIS PALM REST DOES NOT INCLUDE KEYBOARD. Please drop your email on &quot;Notify Me When Available&quot; if the product model is out of stock."
 			],
 			"imgURL": [
-				"../img/product/K4-PalmRest/K4-PalmRest01.jpg",
-				"../img/product/K4-PalmRest/K4-PalmRest02.jpg",
-				"../img/product/K4-PalmRest/K4-PalmRest03.jpg"
+				"../public/img/product/K4-PalmRest/K4-PalmRest01.jpg",
+				"../public/img/product/K4-PalmRest/K4-PalmRest02.jpg",
+				"../public/img/product/K4-PalmRest/K4-PalmRest03.jpg"
 			],
 			"id": "_87Rt-D4BP"
 		},
@@ -417,8 +417,8 @@
 			"reviews": 23,
 			"description": ["THIS K6 KEYCAP SET DOES NOT INCLUDE KEYBOARD."],
 			"imgURL": [
-				"../img/product/K6-KeycapSet/K6-KeycapSet01.jpg",
-				"../img/product/K6-KeycapSet/K6-KeycapSet02.jpg"
+				"../public/img/product/K6-KeycapSet/K6-KeycapSet01.jpg",
+				"../public/img/product/K6-KeycapSet/K6-KeycapSet02.jpg"
 			],
 			"id": "CIGxyLI3HC"
 		},
@@ -432,9 +432,9 @@
 				"THIS K8 KEYCAP SET DOES NOT INCLUDE KEYBOARD.  Please drop your email on &quot;Notify Me When Available&quot; if the product model is out of stock."
 			],
 			"imgURL": [
-				"../img/product/K8-KeycapSet/K8-KeycapSet01.jpg",
-				"../img/product/K8-KeycapSet/K8-KeycapSet02.jpg",
-				"../img/product/K8-KeycapSet/K8-KeycapSet03.jpg"
+				"../public/img/product/K8-KeycapSet/K8-KeycapSet01.jpg",
+				"../public/img/product/K8-KeycapSet/K8-KeycapSet02.jpg",
+				"../public/img/product/K8-KeycapSet/K8-KeycapSet03.jpg"
 			],
 			"id": "MTSelx6zoX"
 		},
@@ -448,9 +448,9 @@
 				"THIS PALM REST DOES NOT INCLUDE KEYBOARD. Please drop your email on &quot;Notify Me When Available&quot; if the product model is out of stock."
 			],
 			"imgURL": [
-				"../img/product/K8-PalmRest/K8-PalmRest01.jpg",
-				"../img/product/K8-PalmRest/K8-PalmRest02.jpg",
-				"../img/product/K8-PalmRest/K8-PalmRest03.jpg"
+				"../public/img/product/K8-PalmRest/K8-PalmRest01.jpg",
+				"../public/img/product/K8-PalmRest/K8-PalmRest02.jpg",
+				"../public/img/product/K8-PalmRest/K8-PalmRest03.jpg"
 			],
 			"id": "ey1Z3HsdSK"
 		}
