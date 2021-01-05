@@ -29,7 +29,7 @@ app.set("view engine", "pug");
 app.use(express.json());
 app.use(session(cookie));
 app.use("/product", product);
-app.use(express.static("assets"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
