@@ -57,6 +57,10 @@ app.get("/CheckOut", function (req, res) {
 	res.render("checkout");
 });
 
+app.get("/data/products", async function (req, res) {
+	res.json(await db.getProducts());
+});
+
 app.route("/products/:product")
 	.get(async (req, res) => {
 		var productName = [],

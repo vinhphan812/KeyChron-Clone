@@ -332,10 +332,10 @@ class Posts extends React.Component {
 class Product extends React.Component {
 	render() {
 		const product = this.props.data;
-		const attr = {
-			src: product.imgURL,
-			alt: product.name,
-		};
+		// const attr = {
+		// 	src: product.imgURL,
+		// 	alt: product.name,
+		// };
 		return (
 			<a href={product.URL} className="flex-item-col">
 				<BgImage src={product.imgURL} />

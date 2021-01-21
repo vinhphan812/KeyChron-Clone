@@ -21,28 +21,38 @@ xhr.onreadystatechange = function () {
 };
 
 function render(data) {
-	ReactDOM.render(
-		<Product data={data} />,
-		document.getElementById("main"),
-		function () {
-			$(".slider-for").slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-				asNavFor: ".slider-nav",
-			});
-			$(".slider-nav").slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				asNavFor: ".slider-for",
-				vertical: true,
-				arrows: false,
-				centerMode: true,
-				centerPadding: "100px",
-				focusOnSelect: true,
-			});
+	xhr.open("GET", "/data/products");
+	xhr.onreadystatechange = function () {
+		if (this.readyState == 4) {
+			ReactDOM.render(
+				[
+					<Product data={data} />,
+					<Posts data={JSON.parse(this.responseText)} />,
+				],
+				document.getElementById("main"),
+				function () {
+					$(".slider-for").slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						arrows: false,
+						asNavFor: ".slider-nav",
+					});
+					$(".slider-nav").slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						asNavFor: ".slider-for",
+						vertical: true,
+						arrows: false,
+						centerMode: true,
+						centerPadding: "100px",
+						focusOnSelect: true,
+					});
+				}
+			);
 		}
-	);
+	};
+	xhr.send();
+
 	$(document).ready(function () {});
 }
 
@@ -371,4 +381,93 @@ function recPrice(dataPrice) {
 			return recPrice(dataPrice[i]);
 		}
 	}
+}
+
+class Posts extends React.Component {
+	constructor(props) {
+		super(props);
+		console.log(props.data);
+	}
+	render() {
+		return (
+			<div>
+				<Title title={this.props.data.title} />
+				<this.ProductContainer>
+					{this.props.data.items.map((item, i) =>
+						item.date ? (
+							<Blog data={item} key={item.title} />
+						) : (
+							<RelatedProducts
+								data={item}
+								key={item.name}
+							/>
+						)
+					)}
+				</this.ProductContainer>
+			</div>
+		);
+	}
+	ProductContainer(props) {
+		return React.createElement("div", {
+			children: props.children,
+			className: "flex-col-3",
+		});
+	}
+}
+//* render Product
+class RelatedProducts extends React.Component {
+	render() {
+		const product = this.props.data;
+		const attr = {
+			src: product.imgURL,
+			alt: product.name,
+		};
+		return (
+			<a href={product.URL} className="flex-item-col">
+				<BgImage src={"." + product.imgURL} />
+				<div className="detail col">
+					<p className="name__product">{product.name}</p>
+					<div className="reviews">
+						<this.StarReview
+							star={product.star}
+							reviews={product.reviews}
+							key={product.star}
+						/>
+					</div>
+					<div className="price">
+						<span>
+							{product.sale > 0
+								? `$${product.price.toFixed(2)}`
+								: ""}
+						</span>
+						<span>
+							&nbsp; form $
+							{(product.price - product.sale).toFixed(2)}
+						</span>
+					</div>
+				</div>
+			</a>
+		);
+	}
+	StarReview(props) {
+		var starHTML = [];
+		for (var i = 1; i <= 5; i++)
+			starHTML.push(
+				i <= props.star ? (
+					<i className="fa fa-star checked"></i>
+				) : (
+					<i className="fa fa-star"></i>
+				)
+			);
+		starHTML.push(<span>{props.reviews} reviews</span>);
+		return starHTML;
+	}
+}
+
+function Title(props) {
+	return <h2 className="h2-title">{props.title}</h2>;
+}
+
+function BgImage(props) {
+	return <div style={{ backgroundImage: `url('${props.src}')` }}></div>;
 }

@@ -43,7 +43,13 @@ class database {
 	getProducts() {
 		return new Promise(async (resolve, reject) => {
 			try {
-				resolve(db.get("products").value());
+				resolve({
+					title: "Related Products",
+					items: db
+						.get("products")
+						.filter({ isVarious: true })
+						.value(),
+				});
 			} catch (error) {
 				reject(error);
 			}
@@ -51,19 +57,14 @@ class database {
 	}
 	findProduct(name) {
 		var namePlace = name.toLowerCase();
-		console.log(namePlace);
-		var product = productDB
+		return productDB
 			.get("Products")
-			// .value()
 			.find(function (product) {
 				if (product.name.toLowerCase().indexOf(namePlace) >= 0) {
-					console.log(product.name);
 					return product;
 				}
 			})
 			.value();
-		console.log(product);
-		return product;
 	}
 }
 

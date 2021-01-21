@@ -140,6 +140,7 @@
 	width: 100%;
 	margin: 1rem 0.5rem;
 	font-weight: 600;
+	background-color: var(--background-color-secondary);
 	border: 1px solid #333;
 	transition: background-color 300ms, color 300ms;
 }
